@@ -22,6 +22,49 @@
   font-size: large;
 }
 
+.StartPage {
+  text-align: center;
+}
+
+.largeHeader {
+  font-size: 1.5em;
+}
+
+.tiles {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.tiles.races {
+  background-color: #9999;
+  height: 150px;
+  padding: 20px;
+}
+
+.readMore {
+  color:blue;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+
+.button-large {
+  background-color: #6d1279;
+  height: 50px;
+  width: 165px;
+  color: #ffffff;
+  border: none;
+  font-family: calibri, sans-serif;
+  font-size: 16px;
+  
+}
+
+.button-large:hover {
+  background-color: #123379;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
