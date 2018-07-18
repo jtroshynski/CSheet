@@ -1,8 +1,8 @@
 {
-  "name": "dnd-app",
+  "name": "csheet",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jtroshynski.com/public_html",
+  "homepage": "http://jtroshynski.com",
   "dependencies": {
     "ajv": "^6.5.2",
     "aws-amplify": "^1.0.0",
