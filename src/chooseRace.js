@@ -1,30 +1,48 @@
 import React, { Component } from "react";
-import eric from "./images/idiot.png";
-import human from "./images/human.png";
 import "./App.css";
-import Amplify, { Analytics } from "aws-amplify";
-import aws_exports from "./aws-exports";
-import { withAuthenticator } from "aws-amplify-react";
+import dragonborn from "./images/dragonborn.png";
+import dwarf from "./images/dwarf.png";
+import elf from "./images/elf.png";
+import halfelf from "./images/half-elf.png";
+import halfling from "./images/halfling.png";
+import halforc from "./images/half-orc.png";
+import human from "./images/human.png";
+import tiefling from "./images/tiefling.png";
 
-Amplify.configure(aws_exports);
+import { Analytics } from "aws-amplify";
 
-class chooseRace extends Component {
+class ChooseRace extends Component {
   render() {
     Analytics.record("appRender");
     return (
-      <div className="chooseRace">
-        <header className="App-header">
-          <img src={eric} className="App-logo" alt="logo" />
-          <h1 className="largeHeader">CHOOSE YOUR CHARACTER</h1>
-        </header>
+      <div className="ChooseRace">
+        <h2 className="App-intro">CHOOSE YOUR CHARACTER</h2>
         <p>
-          <ul className="tiles races">
-            <img src={human} alt="Human" />
-            <img src={human} alt="Human" />
-            <img src={human} alt="Human" />
-            <img src={human} alt="Human" />
-            <img src={human} alt="Human" />
-            <img src={human} alt="Human" />
+          <ul>
+            <div className="tile">
+              <img src={dragonborn} alt="Dragonborn" />
+            </div>
+            <div className="tile">
+              <img src={dwarf} alt="Dwarf" />
+            </div>
+            <div className="tile">
+              <img src={elf} alt="Elf" />
+            </div>
+            <div className="tile">
+              <img src={halfelf} alt="Half-Elf" />
+            </div>
+            <div className="tile">
+              <img src={halfling} alt="Halfling" />
+            </div>
+            <div className="tile">
+              <img src={halforc} alt="Half-Orc" />
+            </div>
+            <div className="tile">
+              <img src={human} alt="Human" />
+            </div>
+            <div className="tile">
+              <img src={tiefling} alt="Tiefling" />
+            </div>
           </ul>
         </p>
       </div>
@@ -32,5 +50,5 @@ class chooseRace extends Component {
   }
 }
 
-export default chooseRace;
+export default ChooseRace;
 // export default withAuthenticator(App);
