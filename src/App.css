@@ -26,16 +26,14 @@
   text-align: center;
 }
 
-.largeHeader {
-  font-size: 1.5em;
+.pageHeader {
+  font-family: "Carter One", "Open Sans", sans-serif;
+  font-size: 2.5em;
+  color: rgb(20, 20, 20);
 }
 
-.tiles.section {
+.tiles-section {
   padding: 20px;
-  /* color: white; */
-}
-
-.chooseRace {
   display: flex;
   flex-flow: row wrap;
   /* This aligns items to the end line on main-axis */
@@ -60,10 +58,10 @@ img {
   font-family: "Carter One", "Open Sans", sans-serif;
   font-size: 2em;
   color: rgb(109, 43, 116);
-  position: absolute;
+  /* position: absolute; */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
 }
 
 .readMore {

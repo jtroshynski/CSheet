@@ -8,29 +8,20 @@ class StartPage extends Component {
     Analytics.record("appRender");
     return (
       <div>
-        <p className="App-intro">yer a wizard, Harry</p>
+        <p className="App-intro">
+          lemme tell ya about how this app works. I'll totally explain myself in
+          this paragraph.
+        </p>
         {
           <Link to={`/chooseRace`}>
-            <button class="button-large" onClick={this.chooseRace}>
-              go to hogwarts
-            </button>
+            <button class="button-large">Start your cSheet</button>
           </Link>
         }
         <br />
-        <a className="readMore">read more stuff</a>
+        <a className="readMore">read more stuff about cSheet</a>
       </div>
     );
   }
-
-  //   chooseRace() {
-  //     return (
-  //       <HashRouter>
-  //         <div>
-  //           <Route path="/chooseRace" component={ChooseRace} />
-  //         </div>
-  //       </HashRouter>
-  //     );
-  //   }
 }
 
 export default StartPage;

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
 import Tile from "../Tile.js";
-import { Column, Row } from "simple-flexbox";
 
 import dragonborn from "../images/dragonborn.png";
 import dwarf from "../images/dwarf.png";
@@ -18,22 +17,19 @@ class ChooseRace extends Component {
   render() {
     Analytics.record("appRender");
     return (
-      // <div className="header">
-      //   <Row horizontal="center">
-      //     <h1>Pick a race</h1>
-      //   </Row>
-      // </div>
-      <ul class="chooseRace">
-        <li>
-          <Tile img={dragonborn} text="Dragonborn" />
-        </li>
-        {/* <li class="tile">Dragonborn</li>
-          <li class="tile">Dragonborn</li>
-          <li class="tile">Dragonborn</li>
-          <li class="tile">Dragonborn</li>
-          <li class="tile">Dragonborn</li>
-          <li class="tile">Dragonborn</li> */}
-      </ul>
+      <div>
+        <h1 class="pageHeader">Pick a race</h1>
+        <ul class="tiles-section">
+          <Tile image={dragonborn} text="Dragonborn" />
+          <Tile image={dwarf} text="Dwarf" />
+          <Tile image={elf} text="Elf" />
+          <Tile image={halfelf} text="Half-Elf" />
+          <Tile image={halfling} text="Halfling" />
+          <Tile image={halforc} text="Halforc" />
+          <Tile image={human} text="Human" />
+          <Tile image={tiefling} text="Tiefling" />
+        </ul>
+      </div>
     );
   }
 }
