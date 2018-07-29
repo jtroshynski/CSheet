@@ -15,11 +15,77 @@
 }
 
 .App-title {
+  font-family: "Carter One", "Open Sans", sans-serif;
   font-size: 1.5em;
 }
 
 .App-intro {
   font-size: large;
+}
+
+.sideBar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  background: none repeat scroll 0 0 #000000;
+  color: white;
+  padding: 20px 10px;
+  width: 140px;
+  z-index: 1;
+}
+
+.sideBar FontAwesomeIcon {
+  font-size: 30px;
+}
+
+.sideBar ul {
+  margin: 0;
+  padding: 0;
+  /* // margin-top: 60px; */
+}
+
+.sideBar ul li {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.sideBar ul li a.expandable {
+  outline: 0;
+  color: white;
+  text-decoration: none;
+  font-size: 80px;
+}
+
+.sideBar ul li a.expandable:hover {
+  color: #bbbbbb;
+}
+
+.sideBar ul li a.expandable span.expanded-element {
+  color: #fff;
+  margin-left: 12px;
+  // display: none;
+  font-size: 16px;
+  position: relative;
+  bottom: 2px;
+}
+
+.sideBar ul li.active {
+  background: none repeat scroll 0 0 black;
+  border-radius: 4px;
+  text-align: center;
+  margin-left: -4px;
+  padding: 4px;
+}
+
+.sideBar ul li.active a.expandable {
+  color: white !important;
+}
+
+.sideBar ul li.active a.expandable:hover {
+  color: white !important;
 }
 
 .StartPage {

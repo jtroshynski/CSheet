@@ -8,17 +8,20 @@ class StartPage extends Component {
     Analytics.record("appRender");
     return (
       <div>
+        <h1 className="pageHeader"> Welcome </h1>
         <p className="App-intro">
           lemme tell ya about how this app works. I'll totally explain myself in
           this paragraph.
         </p>
         {
           <Link to={`/chooseRace`}>
-            <button class="button-large">Start your cSheet</button>
+            <button className="button-large">Start your cSheet</button>
           </Link>
         }
         <br />
-        <a className="readMore">read more stuff about cSheet</a>
+        <Link className="readMore" to={`/PageNotFound`}>
+          read more stuff about cSheet
+        </Link>
       </div>
     );
   }
