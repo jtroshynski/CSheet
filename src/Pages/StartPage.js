@@ -19,9 +19,9 @@ class StartPage extends Component {
           </Link>
         }
         <br />
-        <Link className="readMore" to={`/PageNotFound`}>
+        <a href="https://github.com/jtroshynski/CSheet">
           read more stuff about cSheet
-        </Link>
+        </a>
       </div>
     );
   }
