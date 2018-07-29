@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   height: 150px;
@@ -15,9 +10,18 @@
 }
 
 .App-title {
+  /* High Tower Text used for the app logo */
   font-family: "Carter One", "Open Sans", sans-serif;
   font-size: 1.5em;
 }
+
+/* COLORS!
+4ECDC4 turquoise
+FFFFFF white
+2F195F russian violet
+022F40 rich black - dark blue/green
+656565 granite grey
+*/
 
 .App-intro {
   font-size: large;
@@ -123,7 +127,7 @@ img {
 .tile-text {
   font-family: "Carter One", "Open Sans", sans-serif;
   font-size: 2em;
-  color: rgb(109, 43, 116);
+  color: #2f195f;
   /* position: absolute; */
   top: 50%;
   left: 50%;
@@ -137,7 +141,7 @@ img {
 }
 
 .button-large {
-  background-color: #6d1279;
+  background-color: #2f195f;
   height: 50px;
   width: 165px;
   color: #ffffff;
