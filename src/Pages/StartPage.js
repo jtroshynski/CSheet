@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../App.css";
+import "../Stylesheets/App.css";
 import { Link } from "react-router-dom";
 import { Analytics } from "aws-amplify";
 

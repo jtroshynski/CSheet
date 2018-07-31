@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../App.css";
+import "../Stylesheets/App.css";
 import { Analytics } from "aws-amplify";
 import StartPage from "./StartPage";
 

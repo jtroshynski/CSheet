@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import cSheet from "../images/cSheetBlk.png";
 
-import "../App.css";
+import "../Stylesheets/App.css";
 
 class SideBar extends Component {
   render() {
@@ -13,10 +13,11 @@ class SideBar extends Component {
         <Link className="App-title" to="/">
           <img src={cSheet} alt="cSheet" />
         </Link>
+        <div className="divider" />
         <ul>
           <li>
             <Link className="expandable" to="/chooseRace" title="Setting">
-              <FontAwesomeIcon icon={["fab", "d-and-d"]} size="fa-5x" />
+              <FontAwesomeIcon icon={["fab", "d-and-d"]} size="lg" />
             </Link>
           </li>
         </ul>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "../App.css";
-import Tile from "../Tile.js";
+import "../Stylesheets/App.css";
+import Tile from "../Components/Tile.js";
 
 import dragonborn from "../images/dragonborn.png";
 import dwarf from "../images/dwarf.png";
@@ -18,8 +18,8 @@ class ChooseRace extends Component {
     Analytics.record("appRender");
     return (
       <div>
-        <h1 class="pageHeader">Pick a race</h1>
-        <ul class="tiles-section">
+        <h1 className="pageHeader">Pick a race</h1>
+        <ul className="tiles-section">
           <Tile image={dragonborn} text="Dragonborn" />
           <Tile image={dwarf} text="Dwarf" />
           <Tile image={elf} text="Elf" />

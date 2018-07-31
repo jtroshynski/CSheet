@@ -5,7 +5,7 @@ import SideBar from "./Components/SideBar.js";
 import ChooseRace from "./Pages/ChooseRace.js";
 import StartPage from "./Pages/StartPage.js";
 import PageNotFountComponent from "./Pages/PageNotFoundComponent";
-import "./App.css";
+import "./Stylesheets/App.css";
 
 import Amplify, { Analytics } from "aws-amplify";
 import aws_exports from "./aws-exports";
@@ -31,11 +31,17 @@ class App extends Component {
         <HashRouter>
           <div>
             <SideBar />
-            <Switch>
-              <Route exact path="/" component={StartPage} />
-              <Route path="/chooseRace" component={ChooseRace} />
-              <Route path="*" exact={true} component={PageNotFountComponent} />
-            </Switch>
+            <div>
+              <Switch>
+                <Route exact path="/" component={StartPage} />
+                <Route path="/chooseRace" component={ChooseRace} />
+                <Route
+                  path="*"
+                  exact={true}
+                  component={PageNotFountComponent}
+                />
+              </Switch>
+            </div>
           </div>
         </HashRouter>
       </div>

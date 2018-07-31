@@ -6,7 +6,7 @@
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: #ffffff;
 }
 
 .App-title {
@@ -16,13 +16,12 @@
 }
 
 /* COLORS!
-4ECDC4 turquoise
-FFFFFF white
-2F195F russian violet
-022F40 rich black - dark blue/green
-656565 granite grey
-*/
-
+  4ECDC4 turquoise
+  FFFFFF white
+  2F195F russian violet
+  022F40 rich black - dark blue/green
+  656565 granite grey
+  */
 .App-intro {
   font-size: large;
 }
@@ -33,7 +32,7 @@ FFFFFF white
   left: 0px;
   height: 100%;
   background: none repeat scroll 0 0 #000000;
-  color: white;
+  color: #ffffff;
   padding: 20px 10px;
   width: 140px;
   z-index: 1;
@@ -68,9 +67,8 @@ FFFFFF white
 }
 
 .sideBar ul li a.expandable span.expanded-element {
-  color: #fff;
+  color: #ffffff;
   margin-left: 12px;
-  // display: none;
   font-size: 16px;
   position: relative;
   bottom: 2px;
@@ -85,11 +83,17 @@ FFFFFF white
 }
 
 .sideBar ul li.active a.expandable {
-  color: white !important;
+  color: #ffffff !important;
 }
 
 .sideBar ul li.active a.expandable:hover {
-  color: white !important;
+  color: #ffffff !important;
+}
+
+.sideBar .divider {
+  height: 1px;
+  width: 95%;
+  background: #656565;
 }
 
 .StartPage {
@@ -99,7 +103,7 @@ FFFFFF white
 .pageHeader {
   font-family: "Carter One", "Open Sans", sans-serif;
   font-size: 2.5em;
-  color: rgb(20, 20, 20);
+  color: #141414;
 }
 
 .tiles-section {
@@ -162,3 +166,5 @@ img {
     transform: rotate(360deg);
   }
 }
+
+/*# sourceMappingURL=App.css.map */
