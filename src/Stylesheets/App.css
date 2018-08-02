@@ -15,13 +15,6 @@
   font-size: 1.5em;
 }
 
-/* COLORS!
-  4ECDC4 turquoise
-  FFFFFF white
-  2F195F russian violet
-  022F40 rich black - dark blue/green
-  656565 granite grey
-  */
 .App-intro {
   font-size: large;
 }
@@ -37,35 +30,30 @@
   width: 140px;
   z-index: 1;
 }
-
 .sideBar FontAwesomeIcon {
   font-size: 30px;
 }
-
+.sideBar .divider {
+  height: 1px;
+  width: 95%;
+  background: #656565;
+}
 .sideBar ul {
   margin: 0;
   padding: 0;
-  /* // margin-top: 60px; */
 }
-
 .sideBar ul li {
   margin: 0;
   padding: 0;
   margin-top: 20px;
   list-style-type: none;
 }
-
 .sideBar ul li a.expandable {
   outline: 0;
   color: white;
   text-decoration: none;
   font-size: 80px;
 }
-
-.sideBar ul li a.expandable:hover {
-  color: #bbbbbb;
-}
-
 .sideBar ul li a.expandable span.expanded-element {
   color: #ffffff;
   margin-left: 12px;
@@ -73,27 +61,21 @@
   position: relative;
   bottom: 2px;
 }
-
-.sideBar ul li.active {
+.sideBar ul li a.expandable:hover {
+  color: #bbbbbb;
+}
+.sideBar ul li .active {
   background: none repeat scroll 0 0 black;
   border-radius: 4px;
   text-align: center;
   margin-left: -4px;
   padding: 4px;
 }
-
-.sideBar ul li.active a.expandable {
+.sideBar ul li .active a.expandable {
   color: #ffffff !important;
 }
-
-.sideBar ul li.active a.expandable:hover {
-  color: #ffffff !important;
-}
-
-.sideBar .divider {
-  height: 1px;
-  width: 95%;
-  background: #656565;
+.sideBar ul li .active a.expandable:hover {
+  color: #bbbbbb !important;
 }
 
 .StartPage {
@@ -127,8 +109,7 @@ img {
   /* -webkit-box-shadow: 1px 3px 1px #9e9e9e; */
   padding: 20px;
 }
-
-.tile-text {
+.tile .tile-text {
   font-family: "Carter One", "Open Sans", sans-serif;
   font-size: 2em;
   color: #2f195f;
@@ -136,12 +117,6 @@ img {
   top: 50%;
   left: 50%;
   /* transform: translate(-50%, -50%); */
-}
-
-.readMore {
-  color: blue;
-  font-size: 13px;
-  text-decoration: underline;
 }
 
 .button-large {
@@ -156,15 +131,6 @@ img {
 
 .button-large:hover {
   background-color: #123379;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /*# sourceMappingURL=App.css.map */

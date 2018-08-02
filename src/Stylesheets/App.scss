@@ -24,14 +24,6 @@ $colorLightGrey: #bbbbbb;
   font-size: 1.5em;
 }
 
-/* COLORS!
-  4ECDC4 turquoise
-  FFFFFF white
-  2F195F russian violet
-  022F40 rich black - dark blue/green
-  656565 granite grey
-  */
-
 .App-intro {
   font-size: large;
 }
@@ -46,64 +38,58 @@ $colorLightGrey: #bbbbbb;
   padding: 20px 10px;
   width: 140px;
   z-index: 1;
-}
 
-.sideBar FontAwesomeIcon {
-  font-size: 30px;
-}
+  FontAwesomeIcon {
+    font-size: 30px;
+  }
 
-.sideBar ul {
-  margin: 0;
-  padding: 0;
-  /* // margin-top: 60px; */
-}
+  .divider {
+    height: 1px;
+    width: 95%;
+    background: $colorMediumGrey;
+  }
 
-.sideBar ul li {
-  margin: 0;
-  padding: 0;
-  margin-top: 20px;
-  list-style-type: none;
-}
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      margin-top: 20px;
+      list-style-type: none;
 
-.sideBar ul li a.expandable {
-  outline: 0;
-  color: white;
-  text-decoration: none;
-  font-size: 80px;
-}
+      a.expandable {
+        outline: 0;
+        color: white;
+        text-decoration: none;
+        font-size: 80px;
 
-.sideBar ul li a.expandable:hover {
-  color: $colorLightGrey;
-}
-
-.sideBar ul li a.expandable span.expanded-element {
-  color: $colorWhite;
-  margin-left: 12px;
-  font-size: 16px;
-  position: relative;
-  bottom: 2px;
-}
-
-.sideBar ul li.active {
-  background: none repeat scroll 0 0 black;
-  border-radius: 4px;
-  text-align: center;
-  margin-left: -4px;
-  padding: 4px;
-}
-
-.sideBar ul li.active a.expandable {
-  color: $colorWhite !important;
-}
-
-.sideBar ul li.active a.expandable:hover {
-  color: $colorWhite !important;
-}
-
-.sideBar .divider {
-  height: 1px;
-  width: 95%;
-  background: $colorMediumGrey;
+        span.expanded-element {
+          color: $colorWhite;
+          margin-left: 12px;
+          font-size: 16px;
+          position: relative;
+          bottom: 2px;
+        }
+      }
+      a.expandable:hover {
+        color: $colorLightGrey;
+      }
+      .active {
+        background: none repeat scroll 0 0 black;
+        border-radius: 4px;
+        text-align: center;
+        margin-left: -4px;
+        padding: 4px;
+        a.expandable {
+          color: $colorWhite !important;
+        }
+        a.expandable:hover {
+          color: $colorLightGrey !important;
+        }
+      }
+    }
+  }
 }
 
 .StartPage {
@@ -136,22 +122,15 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* -webkit-box-shadow: 1px 3px 1px #9e9e9e; */
   padding: 20px;
-}
-
-.tile-text {
-  font-family: $font-stack;
-  font-size: 2em;
-  color: $colorPurple;
-  /* position: absolute; */
-  top: 50%;
-  left: 50%;
-  /* transform: translate(-50%, -50%); */
-}
-
-.readMore {
-  color: blue;
-  font-size: 13px;
-  text-decoration: underline;
+  .tile-text {
+    font-family: $font-stack;
+    font-size: 2em;
+    color: $colorPurple;
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+  }
 }
 
 .button-large {
@@ -163,16 +142,6 @@ img {
   font-family: calibri, sans-serif;
   font-size: 16px;
 }
-
 .button-large:hover {
   background-color: #123379;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

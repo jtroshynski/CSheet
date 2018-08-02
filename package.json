@@ -19,6 +19,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-sidemenu": "0.0.14",
+    "sass": "^1.10.1",
     "simple-flexbox": "^1.2.0"
   },
   "scripts": {

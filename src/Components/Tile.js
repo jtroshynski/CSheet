@@ -8,28 +8,16 @@ class Tile extends Component {
     super();
 
     this.state = {
-      index: "",
       name: "",
       speed: ""
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
-  // API Race Order:
-  // Dwarf
-  // Elf
-  // Halfling
-  // Human
-  // Dragonborn
-  // Gnome
-  // Half-Elf
-  // Half-Orc
-  // Tiefling
-
   handleClick() {
     axios
-      .get("http://www.dnd5eapi.co/api/races/")
-      .then(response => console.log(response));
+      .get("http://www.dnd5eapi.co/api/races/" + this.props.id)
+      .then(response => console.log(response.data.name));
   }
 
   render() {
