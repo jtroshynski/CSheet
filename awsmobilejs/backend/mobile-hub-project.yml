@@ -9,31 +9,31 @@ features:
           sdk-generation-stage-name: Development
         paths:
           /items: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/sampleLambda-20180717213055.zip
+            codeFilename: uploads/sampleLambda-20180801191809.zip
             description: 'Handler for calls to resource path : /items/{proxy+}'
             enableCORS: true
             environment: {}
             handler: lambda.handler
-            hashcode: vErfl2LALoBuCXajcj50926NbhbStdWLUGx9SGGHy9M=
+            hashcode: GHUQkvjcS/D69Dv7+vLv/yaAI3SAUD7k1g4Q21X8XWo=
             memorySize: '128'
-            modified: '2018-07-18T02:31:15.574+0000'
+            modified: '2018-08-02T00:19:28.697+0000'
             name: sampleLambda
             runtime: nodejs6.10
             timeout: '3'
-            version: DCEZgR2DdirwFDoLFbD82tHF66CucKM4
+            version: iu4yVlmEpSYuLWf5MhRR_k5aMrRcpB3W
           '/items/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/sampleLambda-20180717213055.zip
+            codeFilename: uploads/sampleLambda-20180801191809.zip
             description: 'Handler for calls to resource path : /items/{proxy+}'
             enableCORS: true
             environment: {}
             handler: lambda.handler
-            hashcode: vErfl2LALoBuCXajcj50926NbhbStdWLUGx9SGGHy9M=
+            hashcode: GHUQkvjcS/D69Dv7+vLv/yaAI3SAUD7k1g4Q21X8XWo=
             memorySize: '128'
-            modified: '2018-07-18T02:31:15.574+0000'
+            modified: '2018-08-02T00:19:28.697+0000'
             name: sampleLambda
             runtime: nodejs6.10
             timeout: '3'
-            version: uj9ZYKHksl8R0ECjf6NHxyJmr3VfPbR5
+            version: bFSYdIdJGsQklDLY_BN5Dnm.UZXlon6B
   content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
     attributes:
       enabled: true
@@ -89,5 +89,5 @@ features:
     attributes:
       enabled: true
       wildcard-cors-policy: true
-name: dnd-app-2018-07-13-18-19-29
-region: us-east-2
+name: CSheet-2018-08-01-19-17-23
+region: us-west-1
