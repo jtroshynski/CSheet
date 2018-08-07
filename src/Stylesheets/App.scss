@@ -7,14 +7,10 @@ $colorBlack: #000000;
 $colorMediumGrey: #656565;
 $colorLightGrey: #bbbbbb;
 
-.App {
-  text-align: center;
-}
-
 .App-header {
+  text-align: center;
   background-color: #222;
   height: 150px;
-  padding: 20px;
   color: $colorWhite;
 }
 
@@ -28,16 +24,37 @@ $colorLightGrey: #bbbbbb;
   font-size: large;
 }
 
+.CSheet,
+.body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .body {
+    flex-direction: row;
+    flex: 1;
+  }
+  .content {
+    flex: 1;
+  }
+  .sideBar {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+  }
+}
+
 .sideBar {
-  position: fixed;
-  top: 0px;
-  left: 0px;
+  order: -1;
   height: 100%;
+  -webkit-flex: 1;
+  flex: 1;
   background: none repeat scroll 0 0 $colorBlack;
   color: $colorWhite;
-  padding: 20px 10px;
-  width: 140px;
-  z-index: 1;
+  width: 20px;
+  // z-index: 1;
 
   FontAwesomeIcon {
     font-size: 30px;
@@ -92,22 +109,15 @@ $colorLightGrey: #bbbbbb;
   }
 }
 
-.StartPage {
-  text-align: center;
-}
-
 .pageHeader {
   font-family: $font-stack;
   font-size: 2.5em;
+  text-align: center;
   color: rgb(20, 20, 20);
 }
 
 .tiles-section {
-  padding: 20px;
-  display: flex;
-  flex-flow: row wrap;
-  /* This aligns items to the end line on main-axis */
-  justify-content: center;
+  text-align: center;
 }
 
 img {
@@ -116,6 +126,8 @@ img {
 }
 
 .tile {
+  display: inline-block;
+  // margin: 0 auto;
   text-align: center;
   height: 200px;
   width: 250px;

@@ -1,11 +1,7 @@
-.App {
-  text-align: center;
-}
-
 .App-header {
+  text-align: center;
   background-color: #222;
   height: 150px;
-  padding: 20px;
   color: #ffffff;
 }
 
@@ -19,16 +15,37 @@
   font-size: large;
 }
 
+.CSheet,
+.body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .body {
+    flex-direction: row;
+    flex: 1;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .sideBar {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+  }
+}
 .sideBar {
-  position: fixed;
-  top: 0px;
-  left: 0px;
+  order: -1;
   height: 100%;
+  -webkit-flex: 1;
+  flex: 1;
   background: none repeat scroll 0 0 #000000;
   color: #ffffff;
-  padding: 20px 10px;
-  width: 140px;
-  z-index: 1;
+  width: 20px;
 }
 .sideBar FontAwesomeIcon {
   font-size: 30px;
@@ -78,22 +95,15 @@
   color: #bbbbbb !important;
 }
 
-.StartPage {
-  text-align: center;
-}
-
 .pageHeader {
   font-family: "Carter One", "Open Sans", sans-serif;
   font-size: 2.5em;
+  text-align: center;
   color: #141414;
 }
 
 .tiles-section {
-  padding: 20px;
-  display: flex;
-  flex-flow: row wrap;
-  /* This aligns items to the end line on main-axis */
-  justify-content: center;
+  text-align: center;
 }
 
 img {
@@ -102,6 +112,7 @@ img {
 }
 
 .tile {
+  display: inline-block;
   text-align: center;
   height: 200px;
   width: 250px;

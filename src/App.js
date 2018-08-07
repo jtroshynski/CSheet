@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, HashRouter, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import SideBar from "./Components/SideBar.js";
 import ChooseRace from "./Pages/ChooseRace.js";
@@ -27,24 +27,18 @@ class App extends Component {
   render() {
     Analytics.record("appRender");
     return (
-      <div className="App">
-        <HashRouter>
-          <div>
+      <body className="CSheet">
+        <Router>
+          <div className="body">
             <SideBar />
-            <div>
-              <Switch>
-                <Route exact path="/" component={StartPage} />
-                <Route path="/chooseRace" component={ChooseRace} />
-                <Route
-                  path="*"
-                  exact={true}
-                  component={PageNotFountComponent}
-                />
-              </Switch>
-            </div>
+            <Switch>
+              <Route exact path="/" component={StartPage} />
+              <Route path="/chooseRace" component={ChooseRace} />
+              <Route path="*" exact={true} component={PageNotFountComponent} />
+            </Switch>
           </div>
-        </HashRouter>
-      </div>
+        </Router>
+      </body>
     );
   }
 }
