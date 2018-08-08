@@ -27,18 +27,18 @@ class App extends Component {
   render() {
     Analytics.record("appRender");
     return (
-      <body className="CSheet">
+      <div className="CSheet">
         <Router>
           <div className="body">
             <SideBar />
             <Switch>
               <Route exact path="/" component={StartPage} />
               <Route path="/chooseRace" component={ChooseRace} />
-              <Route path="*" exact={true} component={PageNotFountComponent} />
+              <Route component={PageNotFountComponent} />
             </Switch>
           </div>
         </Router>
-      </body>
+      </div>
     );
   }
 }

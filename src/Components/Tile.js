@@ -16,8 +16,8 @@ class Tile extends Component {
 
   handleClick() {
     axios
-      .get("http://www.dnd5eapi.co/api/races/" + this.props.id)
-      .then(response => console.log(response.data.name));
+      .get("http://www.dnd5eapi.co/api/races/")
+      .then(response => console.log(response.data));
   }
 
   render() {
@@ -27,6 +27,7 @@ class Tile extends Component {
         <img src={this.props.image} alt={this.props.text} />
         <div className="tile-text">{this.props.text}</div>
       </div>
+      
       // </Link>
     );
   }

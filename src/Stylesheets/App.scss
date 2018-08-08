@@ -7,10 +7,13 @@ $colorBlack: #000000;
 $colorMediumGrey: #656565;
 $colorLightGrey: #bbbbbb;
 
+$small-screen: 320px;
+$large-screen: 1200px;
+
 .App-header {
   text-align: center;
   background-color: #222;
-  height: 150px;
+  // height: 150px;
   color: $colorWhite;
 }
 
@@ -18,15 +21,18 @@ $colorLightGrey: #bbbbbb;
   /* High Tower Text used for the app logo */
   font-family: $font-stack;
   font-size: 1.5em;
+  text-align: center;
 }
 
 .App-intro {
   font-size: large;
+  text-align: center;
 }
 
 .CSheet,
 .body {
   margin: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -34,13 +40,18 @@ $colorLightGrey: #bbbbbb;
 
 @media (min-width: 768px) {
   .body {
+    margin: 0;
     flex-direction: row;
     flex: 1;
+    height: 100%;
   }
   .content {
+    margin: 0;
     flex: 1;
   }
   .sideBar {
+    margin: 0;
+    height: 100%;
     /* 12em is the width of the columns */
     flex: 0 0 12em;
   }
@@ -49,8 +60,9 @@ $colorLightGrey: #bbbbbb;
 .sideBar {
   order: -1;
   height: 100%;
-  -webkit-flex: 1;
-  flex: 1;
+  margin: 0;
+  // -webkit-flex: 1;
+  // flex: 1;
   background: none repeat scroll 0 0 $colorBlack;
   color: $colorWhite;
   width: 20px;
@@ -156,4 +168,31 @@ img {
 }
 .button-large:hover {
   background-color: #123379;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+  vertical-align: baseline;
+  text-align: center;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }

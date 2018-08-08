@@ -9,7 +9,7 @@ class PageNotFoundComponent extends Component {
     return (
       <div className="pnf">
         <h1 className="pageHeader">Oh Hello </h1>
-        <p>there is nothing to read here. move along.</p>
+        <p>there is nothing here yet. move along.</p>
       </div>
     );
   }
