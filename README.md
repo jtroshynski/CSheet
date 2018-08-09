@@ -24,6 +24,7 @@ Roadmap/Ideas:
   - Can have multiple groups
 - Generic character images
 - Might add the ability to roll dice for leveling up
+- Might add an API, to pull your character data into other apps
 
 
 
