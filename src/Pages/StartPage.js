@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../Stylesheets/App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { Analytics } from "aws-amplify";
 
@@ -19,8 +20,12 @@ class StartPage extends Component {
           </Link>
         }
         <br />
-        <a href="https://github.com/jtroshynski/CSheet">
-          read more about cSheet
+        <a href="https://github.com/jtroshynski/CSheet" title="Github">
+          <FontAwesomeIcon
+            className="footerIcon"
+            icon={["fab", "github"]}
+            size="3x"
+          />
         </a>
       </div>
     );

@@ -147,10 +147,16 @@ img {
   border: none;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
   font-size: 16px;
+  margin-top: 20px;
 }
 
 .button-large:hover {
   background-color: #123379;
+}
+
+.footerIcon {
+  color: black;
+  margin: 10px;
 }
 
 html,
