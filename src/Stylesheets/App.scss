@@ -13,7 +13,7 @@ $large-screen: 1200px;
 
 .pageHeader {
   font-family: $font-stack;
-  font-size: 3.5em;
+  font-size: 3em; //3.5vw?
   text-align: center;
   margin: 60px 0 40px 0;
   color: rgb(20, 20, 20);
@@ -23,7 +23,7 @@ $large-screen: 1200px;
   font-size: large;
   text-align: center;
   font-family: $paragraphFonts;
-  margin: 0 450px 0 450px;
+  margin: 0 20vw 0 20vw;
 }
 
 .CSheet,
@@ -60,6 +60,9 @@ $large-screen: 1200px;
 @media (max-width: 768px) {
   .sideBar {
     visibility: collapse;
+  }
+  .paragraphText {
+    margin: 0 5vw 0 5vw;
   }
 }
 

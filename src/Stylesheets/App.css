@@ -1,6 +1,6 @@
 .pageHeader {
   font-family: "Carter One", "Open Sans", sans-serif;
-  font-size: 3.5em;
+  font-size: 3em;
   text-align: center;
   margin: 60px 0 40px 0;
   color: #141414;
@@ -10,7 +10,7 @@
   font-size: large;
   text-align: center;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
-  margin: 0 450px 0 450px;
+  margin: 0 20vw 0 20vw;
 }
 
 .CSheet,
@@ -48,6 +48,10 @@
 @media (max-width: 768px) {
   .sideBar {
     visibility: collapse;
+  }
+
+  .paragraphText {
+    margin: 0 5vw 0 5vw;
   }
 }
 .sideBar {
