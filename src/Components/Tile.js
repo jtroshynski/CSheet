@@ -16,19 +16,18 @@ class Tile extends Component {
 
   handleClick() {
     axios
-      .get("http://www.dnd5eapi.co/api/races/")
+      .get("http://www.dnd5eapi.co/api/races/" + this.props.id)
       .then(response => console.log(response.data));
   }
 
   render() {
     return (
-      // <Link to={`/PageNotFound`}>
-      <div className="tile" onClick={this.handleClick}>
-        <img src={this.props.image} alt={this.props.text} />
-        <div className="tile-text">{this.props.text}</div>
-      </div>
-      
-      // </Link>
+      <Link to={this.props.link}>
+        <div className="tile" onClick={this.handleClick}>
+          <img src={this.props.image} alt={this.props.text} />
+          <div className="tile-text">{this.props.text}</div>
+        </div>
+      </Link>
     );
   }
 }
