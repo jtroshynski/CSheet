@@ -3,8 +3,8 @@ import "../Stylesheets/App.css";
 import Tile from "../Components/Tile.js";
 
 import idiot from "../images/idiot.png";
+import biggestIdiot from "../images/biggestIdiot.png";
 import ericWilson from "../images/ericWilson.png";
-import dragonborn from "../images/dragonborn.png";
 
 import { Analytics } from "aws-amplify";
 
@@ -43,7 +43,7 @@ class ChooseClass extends Component {
             text="Paladin"
           />
           <Tile id={"8"} image={idiot} link="/chooseAttributes" text="Ranger" />
-          <Tile id={"9"} image={idiot} link="/chooseAttributes" text="Rougue" />
+          <Tile id={"9"} image={idiot} link="/chooseAttributes" text="Rogue" />
           <Tile
             id={"10"}
             image={idiot}
@@ -58,7 +58,7 @@ class ChooseClass extends Component {
           />
           <Tile
             id={"12"}
-            image={idiot}
+            image={biggestIdiot}
             link="/chooseAttributes"
             text="Wizard"
           />
@@ -77,7 +77,7 @@ class ChooseClass extends Component {
 // Monk
 // Paladin
 // Ranger
-// Rougue
+// Rogue
 // Sorcerer
 // Warlock
 // Wizard

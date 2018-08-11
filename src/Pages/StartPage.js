@@ -11,8 +11,10 @@ class StartPage extends Component {
       <div className="content">
         <h1 className="pageHeader"> Welcome </h1>
         <p className="paragraphText">
-          lemme tell ya about how this app works. I'll totally explain myself in
-          this paragraph.
+          Are you tired of having to write down stuff on your character sheet?
+          Does DnD feel overwhelming and complicated? Are you tired of using a
+          PENCIL? Well look no further, for you've stumbled upon a digital
+          version of the fifth edition character sheet!
         </p>
         {
           <Link to={`/chooseRace`}>
