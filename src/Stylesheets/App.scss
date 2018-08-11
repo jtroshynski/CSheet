@@ -11,17 +11,18 @@ $colorLightGrey: #bbbbbb;
 $small-screen: 320px;
 $large-screen: 1200px;
 
-.App-title {
-  /* High Tower Text used for the app logo */
+.pageHeader {
   font-family: $font-stack;
-  font-size: 1.5em;
+  font-size: 2.5em;
   text-align: center;
+  color: rgb(20, 20, 20);
 }
 
 .paragraphText {
   font-size: large;
   text-align: center;
   font-family: $paragraphFonts;
+  margin: 0 450px 0 450px;
 }
 
 .CSheet,
@@ -70,6 +71,13 @@ $large-screen: 1200px;
   color: $colorWhite;
   width: 80px;
   // z-index: 1;
+
+  .cSheetLogo {
+    /* High Tower Text used for the app logo */
+    font-family: $font-stack;
+    font-size: 1.5em;
+    text-align: center;
+  }
 
   FontAwesomeIcon {
     font-size: 30px;
@@ -122,13 +130,6 @@ $large-screen: 1200px;
       }
     }
   }
-}
-
-.pageHeader {
-  font-family: $font-stack;
-  font-size: 2.5em;
-  text-align: center;
-  color: rgb(20, 20, 20);
 }
 
 .tiles-section {

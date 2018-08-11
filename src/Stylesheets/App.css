@@ -1,14 +1,15 @@
-.App-title {
-  /* High Tower Text used for the app logo */
+.pageHeader {
   font-family: "Carter One", "Open Sans", sans-serif;
-  font-size: 1.5em;
+  font-size: 2.5em;
   text-align: center;
+  color: #141414;
 }
 
 .paragraphText {
   font-size: large;
   text-align: center;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
+  margin: 0 450px 0 450px;
 }
 
 .CSheet,
@@ -54,6 +55,12 @@
   background: none repeat scroll 0 0 #000000;
   color: #ffffff;
   width: 80px;
+}
+.sideBar .cSheetLogo {
+  /* High Tower Text used for the app logo */
+  font-family: "Carter One", "Open Sans", sans-serif;
+  font-size: 1.5em;
+  text-align: center;
 }
 .sideBar FontAwesomeIcon {
   font-size: 30px;
@@ -101,13 +108,6 @@
 }
 .sideBar ul li .active a.expandable:hover {
   color: #bbbbbb !important;
-}
-
-.pageHeader {
-  font-family: "Carter One", "Open Sans", sans-serif;
-  font-size: 2.5em;
-  text-align: center;
-  color: #141414;
 }
 
 .tiles-section {
