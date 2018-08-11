@@ -10,7 +10,7 @@ class SideBar extends Component {
     return (
       <div className="sideBar">
         {/* <div className="App-title">cSheet</div> */}
-        <Link className="App-title" to="/">
+        <Link className="cSheetLogo" to="/">
           <img src={cSheet} alt="cSheet" />
         </Link>
         <div className="divider" />
