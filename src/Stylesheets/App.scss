@@ -1,4 +1,5 @@
 $font-stack: "Carter One", "Open Sans", sans-serif;
+$paragraphFonts: "Cabin", "Calibri", "Open Sans", sans-serif;
 $colorPurple: #2f195f;
 // $cSheet-secondary-purple: #333;
 $colorTurquoise: #4ecdc4;
@@ -10,13 +11,6 @@ $colorLightGrey: #bbbbbb;
 $small-screen: 320px;
 $large-screen: 1200px;
 
-.App-header {
-  text-align: center;
-  background-color: #222;
-  // height: 150px;
-  color: $colorWhite;
-}
-
 .App-title {
   /* High Tower Text used for the app logo */
   font-family: $font-stack;
@@ -24,9 +18,10 @@ $large-screen: 1200px;
   text-align: center;
 }
 
-.App-intro {
+.paragraphText {
   font-size: large;
   text-align: center;
+  font-family: $paragraphFonts;
 }
 
 .CSheet,
@@ -46,26 +41,34 @@ $large-screen: 1200px;
     height: 100%;
   }
   .content {
-    margin: 0;
+    margin-left: 200px;
     flex: 1;
   }
   .sideBar {
+    min-width: 200px;
     margin: 0;
     height: 100%;
+    position: fixed;
+    overflow-x: hidden;
     /* 12em is the width of the columns */
     flex: 0 0 12em;
   }
 }
 
+@media (max-width: 768px) {
+  .sideBar {
+    visibility: collapse;
+  }
+}
+
 .sideBar {
-  order: -1;
   height: 100%;
   margin: 0;
   // -webkit-flex: 1;
   // flex: 1;
   background: none repeat scroll 0 0 $colorBlack;
   color: $colorWhite;
-  width: 20px;
+  width: 80px;
   // z-index: 1;
 
   FontAwesomeIcon {
@@ -129,6 +132,7 @@ $large-screen: 1200px;
 }
 
 .tiles-section {
+  width: 100%;
   text-align: center;
 }
 
@@ -163,36 +167,113 @@ img {
   width: 165px;
   color: $colorWhite;
   border: none;
-  font-family: calibri, sans-serif;
+  font-family: $paragraphFonts;
   font-size: 16px;
 }
 .button-large:hover {
   background-color: #123379;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
   vertical-align: baseline;
   text-align: center;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
