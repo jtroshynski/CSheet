@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import SideBar from "./Components/SideBar.js";
 import ChooseRace from "./Pages/ChooseRace.js";
+import ChooseClass from "./Pages/ChooseClass.js";
 import StartPage from "./Pages/StartPage.js";
+import ChooseAttributes from "./Pages/ChooseAttributes.js";
+
 import PageNotFountComponent from "./Pages/PageNotFoundComponent";
 import "./Stylesheets/App.css";
 
@@ -34,6 +37,8 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={StartPage} />
               <Route path="/chooseRace" component={ChooseRace} />
+              <Route path="/chooseClass" component={ChooseClass} />
+              <Route path="/chooseAttributes" component={ChooseAttributes} />
               <Route component={PageNotFountComponent} />
             </Switch>
           </div>
