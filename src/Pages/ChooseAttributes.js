@@ -13,26 +13,19 @@ import tiefling from "../images/tiefling.png";
 
 import { Analytics } from "aws-amplify";
 
-class ChooseRace extends Component {
+class ChooseAttributes extends Component {
   render() {
     Analytics.record("appRender");
     return (
       <div className="content">
-        <h1 className="pageHeader">Pick a race</h1>
+        <h1 className="pageHeader">Pick attribute scores</h1>
         <ul className="tiles-section">
           <Tile
             id={"5"}
             image={dragonborn}
             link="/chooseClass"
-            text="Dragonborn"
+            text="Strength"
           />
-          <Tile id={"1"} image={dwarf} link="/chooseClass" text="Dwarf" />
-          <Tile id={"2"} image={elf} link="/chooseClass" text="Elf" />
-          <Tile id={"7"} image={halfelf} link="/chooseClass" text="Half-Elf" />
-          <Tile id={"3"} image={halfling} link="/chooseClass" text="Halfling" />
-          <Tile id={"8"} image={halforc} link="/chooseClass" text="Halforc" />
-          <Tile id={"4"} image={human} link="/chooseClass" text="Human" />
-          <Tile id={"9"} image={tiefling} link="/chooseClass" text="Tiefling" />
         </ul>
       </div>
     );
@@ -50,5 +43,5 @@ class ChooseRace extends Component {
 // Half-Orc
 // Tiefling
 
-export default ChooseRace;
+export default ChooseAttributes;
 // export default withAuthenticator(App);

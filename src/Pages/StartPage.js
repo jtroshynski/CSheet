@@ -7,9 +7,9 @@ class StartPage extends Component {
   render() {
     Analytics.record("appRender");
     return (
-      <div>
+      <div className="content">
         <h1 className="pageHeader"> Welcome </h1>
-        <p className="App-intro">
+        <p className="paragraphText">
           lemme tell ya about how this app works. I'll totally explain myself in
           this paragraph.
         </p>
@@ -20,7 +20,7 @@ class StartPage extends Component {
         }
         <br />
         <a href="https://github.com/jtroshynski/CSheet">
-          read more stuff about cSheet
+          read more about cSheet
         </a>
       </div>
     );
