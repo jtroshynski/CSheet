@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import "../Stylesheets/App.css";
 import Tile from "../Components/Tile.js";
 
-import dragonborn from "../images/dragonborn.png";
-import dwarf from "../images/dwarf.png";
-import elf from "../images/elf.png";
-import halfelf from "../images/half-elf.png";
-import halfling from "../images/halfling.png";
-import halforc from "../images/half-orc.png";
-import human from "../images/human.png";
-import tiefling from "../images/tiefling.png";
+import dragonborn from "../Images/dragonborn.png";
+import dwarf from "../Images/dwarf.png";
+import elf from "../Images/elf.png";
+import halfelf from "../Images/half-elf.png";
+import halfling from "../Images/halfling.png";
+import halforc from "../Images/half-orc.png";
+import human from "../Images/human.png";
+import tiefling from "../Images/tiefling.png";
 
 import { Analytics } from "aws-amplify";
 
