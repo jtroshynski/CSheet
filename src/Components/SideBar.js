@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import cSheet from "../images/cSheetBlk.png";
+import cSheet from "../Images/cSheetBlk.png";
 
 import "../Stylesheets/App.css";
 
@@ -9,7 +9,6 @@ class SideBar extends Component {
   render() {
     return (
       <div className="sideBar">
-        {/* <div className="App-title">cSheet</div> */}
         <Link className="cSheetLogo" to="/">
           <img src={cSheet} alt="cSheet" />
         </Link>
@@ -21,6 +20,9 @@ class SideBar extends Component {
             </Link>
           </li>
         </ul>
+        <button className="sidebarButton">
+          <span className="mobileButton" />
+        </button>
       </div>
     );
   }

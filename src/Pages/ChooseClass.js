@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import "../Stylesheets/App.css";
 import Tile from "../Components/Tile.js";
 
-import idiot from "../images/idiot.png";
-import biggestIdiot from "../images/biggestIdiot.png";
-import ericWilson from "../images/ericWilson.png";
+import idiot from "../Images/idiot.png";
+import biggestIdiot from "../Images/biggestIdiot.png";
+import ericWilson from "../Images/ericWilson.png";
 
 import { Analytics } from "aws-amplify";
 
