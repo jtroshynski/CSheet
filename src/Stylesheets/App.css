@@ -163,11 +163,24 @@ img {
   background-color: #123379;
 }
 
-.button.mobileCircular {
+.sidebarButton {
+  background: black;
+  border: none;
+  margin: 25px;
+}
+
+.mobileButton {
+  display: block;
   height: 50px;
   width: 50px;
-  margin: 25px;
   border-radius: 25px;
+  background: url("../Images/Purple Mobile Button.svg");
+  background-size: contain;
+  cursor: pointer;
+}
+
+.mobileButton:active {
+  background: url("../Images/Blue Mobile Button.svg");
 }
 
 .footerIcon {

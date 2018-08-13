@@ -8,6 +8,9 @@ $colorBlack: #000000;
 $colorMediumGrey: #656565;
 $colorLightGrey: #bbbbbb;
 
+$purpleCircleButton: "../Images/Purple Mobile Button.svg";
+$blueCircleButton: "../Images/Blue Mobile Button.svg";
+
 $small-screen: 320px;
 $large-screen: 1200px;
 
@@ -191,11 +194,25 @@ img {
   background-color: #123379;
 }
 
-.button.mobileCircular {
+.sidebarButton {
+  background: black;
+  border: none;
+  margin: 25px;
+}
+
+.mobileButton {
+  display: block;
   height: 50px;
   width: 50px;
-  margin: 25px;
+
   border-radius: 25px;
+  background: url($purpleCircleButton);
+  background-size: contain;
+  cursor: pointer;
+}
+
+.mobileButton:active {
+  background: url($blueCircleButton);
 }
 
 .footerIcon {

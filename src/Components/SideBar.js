@@ -20,7 +20,9 @@ class SideBar extends Component {
             </Link>
           </li>
         </ul>
-        <button class="button mobileCircular" />
+        <button className="sidebarButton">
+          <span className="mobileButton" />
+        </button>
       </div>
     );
   }
