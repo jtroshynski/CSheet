@@ -44,14 +44,24 @@
     /* 12em is the width of the columns */
     flex: 0 0 12em;
   }
+
+  .sidebarButton {
+    visibility: hidden;
+    background: none;
+    border: none;
+    margin: 25px;
+  }
 }
 @media (max-width: 768px) {
   .sideBar {
     visibility: collapse;
   }
 
-  .button.mobileCircular {
+  .sidebarButton {
     visibility: visible;
+    position: fixed;
+    background: none;
+    border: none;
   }
 
   .paragraphText {
@@ -161,12 +171,6 @@ img {
 
 .button.large:hover {
   background-color: #123379;
-}
-
-.sidebarButton {
-  background: black;
-  border: none;
-  margin: 25px;
 }
 
 .mobileButton {
