@@ -15,8 +15,8 @@ class SideBar extends Component {
         <div className="divider" />
         <ul>
           <li>
-            <Link className="expandable" to="/chooseRace" title="Setting">
-              <FontAwesomeIcon icon={["fab", "d-and-d"]} size="lg" />
+            <Link to="/chooseRace" title="Character Sheet">
+              <span className="characterSheetIcon" />
             </Link>
           </li>
         </ul>

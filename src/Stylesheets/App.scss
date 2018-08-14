@@ -10,6 +10,7 @@ $colorLightGrey: #bbbbbb;
 
 $purpleCircleButton: "../Images/Purple Mobile Button.svg";
 $blueCircleButton: "../Images/Blue Mobile Button.svg";
+$characterSheetIcon: "../Images/characterSheetIconWhite.svg";
 
 $small-screen: 320px;
 $large-screen: 1200px;
@@ -100,10 +101,6 @@ $large-screen: 1200px;
     text-align: center;
   }
 
-  FontAwesomeIcon {
-    font-size: 30px;
-  }
-
   .divider {
     height: 1px;
     width: 95%;
@@ -114,10 +111,21 @@ $large-screen: 1200px;
     margin: 0;
     padding: 0;
     li {
-      margin: 0;
+      display: block;
+
       padding: 0;
       margin-top: 20px;
       list-style-type: none;
+
+      .characterSheetIcon {
+        background: url($characterSheetIcon);
+        background-repeat: no-repeat;
+        display: block;
+        height: 125px;
+        width: 100px;
+        margin: auto;
+        cursor: pointer;
+      }
 
       a.expandable {
         outline: 0;
@@ -214,6 +222,9 @@ img {
 .mobileButton:active {
   background: url($blueCircleButton);
 }
+
+// .characterSheetIcon:hover {
+// }
 
 .footerIcon {
   color: black;

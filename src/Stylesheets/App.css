@@ -81,9 +81,6 @@
   font-size: 1.5em;
   text-align: center;
 }
-.sideBar FontAwesomeIcon {
-  font-size: 30px;
-}
 .sideBar .divider {
   height: 1px;
   width: 95%;
@@ -94,10 +91,19 @@
   padding: 0;
 }
 .sideBar ul li {
-  margin: 0;
+  display: block;
   padding: 0;
   margin-top: 20px;
   list-style-type: none;
+}
+.sideBar ul li .characterSheetIcon {
+  background: url("../Images/characterSheetIconWhite.svg");
+  background-repeat: no-repeat;
+  display: block;
+  height: 125px;
+  width: 100px;
+  margin: auto;
+  cursor: pointer;
 }
 .sideBar ul li a.expandable {
   outline: 0;
