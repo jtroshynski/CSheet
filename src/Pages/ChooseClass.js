@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../Stylesheets/App.css";
 import Tile from "../Components/Tile.js";
-
+import axios from "axios";
 import idiot from "../Images/idiot.png";
 import biggestIdiot from "../Images/biggestIdiot.png";
 import ericWilson from "../Images/ericWilson.png";
@@ -9,62 +9,101 @@ import ericWilson from "../Images/ericWilson.png";
 import { Analytics } from "aws-amplify";
 
 class ChooseClass extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      classes: [],
+      count: 0
+    };
+    // this.handleClick = this.handleClick.bind(this);
+  }
+
+  async componentDidMount() {
+    await axios.get("http://www.dnd5eapi.co/api/classes/").then(res => {
+      const classData = res.data.results;
+      const count = res.data.count;
+      this.setState({ classes: classData, count: count });
+    });
+  }
+
   render() {
     Analytics.record("appRender");
-    return (
-      <div className="content">
-        <h1 className="pageHeader">Pick a class</h1>
-        <ul className="tiles-section">
-          <Tile
-            id={"1"}
-            image={idiot}
-            link="/chooseAttributes"
-            text="Barbarian"
-          />
-          <Tile
-            id={"2"}
-            image={ericWilson}
-            link="/chooseAttributes"
-            text="Bard"
-          />
-          <Tile id={"3"} image={idiot} link="/chooseAttributes" text="Cleric" />
-          <Tile id={"4"} image={idiot} link="/chooseAttributes" text="Druid" />
-          <Tile
-            id={"5"}
-            image={idiot}
-            link="/chooseAttributes"
-            text="Fighter"
-          />
-          <Tile id={"6"} image={idiot} link="/chooseAttributes" text="Monk" />
-          <Tile
-            id={"7"}
-            image={idiot}
-            link="/chooseAttributes"
-            text="Paladin"
-          />
-          <Tile id={"8"} image={idiot} link="/chooseAttributes" text="Ranger" />
-          <Tile id={"9"} image={idiot} link="/chooseAttributes" text="Rogue" />
-          <Tile
-            id={"10"}
-            image={idiot}
-            link="/chooseAttributes"
-            text="Sorcerer"
-          />
-          <Tile
-            id={"11"}
-            image={idiot}
-            link="/chooseAttributes"
-            text="Warlock"
-          />
-          <Tile
-            id={"12"}
-            image={biggestIdiot}
-            link="/chooseAttributes"
-            text="Wizard"
-          />
-        </ul>
-      </div>
-    );
+    if (this.state.count === 0) {
+      return (
+        <div className="content">
+          <span>Loading...</span>
+        </div>
+      );
+    } else {
+      return (
+        <div className="content">
+          <h1 className="pageHeader">Pick a class</h1>
+          <ul className="tiles-section">
+            <Tile
+              image={idiot}
+              link="/chooseAttributes"
+              name={this.state.classes[0].name}
+            />
+            <Tile
+              image={ericWilson}
+              link="/chooseAttributes"
+              name={this.state.classes[1].name}
+            />
+            <Tile
+              image={idiot}
+              link="/chooseAttributes"
+              name={this.state.classes[2].name}
+            />
+            <Tile
+              image={idiot}
+              link="/chooseAttributes"
+              name={this.state.classes[3].name}
+            />
+            <Tile
+              image={idiot}
+              link="/chooseAttributes"
+              name={this.state.classes[4].name}
+            />
+            <Tile
+              image={idiot}
+              link="/chooseAttributes"
+              name={this.state.classes[5].name}
+            />
+            <Tile
+              image={idiot}
+              link="/chooseAttributes"
+              name={this.state.classes[6].name}
+            />
+            <Tile
+              image={idiot}
+              link="/chooseAttributes"
+              name={this.state.classes[7].name}
+            />
+            <Tile
+              image={idiot}
+              link="/chooseAttributes"
+              name={this.state.classes[8].name}
+            />
+            <Tile
+              image={idiot}
+              link="/chooseAttributes"
+              name={this.state.classes[9].name}
+            />
+            <Tile
+              image={idiot}
+              link="/chooseAttributes"
+              name={this.state.classes[10].name}
+            />
+            <Tile
+              image={biggestIdiot}
+              link="/chooseAttributes"
+              name={this.state.classes[11].name}
+            />
+          </ul>
+        </div>
+      );
+    }
   }
 }
 
