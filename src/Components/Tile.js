@@ -7,25 +7,14 @@ class Tile extends Component {
   constructor() {
     super();
 
-    this.state = {
-      name: "",
-      speed: ""
-    };
-    this.handleClick = this.handleClick.bind(this);
+    this.state = {};
   }
-
-  handleClick() {
-    axios
-      .get("http://www.dnd5eapi.co/api/races/" + this.props.id)
-      .then(response => console.log(response.data));
-  }
-
   render() {
     return (
       <Link to={this.props.link}>
         <div className="tile" onClick={this.handleClick}>
-          <img src={this.props.image} alt={this.props.text} />
-          <div className="tile-text">{this.props.text}</div>
+          <img src={this.props.image} alt={this.props.name} />
+          <div className="tile-text">{this.props.name}</div>
         </div>
       </Link>
     );
