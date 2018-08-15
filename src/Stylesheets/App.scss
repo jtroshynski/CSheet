@@ -71,10 +71,10 @@ $large-screen: 1200px;
 //Mobile and small screens
 @media (max-width: 768px) {
   .sideBar {
-    visibility: collapse;
+    // visibility: collapse;
   }
   .sidebarButton {
-    visibility: visible;
+    // visibility: visible;
     position: fixed;
     background: none;
     border: none;

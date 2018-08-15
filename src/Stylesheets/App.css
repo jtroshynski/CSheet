@@ -53,12 +53,7 @@
   }
 }
 @media (max-width: 768px) {
-  .sideBar {
-    visibility: collapse;
-  }
-
   .sidebarButton {
-    visibility: visible;
     position: fixed;
     background: none;
     border: none;
