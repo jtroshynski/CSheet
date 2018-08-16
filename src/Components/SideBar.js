@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import cSheet from "../Images/cSheetBlk.png";
+import cSheet from "../Images/CSheet Logo Grey White.svg";
 
 import "../Stylesheets/App.css";
 
