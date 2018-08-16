@@ -19,6 +19,34 @@ class ChooseClass extends Component {
     // this.handleClick = this.handleClick.bind(this);
   }
 
+  classArray = [
+    { id: 0, image: idiot },
+    { id: 1, image: ericWilson },
+    { id: 2, image: idiot },
+    { id: 3, image: idiot },
+    { id: 4, image: idiot },
+    { id: 5, image: idiot },
+    { id: 6, image: idiot },
+    { id: 7, image: idiot },
+    { id: 8, image: idiot },
+    { id: 9, image: idiot },
+    { id: 10, image: idiot },
+    { id: 11, image: biggestIdiot }
+  ];
+
+  // Creates Tile components out of the raceArray and api data
+  ClassTiles(props) {
+    const classTiles = props.classArray.map(classs => (
+      <Tile
+        key={classs.id}
+        image={classs.image}
+        link="/chooseAttributes"
+        name={props.classes[classs.id].name}
+      />
+    ));
+    return <ul className="tiles-section">{classTiles}</ul>;
+  }
+
   async componentDidMount() {
     await axios.get("http://www.dnd5eapi.co/api/classes/").then(res => {
       const classData = res.data.results;
@@ -29,6 +57,7 @@ class ChooseClass extends Component {
 
   render() {
     Analytics.record("appRender");
+    // Analytics.record("appRender");
     if (this.state.count === 0) {
       return (
         <div className="content">
@@ -39,68 +68,7 @@ class ChooseClass extends Component {
       return (
         <div className="content">
           <h1 className="pageHeader">Pick a class</h1>
-          <ul className="tiles-section">
-            <Tile
-              image={idiot}
-              link="/chooseAttributes"
-              name={this.state.classes[0].name}
-            />
-            <Tile
-              image={ericWilson}
-              link="/chooseAttributes"
-              name={this.state.classes[1].name}
-            />
-            <Tile
-              image={idiot}
-              link="/chooseAttributes"
-              name={this.state.classes[2].name}
-            />
-            <Tile
-              image={idiot}
-              link="/chooseAttributes"
-              name={this.state.classes[3].name}
-            />
-            <Tile
-              image={idiot}
-              link="/chooseAttributes"
-              name={this.state.classes[4].name}
-            />
-            <Tile
-              image={idiot}
-              link="/chooseAttributes"
-              name={this.state.classes[5].name}
-            />
-            <Tile
-              image={idiot}
-              link="/chooseAttributes"
-              name={this.state.classes[6].name}
-            />
-            <Tile
-              image={idiot}
-              link="/chooseAttributes"
-              name={this.state.classes[7].name}
-            />
-            <Tile
-              image={idiot}
-              link="/chooseAttributes"
-              name={this.state.classes[8].name}
-            />
-            <Tile
-              image={idiot}
-              link="/chooseAttributes"
-              name={this.state.classes[9].name}
-            />
-            <Tile
-              image={idiot}
-              link="/chooseAttributes"
-              name={this.state.classes[10].name}
-            />
-            <Tile
-              image={biggestIdiot}
-              link="/chooseAttributes"
-              name={this.state.classes[11].name}
-            />
-          </ul>
+          <this.ClassTiles classArray={this.classArray} {...this.state} />
         </div>
       );
     }

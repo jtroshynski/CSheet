@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../Stylesheets/App.css";
-import axios from "axios";
 import { Link } from "react-router-dom";
 
 class Tile extends Component {

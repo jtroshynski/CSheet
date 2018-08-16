@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../Stylesheets/App.css";
 import { Analytics } from "aws-amplify";
-import StartPage from "./StartPage";
 
 class PageNotFoundComponent extends Component {
   render() {
