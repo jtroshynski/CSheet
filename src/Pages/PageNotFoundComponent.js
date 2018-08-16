@@ -7,10 +7,8 @@ class PageNotFoundComponent extends Component {
     Analytics.record("appRender");
     return (
       <div className="content">
-        <h1 className="pageHeader">Oh Hello</h1>
-        <p className="paragraphText">
-          these are not the droids you're looking for
-        </p>
+        <h1 className="pageHeader">Hello There</h1>
+        <p className="paragraphText">{"General Kenobi!"}</p>
       </div>
     );
   }
