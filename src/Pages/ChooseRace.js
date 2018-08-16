@@ -26,6 +26,31 @@ class ChooseRace extends Component {
     // this.handleClick = this.handleClick.bind(this);
   }
 
+  raceArray = [
+    { id: 4, image: dragonborn },
+    { id: 0, image: dwarf },
+    { id: 1, image: elf },
+    { id: 6, image: halfelf },
+    { id: 2, image: halfling },
+    { id: 7, image: halforc },
+    { id: 3, image: human },
+    { id: 8, image: tiefling }
+  ];
+
+  // Creates Tile components out of the raceArray and api data
+  RaceTiles(props) {
+    const raceTiles = props.raceArray.map(race => (
+      <Tile
+        key={race.id}
+        image={race.image}
+        link="/chooseClass"
+        name={props.races[race.id].name}
+      />
+    ));
+    return <ul className="tiles-section">{raceTiles}</ul>;
+  }
+
+  // Calls D&D api to get race data when page loads
   async componentDidMount() {
     await axios.get("http://www.dnd5eapi.co/api/races/").then(res => {
       const raceData = res.data.results;
@@ -46,54 +71,7 @@ class ChooseRace extends Component {
       return (
         <div className="content">
           <h1 className="pageHeader">Pick a race</h1>
-          <ul className="tiles-section">
-            <Tile
-              image={dragonborn}
-              link="/chooseClass"
-              name={this.state.races[4].name}
-            />
-            <Tile
-              link="/chooseClass"
-              image={dwarf}
-              name={this.state.races[0].name}
-            />
-            <Tile
-              id={"2"}
-              image={elf}
-              link="/chooseClass"
-              name={this.state.races[1].name}
-            />
-            <Tile
-              id={"7"}
-              image={halfelf}
-              link="/chooseClass"
-              name={this.state.races[6].name}
-            />
-            <Tile
-              id={"3"}
-              image={halfling}
-              link="/chooseClass"
-              name={this.state.races[2].name}
-            />
-            <Tile
-              id={"8"}
-              image={halforc}
-              link="/chooseClass"
-              name={this.state.races[7].name}
-            />
-            <Tile
-              id={"4"}
-              image={human}
-              link="/chooseClass"
-              name={this.state.races[3].name}
-            />
-            <Tile
-              id={"9"}
-              image={tiefling}
-              link="/chooseClass"
-              name={this.state.races[8].name}
-            />
-          </ul>
+          <this.RaceTiles raceArray={this.raceArray} {...this.state} />
         </div>
       );
     }

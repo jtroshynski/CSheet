@@ -1,17 +1,14 @@
 import React, { Component } from "react";
 import "../Stylesheets/App.css";
 import { Analytics } from "aws-amplify";
-import StartPage from "./StartPage";
 
 class PageNotFoundComponent extends Component {
   render() {
     Analytics.record("appRender");
     return (
       <div className="content">
-        <h1 className="pageHeader">Oh Hello</h1>
-        <p className="paragraphText">
-          these are not the droids you're looking for
-        </p>
+        <h1 className="pageHeader">Hello There</h1>
+        <p className="paragraphText">{"General Kenobi!"}</p>
       </div>
     );
   }

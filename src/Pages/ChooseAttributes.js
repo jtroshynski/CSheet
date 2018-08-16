@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import "../Stylesheets/App.css";
-import Tile from "../Components/Tile.js";
 import Attribute from "../Components/Attribute";
-
-import dragonborn from "../Images/dragonborn.png";
 
 import { Analytics } from "aws-amplify";
 
