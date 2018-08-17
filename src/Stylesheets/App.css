@@ -45,7 +45,8 @@
     flex: 0 0 12em;
   }
   .sideBar .sideBarLogoSection {
-    background-color: #ffffff;
+    background-color: #bbbbbb;
+    padding: 20px;
   }
 
   .mobileButton {
@@ -89,7 +90,6 @@
   display: block;
   width: 180px;
   height: auto;
-  margin: 10px;
   cursor: pointer;
 }
 .sideBar .divider {

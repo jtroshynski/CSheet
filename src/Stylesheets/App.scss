@@ -61,7 +61,8 @@ $large-screen: 1200px;
     /* 12em is the width of the columns */
     flex: 0 0 12em;
     .sideBarLogoSection {
-      background-color: $colorWhite;
+      background-color: $colorLightGrey;
+      padding: 20px;
     }
   }
   .mobileButton {
@@ -109,7 +110,6 @@ $large-screen: 1200px;
     display: block;
     width: 180px;
     height: auto;
-    margin: 10px;
     cursor: pointer;
   }
 
