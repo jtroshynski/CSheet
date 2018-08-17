@@ -70,11 +70,13 @@ class SideBar extends Component {
           <img src={cSheet} alt="cSheet" />
         </Link>
       </div>
-      <div className="divider" />
       <ul>
         <li>
           <Link to="/chooseRace" title="Character Sheet">
             <span className="characterSheetIcon" />
+          </Link>
+          <Link to="/chooseClass" title="Parties">
+            <span className="partyIcon" />
           </Link>
         </li>
       </ul>

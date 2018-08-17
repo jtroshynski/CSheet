@@ -2,9 +2,19 @@ import React, { Component } from "react";
 import "Stylesheets/App.css";
 import Tile from "Components/Tile.js";
 import axios from "axios";
-import idiot from "Images/People/idiot.png";
-import biggestIdiot from "Images/People/biggestIdiot.png";
-import ericWilson from "Images/People/ericWilson.png";
+import barbarian from "DnDMaterials/Classes/DnD5E_ClassSymb_Barbarian.svg";
+import bard from "DnDMaterials/Classes/DnD5E_ClassSymb_Bard.svg";
+import cleric from "DnDMaterials/Classes/DnD5E_ClassSymb_Cleric.svg";
+import druid from "DnDMaterials/Classes/DnD5E_ClassSymb_Druid.svg";
+import fighter from "DnDMaterials/Classes/DnD5E_ClassSymb_Fighter.svg";
+import monk from "DnDMaterials/Classes/DnD5E_ClassSymb_Monk.svg";
+import paladin from "DnDMaterials/Classes/DnD5E_ClassSymb_Paladin.svg";
+import ranger from "DnDMaterials/Classes/DnD5E_ClassSymb_Ranger.svg";
+import rogue from "DnDMaterials/Classes/DnD5E_ClassSymb_Rogue.svg";
+import sorcerer from "DnDMaterials/Classes/DnD5E_ClassSymb_Sorcerer.svg";
+import warlock from "DnDMaterials/Classes/DnD5E_ClassSymb_Warlock.svg";
+import wizard from "DnDMaterials/Classes/DnD5E_ClassSymb_Wizard.svg";
+
 
 import { Analytics } from "aws-amplify";
 
@@ -20,18 +30,18 @@ class ChooseClass extends Component {
   }
 
   classArray = [
-    { id: 0, image: idiot },
-    { id: 1, image: ericWilson },
-    { id: 2, image: idiot },
-    { id: 3, image: idiot },
-    { id: 4, image: idiot },
-    { id: 5, image: idiot },
-    { id: 6, image: idiot },
-    { id: 7, image: idiot },
-    { id: 8, image: idiot },
-    { id: 9, image: idiot },
-    { id: 10, image: idiot },
-    { id: 11, image: biggestIdiot }
+    { id: 0, image: barbarian },
+    { id: 1, image: bard },
+    { id: 2, image: cleric },
+    { id: 3, image: druid },
+    { id: 4, image: fighter },
+    { id: 5, image: monk },
+    { id: 6, image: paladin },
+    { id: 7, image: ranger },
+    { id: 8, image: rogue },
+    { id: 9, image: sorcerer },
+    { id: 10, image: warlock },
+    { id: 11, image: wizard }
   ];
 
   // Creates Tile components out of the raceArray and api data
@@ -48,7 +58,7 @@ class ChooseClass extends Component {
   }
 
   async componentDidMount() {
-    await axios.get("http://www.dnd5eapi.co/api/classes/").then(res => {
+    await axios.get("http://www.dnd5Eapi.co/api/classes/").then(res => {
       const classData = res.data.results;
       const count = res.data.count;
       this.setState({ classes: classData, count: count });

@@ -45,7 +45,7 @@
     flex: 0 0 12em;
   }
   .sideBar .sideBarLogoSection {
-    background-color: #bbbbbb;
+    background-color: #656565;
     padding: 20px;
   }
 
@@ -82,6 +82,13 @@
     margin: auto;
   }
 
+  .partyIcon {
+    display: block;
+    height: 62px;
+    width: 50px;
+    margin: auto;
+  }
+
   .paragraphText {
     margin: 0 5vw 0 5vw;
   }
@@ -89,7 +96,7 @@
 .sideBar {
   height: 100%;
   margin: 0;
-  background: none repeat scroll 0 0 #000000;
+  background: none repeat scroll 0 0 #bbbbbb;
   color: #ffffff;
 }
 .sideBar .cSheetLogo {
@@ -125,21 +132,15 @@
   margin-top: 50px;
   cursor: pointer;
 }
-.sideBar ul li a.expandable {
-  outline: 0;
-  color: white;
-  text-decoration: none;
-  font-size: 80px;
-}
-.sideBar ul li a.expandable span.expanded-element {
-  color: #ffffff;
-  margin-left: 12px;
-  font-size: 16px;
-  position: relative;
-  bottom: 2px;
-}
-.sideBar ul li a.expandable:hover {
-  color: #bbbbbb;
+.sideBar ul li .partyIcon {
+  background: url("../Images/Navigation/Party Icon_1.svg");
+  background-repeat: no-repeat;
+  display: block;
+  height: 125px;
+  width: 100px;
+  margin: auto;
+  margin-top: 50px;
+  cursor: pointer;
 }
 .sideBar ul li .active {
   background: none repeat scroll 0 0 black;
@@ -147,12 +148,6 @@
   text-align: center;
   margin-left: -4px;
   padding: 4px;
-}
-.sideBar ul li .active a.expandable {
-  color: #ffffff !important;
-}
-.sideBar ul li .active a.expandable:hover {
-  color: #bbbbbb !important;
 }
 
 .tiles-section {
@@ -172,7 +167,7 @@
 .tiles-section .tile .tile-text {
   font-family: "Carter One", "Open Sans", sans-serif;
   font-size: 2em;
-  color: #2f195f;
+  color: #40294B;
   /* position: absolute; */
   top: 50%;
   left: 50%;
@@ -185,7 +180,7 @@ img {
 }
 
 .button.large {
-  background-color: #2f195f;
+  background-color: #40294B;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
   height: 50px;
   width: 165px;
