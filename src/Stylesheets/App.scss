@@ -1,7 +1,8 @@
 $font-stack: "Carter One", "Open Sans", sans-serif;
 $paragraphFonts: "Cabin", "Calibri", "Open Sans", sans-serif;
-$colorPurple: #2f195f;
-// $cSheet-secondary-purple: #333;
+// $colorPurple: #2f195f;
+$colorPurple: #40294B;
+$colorGreen: #4F5F55;
 $colorTurquoise: #4ecdc4;
 $colorWhite: #ffffff;
 $colorBlack: #000000;
@@ -12,6 +13,7 @@ $cSheetLogo: "../Images/CSheet Logos/CSheet Logo Green Black.svg";
 $purpleCircleButton: "../Images/Buttons/Purple Mobile Button.svg";
 $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
 $characterSheetIcon: "../Images/Navigation/Character Sheet Black.svg";
+$partyIcon: "../Images/Navigation/Party Icon_1.svg";
 
 $small-screen: 320px;
 $large-screen: 1200px;
@@ -61,7 +63,7 @@ $large-screen: 1200px;
     /* 12em is the width of the columns */
     flex: 0 0 12em;
     .sideBarLogoSection {
-      background-color: $colorLightGrey;
+      background-color: $colorMediumGrey;
       padding: 20px;
     }
   }
@@ -90,6 +92,12 @@ $large-screen: 1200px;
     width: 50px;
     margin: auto;
   }
+  .partyIcon {
+    display: block;
+    height: 62px;
+    width: 50px;
+    margin: auto;
+  }
   .paragraphText {
     margin: 0 5vw 0 5vw;
   }
@@ -100,7 +108,7 @@ $large-screen: 1200px;
   margin: 0;
   // -webkit-flex: 1;
   // flex: 1;
-  background: none repeat scroll 0 0 $colorBlack;
+  background: none repeat scroll 0 0 $colorLightGrey;
   color: $colorWhite;
   // z-index: 1;
 
@@ -140,35 +148,23 @@ $large-screen: 1200px;
         cursor: pointer;
       }
 
-      a.expandable {
-        outline: 0;
-        color: white;
-        text-decoration: none;
-        font-size: 80px;
+      .partyIcon {
+        background: url($partyIcon);
+        background-repeat: no-repeat;
+        display: block;
+        height: 125px;
+        width: 100px;
+        margin: auto;
+        margin-top: 50px;
+        cursor: pointer;
+      }
 
-        span.expanded-element {
-          color: $colorWhite;
-          margin-left: 12px;
-          font-size: 16px;
-          position: relative;
-          bottom: 2px;
-        }
-      }
-      a.expandable:hover {
-        color: $colorLightGrey;
-      }
       .active {
         background: none repeat scroll 0 0 black;
         border-radius: 4px;
         text-align: center;
         margin-left: -4px;
         padding: 4px;
-        a.expandable {
-          color: $colorWhite !important;
-        }
-        a.expandable:hover {
-          color: $colorLightGrey !important;
-        }
       }
     }
   }
