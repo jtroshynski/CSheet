@@ -84,6 +84,13 @@ $large-screen: 1200px;
     background: none;
     border: none;
   }
+  .sideBarLogoSection {
+    background-color: $colorLightGrey;
+    padding: 20px;
+    .cSheetLogo {
+      width: 120px;
+    }
+  }
   .characterSheetIcon {
     display: block;
     height: 62px;

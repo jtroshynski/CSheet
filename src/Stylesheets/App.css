@@ -67,6 +67,14 @@
     border: none;
   }
 
+  .sideBarLogoSection {
+    background-color: #bbbbbb;
+    padding: 20px;
+  }
+  .sideBarLogoSection .cSheetLogo {
+    width: 120px;
+  }
+
   .characterSheetIcon {
     display: block;
     height: 62px;
