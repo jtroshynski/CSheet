@@ -66,7 +66,7 @@ class SideBar extends Component {
   SideBar = () => (
     <div className="sideBar">
       <Link className="cSheetLogo" to="/">
-        <img src={cSheet} alt="cSheet" />
+      <span className="cSheetLogo" />
       </Link>
       <div className="divider" />
       <ul>

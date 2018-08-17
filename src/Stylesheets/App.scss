@@ -8,9 +8,10 @@ $colorBlack: #000000;
 $colorMediumGrey: #656565;
 $colorLightGrey: #bbbbbb;
 
+$cSheetLogo: "../Images/CSheet Logo Grey White.svg";
 $purpleCircleButton: "../Images/Purple Mobile Button.svg";
 $blueCircleButton: "../Images/Blue Mobile Button.svg";
-$characterSheetIcon: "../Images/characterSheetIconWhite.svg";
+$characterSheetIcon: "../Images/cSheet Icon.svg";
 
 $small-screen: 320px;
 $large-screen: 1200px;
@@ -91,14 +92,17 @@ $large-screen: 1200px;
   // flex: 1;
   background: none repeat scroll 0 0 $colorBlack;
   color: $colorWhite;
-  width: 80px;
+  width: 100px;
   // z-index: 1;
 
   .cSheetLogo {
-    /* High Tower Text used for the app logo */
-    font-family: $font-stack;
-    font-size: 1.5em;
-    text-align: center;
+    background: url($cSheetLogo);
+    background-repeat: no-repeat;
+    display: block;
+    width: 100px;
+    height: auto;
+    margin: auto;
+    cursor: pointer;
   }
 
   .divider {
