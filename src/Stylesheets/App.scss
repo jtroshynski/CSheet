@@ -60,7 +60,7 @@ $large-screen: 1200px;
     /* 12em is the width of the columns */
     flex: 0 0 12em;
   }
-  .sidebarButton {
+  .mobileButton {
     visibility: hidden;
     background: none;
     border: none;
@@ -73,7 +73,7 @@ $large-screen: 1200px;
   .sideBar {
     // visibility: collapse;
   }
-  .sidebarButton {
+  .mobileButton {
     // visibility: visible;
     position: fixed;
     background: none;
@@ -208,7 +208,7 @@ img {
   background-color: #123379;
 }
 
-.mobileButton {
+.purpleMobileButton {
   display: block;
   height: 50px;
   width: 50px;
@@ -219,7 +219,7 @@ img {
   cursor: pointer;
 }
 
-.mobileButton:active {
+.purpleMobileButton:active {
   background: url($blueCircleButton);
 }
 
