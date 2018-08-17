@@ -68,13 +68,16 @@
   margin: 0;
   background: none repeat scroll 0 0 #000000;
   color: #ffffff;
-  width: 80px;
+  width: 100px;
 }
 .sideBar .cSheetLogo {
-  /* High Tower Text used for the app logo */
-  font-family: "Carter One", "Open Sans", sans-serif;
-  font-size: 1.5em;
-  text-align: center;
+  background: url("../Images/CSheet Logo Grey White.svg");
+  background-repeat: no-repeat;
+  display: block;
+  width: 100px;
+  height: auto;
+  margin: auto;
+  cursor: pointer;
 }
 .sideBar .divider {
   height: 1px;
@@ -92,7 +95,7 @@
   list-style-type: none;
 }
 .sideBar ul li .characterSheetIcon {
-  background: url("../Images/characterSheetIconWhite.svg");
+  background: url("../Images/cSheet Icon.svg");
   background-repeat: no-repeat;
   display: block;
   height: 125px;
