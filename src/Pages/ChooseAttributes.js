@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "../Stylesheets/App.css";
-import Attribute from "../Components/Attribute";
+import "Stylesheets/App.css";
+// import Attribute from "Components/Attribute";
 
 import { Analytics } from "aws-amplify";
 

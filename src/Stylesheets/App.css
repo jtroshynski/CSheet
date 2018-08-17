@@ -44,6 +44,9 @@
     /* 12em is the width of the columns */
     flex: 0 0 12em;
   }
+  .sideBar .sideBarLogoSection {
+    background-color: #ffffff;
+  }
 
   .mobileButton {
     visibility: hidden;
@@ -53,10 +56,21 @@
   }
 }
 @media (max-width: 768px) {
+  .sideBar {
+    width: 200px;
+  }
+
   .mobileButton {
     position: fixed;
     background: none;
     border: none;
+  }
+
+  .characterSheetIcon {
+    display: block;
+    height: 62px;
+    width: 50px;
+    margin: auto;
   }
 
   .paragraphText {
@@ -68,15 +82,14 @@
   margin: 0;
   background: none repeat scroll 0 0 #000000;
   color: #ffffff;
-  width: 100px;
 }
 .sideBar .cSheetLogo {
-  background: url("../Images/CSheet Logo Grey White.svg");
+  background: url("../Images/CSheet Logos/CSheet Logo Green Black.svg");
   background-repeat: no-repeat;
   display: block;
-  width: 100px;
+  width: 180px;
   height: auto;
-  margin: auto;
+  margin: 10px;
   cursor: pointer;
 }
 .sideBar .divider {
@@ -95,12 +108,13 @@
   list-style-type: none;
 }
 .sideBar ul li .characterSheetIcon {
-  background: url("../Images/cSheet Icon.svg");
+  background: url("../Images/Navigation/Character Sheet Black.svg");
   background-repeat: no-repeat;
   display: block;
   height: 125px;
   width: 100px;
   margin: auto;
+  margin-top: 50px;
   cursor: pointer;
 }
 .sideBar ul li a.expandable {
@@ -182,13 +196,13 @@ img {
   height: 50px;
   width: 50px;
   border-radius: 25px;
-  background: url("../Images/Purple Mobile Button.svg");
+  background: url("../Images/Buttons/Purple Mobile Button.svg");
   background-size: contain;
   cursor: pointer;
 }
 
 .purpleMobileButton:active {
-  background: url("../Images/Blue Mobile Button.svg");
+  background: url("../Images/Buttons/Blue Mobile Button.svg");
 }
 
 .footerIcon {

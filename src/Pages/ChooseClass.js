@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "../Stylesheets/App.css";
-import Tile from "../Components/Tile.js";
+import "Stylesheets/App.css";
+import Tile from "Components/Tile.js";
 import axios from "axios";
-import idiot from "../Images/idiot.png";
-import biggestIdiot from "../Images/biggestIdiot.png";
-import ericWilson from "../Images/ericWilson.png";
+import idiot from "Images/People/idiot.png";
+import biggestIdiot from "Images/People/biggestIdiot.png";
+import ericWilson from "Images/People/ericWilson.png";
 
 import { Analytics } from "aws-amplify";
 

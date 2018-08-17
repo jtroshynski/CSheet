@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../Stylesheets/App.css";
+import "Stylesheets/App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { Analytics } from "aws-amplify";

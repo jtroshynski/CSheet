@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import "../Stylesheets/App.css";
-import Tile from "../Components/Tile.js";
+import "Stylesheets/App.css";
+import Tile from "Components/Tile.js";
 
 import axios from "axios";
 
-import dragonborn from "../Images/dragonborn.png";
-import dwarf from "../Images/dwarf.png";
-import elf from "../Images/elf.png";
-import halfelf from "../Images/half-elf.png";
-import halfling from "../Images/halfling.png";
-import halforc from "../Images/half-orc.png";
-import human from "../Images/human.png";
-import tiefling from "../Images/tiefling.png";
+import dragonborn from "Images/Races/dragonborn.png";
+import dwarf from "Images/Races/dwarf.png";
+import elf from "Images/Races/elf.png";
+import halfelf from "Images/Races/half-elf.png";
+import halfling from "Images/Races/halfling.png";
+import halforc from "Images/Races/half-orc.png";
+import human from "Images/Races/human.png";
+import tiefling from "Images/Races/tiefling.png";
 
 import { Analytics } from "aws-amplify";
 

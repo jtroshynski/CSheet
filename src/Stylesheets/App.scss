@@ -8,10 +8,10 @@ $colorBlack: #000000;
 $colorMediumGrey: #656565;
 $colorLightGrey: #bbbbbb;
 
-$cSheetLogo: "../Images/CSheet Logo Grey White.svg";
-$purpleCircleButton: "../Images/Purple Mobile Button.svg";
-$blueCircleButton: "../Images/Blue Mobile Button.svg";
-$characterSheetIcon: "../Images/cSheet Icon.svg";
+$cSheetLogo: "../Images/CSheet Logos/CSheet Logo Green Black.svg";
+$purpleCircleButton: "../Images/Buttons/Purple Mobile Button.svg";
+$blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
+$characterSheetIcon: "../Images/Navigation/Character Sheet Black.svg";
 
 $small-screen: 320px;
 $large-screen: 1200px;
@@ -60,6 +60,9 @@ $large-screen: 1200px;
     overflow-x: hidden;
     /* 12em is the width of the columns */
     flex: 0 0 12em;
+    .sideBarLogoSection {
+      background-color: $colorWhite;
+    }
   }
   .mobileButton {
     visibility: hidden;
@@ -72,13 +75,19 @@ $large-screen: 1200px;
 //Mobile and small screens
 @media (max-width: 768px) {
   .sideBar {
-    // visibility: collapse;
+    width: 200px;
   }
   .mobileButton {
     // visibility: visible;
     position: fixed;
     background: none;
     border: none;
+  }
+  .characterSheetIcon {
+    display: block;
+    height: 62px;
+    width: 50px;
+    margin: auto;
   }
   .paragraphText {
     margin: 0 5vw 0 5vw;
@@ -92,16 +101,15 @@ $large-screen: 1200px;
   // flex: 1;
   background: none repeat scroll 0 0 $colorBlack;
   color: $colorWhite;
-  width: 100px;
   // z-index: 1;
 
   .cSheetLogo {
     background: url($cSheetLogo);
     background-repeat: no-repeat;
     display: block;
-    width: 100px;
+    width: 180px;
     height: auto;
-    margin: auto;
+    margin: 10px;
     cursor: pointer;
   }
 
@@ -128,6 +136,7 @@ $large-screen: 1200px;
         height: 125px;
         width: 100px;
         margin: auto;
+        margin-top: 50px;
         cursor: pointer;
       }
 

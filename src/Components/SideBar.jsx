@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import cSheet from "../Images/CSheet Logo Grey White.svg";
+import cSheet from "Images/CSheet Logos/CSheet Logo Green Black.svg";
 
-import "../Stylesheets/App.css";
+import "Stylesheets/App.css";
 
 class SideBar extends Component {
   constructor() {
@@ -65,9 +65,11 @@ class SideBar extends Component {
 
   SideBar = () => (
     <div className="sideBar">
-      <Link className="cSheetLogo" to="/">
-        <img src={cSheet} alt="cSheet" />
-      </Link>
+      <div className="sideBarLogoSection">
+        <Link className="cSheetLogo" to="/">
+          <img src={cSheet} alt="cSheet" />
+        </Link>
+      </div>
       <div className="divider" />
       <ul>
         <li>

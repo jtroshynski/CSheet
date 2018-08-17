@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "../Stylesheets/App.css";
+import "Stylesheets/App.css";
 import { Analytics } from "aws-amplify";
 
-class PageNotFoundComponent extends Component {
+class PageNotFound extends Component {
   render() {
     Analytics.record("appRender");
     return (
@@ -14,5 +14,5 @@ class PageNotFoundComponent extends Component {
   }
 }
 
-export default PageNotFoundComponent;
+export default PageNotFound;
 // export default withAuthenticator(App);
