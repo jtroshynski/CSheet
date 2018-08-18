@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "Stylesheets/App.css";
+import "sass/main.css";
 import axios from "axios";
 import Tile from "Components/Tile.js";
 import idiot from "Images/People/idiot.png";
@@ -8,6 +8,7 @@ import ericWilson from "Images/People/ericWilson.png";
 // import Attribute from "Components/Attribute";
 
 import { Analytics } from "aws-amplify";
+import Attribute from "../Components/Attribute";
 
 class ChooseAttributes extends Component {
   constructor() {
@@ -41,7 +42,7 @@ class ChooseAttributes extends Component {
   // Creates Tile components out of the raceArray and api data
   AttributeTiles(props) {
     const attributeTiles = props.attributeArray.map(attribute => (
-      <Tile
+      <Attribute
         key={attribute.id}
         image={attribute.image}
         link="/chooseAttributes"

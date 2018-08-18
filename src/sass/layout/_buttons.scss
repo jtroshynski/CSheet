@@ -1,0 +1,49 @@
+$purpleCircleButton: "../Images/Buttons/Purple Mobile Button.svg";
+$blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
+
+.button.large {
+  background-color: $colorPurple;
+  font-family: $paragraphFonts;
+
+  height: 50px;
+  width: 165px;
+  color: $colorWhite;
+  border: none;
+  font-size: 16px;
+  margin: 30px 0 10px 0;
+}
+
+.button.large:hover {
+  background-color: #123379;
+}
+
+.purpleMobileButton {
+  display: block;
+  height: 50px;
+  width: 50px;
+
+  border-radius: 25px;
+  background: url($purpleCircleButton);
+  background-size: contain;
+  cursor: pointer;
+}
+
+.purpleMobileButton:active {
+  background: url($blueCircleButton);
+}
+@media (min-width: $breakpoint) {
+  .mobileButton {
+    // visibility: visible;
+    position: fixed;
+    background: none;
+    border: none;
+  }
+}
+@media (max-width: $breakpoint) {
+  .mobileButton {
+    visibility: hidden;
+    background: none;
+    border: none;
+    margin: 25px;
+  }
+}

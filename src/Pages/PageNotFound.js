@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "Stylesheets/App.css";
+import "sass/main.css";
 import { Analytics } from "aws-amplify";
 
 class PageNotFound extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "Stylesheets/App.css";
+import "sass/main.css";
 import Tile from "Components/Tile.js";
 
 import axios from "axios";

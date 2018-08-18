@@ -1,0 +1,121 @@
+//Desktop and large screens
+@media (min-width: $breakpoint) {
+  .sideBar {
+    min-width: 200px;
+    margin: 0;
+    height: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+    .sideBarLogoSection {
+      background-color: $colorMediumGrey;
+      padding: 20px;
+    }
+  }
+  .mobileButton {
+    visibility: hidden;
+    background: none;
+    border: none;
+    margin: 25px;
+  }
+}
+
+//Mobile and small screens
+@media (max-width: $breakpoint) {
+  .sideBar {
+    width: 200px;
+  }
+  .mobileButton {
+    // visibility: visible;
+    position: fixed;
+    background: none;
+    border: none;
+  }
+  .sideBarLogoSection {
+    background-color: $colorLightGrey;
+    padding: 20px;
+    .cSheetLogo {
+      width: 120px;
+    }
+  }
+  .characterSheetIcon {
+    display: block;
+    height: 62px;
+    width: 50px;
+    margin: auto;
+  }
+  .partyIcon {
+    display: block;
+    height: 62px;
+    width: 50px;
+    margin: auto;
+  }
+}
+
+.sideBar {
+  height: 100%;
+  margin: 0;
+  // -webkit-flex: 1;
+  // flex: 1;
+  background: none repeat scroll 0 0 $colorLightGrey;
+  color: $colorWhite;
+  // z-index: 1;
+
+  .cSheetLogo {
+    background: url($cSheetLogo);
+    background-repeat: no-repeat;
+    display: block;
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .divider {
+    height: 1px;
+    width: 95%;
+    background: $colorMediumGrey;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: block;
+
+      padding: 0;
+      margin-top: 20px;
+      list-style-type: none;
+
+      .characterSheetIcon {
+        background: url($characterSheetIcon);
+        background-repeat: no-repeat;
+        display: block;
+        height: 125px;
+        width: 100px;
+        margin: auto;
+        margin-top: 50px;
+        cursor: pointer;
+      }
+
+      .partyIcon {
+        background: url($partyIcon);
+        background-repeat: no-repeat;
+        display: block;
+        height: 125px;
+        width: 100px;
+        margin: auto;
+        margin-top: 50px;
+        cursor: pointer;
+      }
+
+      .active {
+        background: none repeat scroll 0 0 black;
+        border-radius: 4px;
+        text-align: center;
+        margin-left: -4px;
+        padding: 4px;
+      }
+    }
+  }
+}

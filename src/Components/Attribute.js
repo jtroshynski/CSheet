@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import "src/Stylesheets/App.css";
-import axios from "axios";
+import "sass/main.css";
 import { Link } from "react-router-dom";
 
 class Attribute extends Component {
@@ -9,23 +8,31 @@ class Attribute extends Component {
 
     this.state = {
       name: "",
-      speed: ""
+      count: 0
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.addToAttribute = this.addToAttribute.bind(this);
+    this.subtractFromAttribute = this.subtractFromAttribute.bind(this);
   }
 
-  handleClick() {
-    axios
-      .get("http://www.dnd5eapi.co/api/races/" + this.props.id)
-      .then(response => console.log(response.data));
+  addToAttribute() {
+    this.setState({ count: this.state.count + 1 });
+  }
+
+  subtractFromAttribute() {
+    this.setState({ count: this.state.count - 1 });
   }
 
   render() {
     return (
       <Link to={this.props.link}>
-        <div className="tile" onClick={this.handleClick}>
+        <div className="attribute">
+          <button className="plusButton" onClick={this.addToAttribute} />
+          <button
+            className="minusButton"
+            onClick={this.subtractFromAttribute}
+          />
           <img src={this.props.image} alt={this.props.text} />
-          <div className="tile-text">{this.props.text}</div>
+          <div className="attribute-text">{this.props.text}</div>
         </div>
       </Link>
     );

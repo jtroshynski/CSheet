@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "Stylesheets/App.css";
+import "sass/main.css";
 import Tile from "Components/Tile.js";
 import axios from "axios";
 import barbarian from "DnDMaterials/Classes/DnD5E_ClassSymb_Barbarian.svg";
@@ -14,7 +14,6 @@ import rogue from "DnDMaterials/Classes/DnD5E_ClassSymb_Rogue.svg";
 import sorcerer from "DnDMaterials/Classes/DnD5E_ClassSymb_Sorcerer.svg";
 import warlock from "DnDMaterials/Classes/DnD5E_ClassSymb_Warlock.svg";
 import wizard from "DnDMaterials/Classes/DnD5E_ClassSymb_Wizard.svg";
-
 
 import { Analytics } from "aws-amplify";
 

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import cSheet from "Images/CSheet Logos/CSheet Logo Green Black.svg";
 
-import "Stylesheets/App.css";
+import "sass/main.css";
 
 class SideBar extends Component {
   constructor() {

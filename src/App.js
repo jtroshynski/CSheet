@@ -7,8 +7,8 @@ import ChooseClass from "Pages/ChooseClass";
 import StartPage from "Pages/StartPage";
 import ChooseAttributes from "Pages/ChooseAttributes";
 
-import PageNotFountComponent from "Pages/PageNotFound";
-import "Stylesheets/App.css";
+import PageNotFound from "Pages/PageNotFound";
+import "sass/main.css";
 
 import Amplify, { Analytics } from "aws-amplify";
 import aws_exports from "aws-exports";
@@ -39,7 +39,7 @@ class App extends Component {
               <Route path="/chooseRace" component={ChooseRace} />
               <Route path="/chooseClass" component={ChooseClass} />
               <Route path="/chooseAttributes" component={ChooseAttributes} />
-              <Route component={PageNotFountComponent} />
+              <Route component={PageNotFound} />
             </Switch>
           </div>
         </Router>
