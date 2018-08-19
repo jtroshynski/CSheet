@@ -8,18 +8,18 @@ class Attribute extends Component {
 
     this.state = {
       name: "",
-      count: 0
+      points: 0
     };
     this.addToAttribute = this.addToAttribute.bind(this);
     this.subtractFromAttribute = this.subtractFromAttribute.bind(this);
   }
 
   addToAttribute() {
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ points: this.state.points + 1 });
   }
 
   subtractFromAttribute() {
-    this.setState({ count: this.state.count - 1 });
+    this.setState({ points: this.state.points - 1 });
   }
 
   render() {
@@ -31,8 +31,8 @@ class Attribute extends Component {
             className="minusButton"
             onClick={this.subtractFromAttribute}
           />
-          <img src={this.props.image} alt={this.props.text} />
-          <div className="attribute-text">{this.props.text}</div>
+          <div className="points">{this.state.points} </div>
+          <div className="attribute-text">{this.props.name}</div>
         </div>
       </Link>
     );

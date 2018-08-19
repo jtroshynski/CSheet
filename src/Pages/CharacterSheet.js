@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "sass/main.css";
-import Tile from "Components/Tile.js";
 
 import axios from "axios";
 
@@ -15,12 +14,12 @@ import tiefling from "Images/CSheet Icons/CSheet Icon Yellow.svg";
 
 import { Analytics } from "aws-amplify";
 
-class ChooseRace extends Component {
+class CharacterSheet extends Component {
   constructor() {
     super();
 
     this.state = {
-      races: [],
+      stats: [],
       count: 0
     };
     // this.handleClick = this.handleClick.bind(this);
@@ -37,57 +36,25 @@ class ChooseRace extends Component {
     { id: 8, image: tiefling }
   ];
 
-  // Creates Tile components out of the raceArray and api data
-  RaceTiles(props) {
-    const raceTiles = props.raceArray.map(race => (
-      <Tile
-        key={race.id}
-        image={race.image}
-        link="/chooseClass"
-        name={props.races[race.id].name}
-      />
-    ));
-    return <ul className="tiles-section">{raceTiles}</ul>;
-  }
-
   // Calls D&D api to get race data when page loads
   async componentDidMount() {
-    await axios.get("http://www.dnd5eapi.co/api/races/").then(res => {
-      const raceData = res.data.results;
-      const numRaces = res.data.count;
-      this.setState({ races: raceData, count: numRaces });
-    });
+    // await axios.get("http://www.dnd5eapi.co/api/races/").then(res => {
+    //   const raceData = res.data.results;
+    //   const numRaces = res.data.count;
+    //   this.setState({ races: raceData, count: numRaces });
+    // });
   }
 
   render() {
-    // Analytics.record("appRender");
-    if (this.state.count === 0) {
-      return (
-        <div className="content">
-          <span>Loading...</span>
-        </div>
-      );
-    } else {
-      return (
-        <div className="content">
-          <h1 className="pageHeader">Pick a race</h1>
-          <this.RaceTiles raceArray={this.raceArray} {...this.state} />
-        </div>
-      );
-    }
+    // Analytics.record("appRender"); else {
+    return (
+      <div className="content">
+        <h1 className="pageHeader">Your CSheet</h1>
+        {/* <this.CharacterSheet characterStats={this.stats} {...this.state} /> */}
+      </div>
+    );
   }
 }
 
-// API Race Order:
-// Dwarf
-// Elf
-// Halfling
-// Human
-// Dragonborn
-// Gnome
-// Half-Elf
-// Half-Orc
-// Tiefling
-
-export default ChooseRace;
+export default CharacterSheet;
 // export default withAuthenticator(App);

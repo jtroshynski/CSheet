@@ -78,44 +78,53 @@
   }
 
   ul {
-    margin: 0;
-    padding: 0;
-    li {
-      display: block;
-
-      padding: 0;
-      margin-top: 20px;
-      list-style-type: none;
+    li.navigationIcon {
+      // display: block;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      height: 125px;
+      width: 225px;
+      // list-style-type: none;/
+      position: relative;
+      cursor: pointer;
 
       .characterSheetIcon {
         background: url($characterSheetIcon);
         background-repeat: no-repeat;
-        display: block;
-        height: 125px;
-        width: 100px;
         margin: auto;
-        margin-top: 50px;
-        cursor: pointer;
+        max-height: 77%;
+        max-width: 50%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
       }
 
       .partyIcon {
         background: url($partyIcon);
         background-repeat: no-repeat;
-        display: block;
-        height: 125px;
-        width: 100px;
         margin: auto;
-        margin-top: 50px;
-        cursor: pointer;
+        max-height: 54%;
+        max-width: 70%;
+        // width: auto;
+        // height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
       }
 
       .active {
-        background: none repeat scroll 0 0 black;
+        background-color: $backgroundColor;
         border-radius: 4px;
-        text-align: center;
-        margin-left: -4px;
-        padding: 4px;
       }
+    }
+    li.navigationIcon:hover {
+      background-color: $backgroundColor;
     }
   }
 }

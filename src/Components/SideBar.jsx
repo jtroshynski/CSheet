@@ -71,11 +71,13 @@ class SideBar extends Component {
         </Link>
       </div>
       <ul>
-        <li>
+        <li className="navigationIcon">
           <Link to="/chooseRace" title="Character Sheet">
             <span className="characterSheetIcon" />
           </Link>
-          <Link to="/chooseClass" title="Parties">
+        </li>
+        <li className="navigationIcon">
+          <Link to="/parties" title="Parties">
             <span className="partyIcon" />
           </Link>
         </li>

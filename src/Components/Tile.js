@@ -12,7 +12,11 @@ class Tile extends Component {
     return (
       <Link to={this.props.link}>
         <div className="tile" onClick={this.handleClick}>
-          <img src={this.props.image} alt={this.props.name} />
+          <img
+            className="tile-image"
+            src={this.props.image}
+            alt={this.props.name}
+          />
           <div className="tile-text">{this.props.name}</div>
         </div>
       </Link>
