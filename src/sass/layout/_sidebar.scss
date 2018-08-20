@@ -79,12 +79,10 @@
 
   ul {
     li.navigationIcon {
-      // display: block;
       padding-top: 30px;
       padding-bottom: 30px;
       height: 125px;
       width: 225px;
-      // list-style-type: none;/
       position: relative;
       cursor: pointer;
 
@@ -94,8 +92,6 @@
         margin: auto;
         max-height: 77%;
         max-width: 50%;
-        width: auto;
-        height: auto;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -109,8 +105,6 @@
         margin: auto;
         max-height: 54%;
         max-width: 70%;
-        // width: auto;
-        // height: auto;
         position: absolute;
         top: 0;
         bottom: 0;

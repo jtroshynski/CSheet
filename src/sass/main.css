@@ -14,6 +14,10 @@
   text-align: center;
 }
 
+.content {
+  background-color: #ffffff;
+}
+
 .paragraphText {
   font-size: large;
   text-align: center;
@@ -203,6 +207,58 @@ section {
     margin: 25px;
   }
 }
+.plusButton {
+  background-color: #ffffff;
+  display: block;
+  border: 0px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.plusButton:after {
+  background-color: #4f5f55;
+  width: 29px;
+  height: 5px;
+  position: absolute;
+  top: 13px;
+  left: 0px;
+  content: "";
+}
+
+.plusButton:before {
+  background-color: #4f5f55;
+  width: 5px;
+  height: 29px;
+  position: absolute;
+  top: 0px;
+  left: 13px;
+  content: "";
+}
+
+.minusButton {
+  background-color: #ffffff;
+  display: block;
+  border: 0px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.minusButton:after {
+  background-color: #4f5f55;
+  width: 29px;
+  height: 5px;
+  position: absolute;
+  top: 13px;
+  left: 0px;
+  content: "";
+}
+
 @media (min-width: 768px) {
   .sideBar {
     min-width: 200px;
@@ -291,8 +347,6 @@ section {
   margin: auto;
   max-height: 77%;
   max-width: 50%;
-  width: auto;
-  height: auto;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -320,42 +374,53 @@ section {
 }
 
 .attribute {
-  display: inline-block;
-  text-align: center;
+  display: flex;
   height: 120px;
   width: 100px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* -webkit-box-shadow: 1px 3px 1px #9e9e9e; */
   padding: 20px;
   margin: 20px;
+  position: relative;
 }
-.attribute .points {
+.attribute .attributeValues {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: auto;
+  width: 70%;
+  text-align: center;
+  margin-top: 30px;
+}
+.attribute .attributeValues .points {
   font-family: "Carter One", "Open Sans", sans-serif;
   color: #252830;
   font-size: 3em;
 }
-.attribute .attribute-text {
+.attribute .attributeValues .attribute-text {
   font-family: "Carter One", "Open Sans", sans-serif;
   font-size: 2em;
+  text-align: center;
   color: #40294b;
-  padding: 30px;
   /* position: absolute; */
   /* transform: translate(-50%, -50%); */
 }
-.attribute .plusButton {
-  float: right;
-}
-.attribute .minusButton {
-  float: right;
+.attribute .attributeButtons {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  right: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .tile {
   display: inline-block;
+  background-color: #ffffff;
   text-align: center;
   height: 200px;
   width: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* -webkit-box-shadow: 1px 3px 1px #9e9e9e; */
   padding: 20px;
   margin: 20px;
 }
@@ -367,8 +432,16 @@ section {
   font-size: 2em;
   color: #40294b;
   padding: 30px;
-  /* position: absolute; */
-  /* transform: translate(-50%, -50%); */
+}
+
+.tile:hover {
+  background-color: #bbbbbb;
+}
+
+.attribute-tiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=main.css.map */

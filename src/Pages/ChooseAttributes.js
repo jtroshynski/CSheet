@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "sass/main.css";
 import axios from "axios";
-import idiot from "Images/People/idiot.png";
-import biggestIdiot from "Images/People/biggestIdiot.png";
-import ericWilson from "Images/People/ericWilson.png";
+import { Link } from "react-router-dom";
 // import Attribute from "Components/Attribute";
 
 import { Analytics } from "aws-amplify";
@@ -16,7 +14,7 @@ class ChooseAttributes extends Component {
     this.state = {
       attributes: [],
       count: 0,
-      points: 0
+      totalPoints: 27
     };
     // this.handleClick = this.handleClick.bind(this);
   }
@@ -35,11 +33,11 @@ class ChooseAttributes extends Component {
     const attributeTiles = props.attributeArray.map(attribute => (
       <Attribute
         key={attribute.id}
-        link="/characterSheet"
         name={props.attributes[attribute.id].name}
+        pointsRemaining={props.totalPoints}
       />
     ));
-    return <ul className="tiles-section">{attributeTiles}</ul>;
+    return <ul className="attribute-tiles">{attributeTiles}</ul>;
   }
 
   async componentDidMount() {
@@ -62,11 +60,16 @@ class ChooseAttributes extends Component {
       return (
         <div className="content">
           <h1 className="pageHeader">Allocate your attributes</h1>
-          <h2 className="points">{this.state.points}</h2>
+          <h2 className="paragraphText">
+            Points Remaining: {this.state.totalPoints}
+          </h2>
           <this.AttributeTiles
             attributeArray={this.attributeArray}
             {...this.state}
           />
+          <Link to="/characterSheet">
+            <button className="button large">Done</button>
+          </Link>
         </div>
       );
     }
