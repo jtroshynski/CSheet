@@ -1,70 +1,86 @@
 import React, { Component } from "react";
-import "../Stylesheets/App.css";
-import Tile from "../Components/Tile.js";
-
-import idiot from "../Images/idiot.png";
-import biggestIdiot from "../Images/biggestIdiot.png";
-import ericWilson from "../Images/ericWilson.png";
+import "sass/main.css";
+import Tile from "Components/Tile.js";
+import axios from "axios";
+import barbarian from "DnDMaterials/Classes/DnD5E_ClassSymb_Barbarian.svg";
+import bard from "DnDMaterials/Classes/DnD5E_ClassSymb_Bard.svg";
+import cleric from "DnDMaterials/Classes/DnD5E_ClassSymb_Cleric.svg";
+import druid from "DnDMaterials/Classes/DnD5E_ClassSymb_Druid.svg";
+import fighter from "DnDMaterials/Classes/DnD5E_ClassSymb_Fighter.svg";
+import monk from "DnDMaterials/Classes/DnD5E_ClassSymb_Monk.svg";
+import paladin from "DnDMaterials/Classes/DnD5E_ClassSymb_Paladin.svg";
+import ranger from "DnDMaterials/Classes/DnD5E_ClassSymb_Ranger.svg";
+import rogue from "DnDMaterials/Classes/DnD5E_ClassSymb_Rogue.svg";
+import sorcerer from "DnDMaterials/Classes/DnD5E_ClassSymb_Sorcerer.svg";
+import warlock from "DnDMaterials/Classes/DnD5E_ClassSymb_Warlock.svg";
+import wizard from "DnDMaterials/Classes/DnD5E_ClassSymb_Wizard.svg";
 
 import { Analytics } from "aws-amplify";
 
 class ChooseClass extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      classes: [],
+      count: 0
+    };
+    // this.handleClick = this.handleClick.bind(this);
+  }
+
+  classArray = [
+    { id: 0, image: barbarian },
+    { id: 1, image: bard },
+    { id: 2, image: cleric },
+    { id: 3, image: druid },
+    { id: 4, image: fighter },
+    { id: 5, image: monk },
+    { id: 6, image: paladin },
+    { id: 7, image: ranger },
+    { id: 8, image: rogue },
+    { id: 9, image: sorcerer },
+    { id: 10, image: warlock },
+    { id: 11, image: wizard }
+  ];
+
+  // Creates Tile components out of the raceArray and api data
+  ClassTiles(props) {
+    const classTiles = props.classArray.map(classs => (
+      <Tile
+        key={classs.id}
+        image={classs.image}
+        link="/chooseAttributes"
+        name={props.classes[classs.id].name}
+      />
+    ));
+    return <ul className="tiles-section">{classTiles}</ul>;
+  }
+
+  async componentDidMount() {
+    await axios.get("http://www.dnd5Eapi.co/api/classes/").then(res => {
+      const classData = res.data.results;
+      const count = res.data.count;
+      this.setState({ classes: classData, count: count });
+    });
+  }
+
   render() {
     Analytics.record("appRender");
-    return (
-      <div className="content">
-        <h1 className="pageHeader">Pick a class</h1>
-        <ul className="tiles-section">
-          <Tile
-            id={"1"}
-            image={idiot}
-            link="/chooseAttributes"
-            text="Barbarian"
-          />
-          <Tile
-            id={"2"}
-            image={ericWilson}
-            link="/chooseAttributes"
-            text="Bard"
-          />
-          <Tile id={"3"} image={idiot} link="/chooseAttributes" text="Cleric" />
-          <Tile id={"4"} image={idiot} link="/chooseAttributes" text="Druid" />
-          <Tile
-            id={"5"}
-            image={idiot}
-            link="/chooseAttributes"
-            text="Fighter"
-          />
-          <Tile id={"6"} image={idiot} link="/chooseAttributes" text="Monk" />
-          <Tile
-            id={"7"}
-            image={idiot}
-            link="/chooseAttributes"
-            text="Paladin"
-          />
-          <Tile id={"8"} image={idiot} link="/chooseAttributes" text="Ranger" />
-          <Tile id={"9"} image={idiot} link="/chooseAttributes" text="Rogue" />
-          <Tile
-            id={"10"}
-            image={idiot}
-            link="/chooseAttributes"
-            text="Sorcerer"
-          />
-          <Tile
-            id={"11"}
-            image={idiot}
-            link="/chooseAttributes"
-            text="Warlock"
-          />
-          <Tile
-            id={"12"}
-            image={biggestIdiot}
-            link="/chooseAttributes"
-            text="Wizard"
-          />
-        </ul>
-      </div>
-    );
+    // Analytics.record("appRender");
+    if (this.state.count === 0) {
+      return (
+        <div className="content">
+          <span>Loading...</span>
+        </div>
+      );
+    } else {
+      return (
+        <div className="content">
+          <h1 className="pageHeader">Pick a class</h1>
+          <this.ClassTiles classArray={this.classArray} {...this.state} />
+        </div>
+      );
+    }
   }
 }
 

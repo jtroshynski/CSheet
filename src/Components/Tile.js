@@ -1,31 +1,23 @@
 import React, { Component } from "react";
-import "../Stylesheets/App.css";
-import axios from "axios";
+import "sass/main.css";
 import { Link } from "react-router-dom";
 
 class Tile extends Component {
   constructor() {
     super();
 
-    this.state = {
-      name: "",
-      speed: ""
-    };
-    this.handleClick = this.handleClick.bind(this);
+    this.state = {};
   }
-
-  handleClick() {
-    axios
-      .get("http://www.dnd5eapi.co/api/races/" + this.props.id)
-      .then(response => console.log(response.data));
-  }
-
   render() {
     return (
       <Link to={this.props.link}>
         <div className="tile" onClick={this.handleClick}>
-          <img src={this.props.image} alt={this.props.text} />
-          <div className="tile-text">{this.props.text}</div>
+          <img
+            className="tile-image"
+            src={this.props.image}
+            alt={this.props.name}
+          />
+          <div className="tile-text">{this.props.name}</div>
         </div>
       </Link>
     );

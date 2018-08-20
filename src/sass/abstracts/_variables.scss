@@ -1,0 +1,29 @@
+$small-screen: 320px;
+$large-screen: 1200px;
+$breakpoint: 768px;
+
+// $cSheetLogoDark: "../Images/CSheet Logos/CSheet Logo Green Black.svg";
+// $cSheetLogoLight: "../Images/CSheet Logos/CSheet Logo Green White.svg";
+
+$cSheetLogo: "../Images/CSheet Logos/CSheet Logo Green Black.svg";
+
+$characterSheetIcon: "../Images/Navigation/Character Sheet Black.svg";
+$partyIcon: "../Images/Navigation/Party Icon_1.svg";
+
+$colorPurple: #40294b;
+$colorGreen: #4f5f55;
+$colorBlue: #6a89a8;
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+$colorDarkGrey: #252830;
+$colorMediumGrey: #656565;
+$colorLightGrey: #bbbbbb;
+
+$primaryColor: $colorPurple;
+$secondaryColor: $colorGreen;
+$backgroundColor: $colorWhite;
+$highlightColor: $colorLightGrey;
+// $contrastColor: ;
+
+$font-stack: "Carter One", "Open Sans", sans-serif;
+$paragraphFonts: "Cabin", "Calibri", "Open Sans", sans-serif;

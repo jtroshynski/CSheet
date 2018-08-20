@@ -1,17 +1,19 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
-import SideBar from "./Components/SideBar.js";
-import ChooseRace from "./Pages/ChooseRace.js";
-import ChooseClass from "./Pages/ChooseClass.js";
-import StartPage from "./Pages/StartPage.js";
-import ChooseAttributes from "./Pages/ChooseAttributes.js";
+import SideBar from "Components/SideBar";
+import ChooseRace from "Pages/ChooseRace";
+import ChooseClass from "Pages/ChooseClass";
+import StartPage from "Pages/StartPage";
+import ChooseAttributes from "Pages/ChooseAttributes";
+import Parties from "Pages/Parties";
+import CharacterSheet from "Pages/CharacterSheet";
 
-import PageNotFountComponent from "./Pages/PageNotFoundComponent";
-import "./Stylesheets/App.css";
+import PageNotFound from "Pages/PageNotFound";
+import "sass/main.css";
 
 import Amplify, { Analytics } from "aws-amplify";
-import aws_exports from "./aws-exports";
+import aws_exports from "aws-exports";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -39,7 +41,9 @@ class App extends Component {
               <Route path="/chooseRace" component={ChooseRace} />
               <Route path="/chooseClass" component={ChooseClass} />
               <Route path="/chooseAttributes" component={ChooseAttributes} />
-              <Route component={PageNotFountComponent} />
+              <Route path="/parties" component={Parties} />
+              <Route path="/characterSheet" component={CharacterSheet} />
+              <Route component={PageNotFound} />
             </Switch>
           </div>
         </Router>

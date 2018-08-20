@@ -1,8 +1,14 @@
+For my Sass architecture, I'm using The 7-1 Pattern by Hugo Giraudel.
+https://sass-guidelin.es/#the-7-1-pattern
+
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
 Technologies used:
 
-React, React Side Menu, AWS Amplify, Font Awesome
+React, Sass, AWS Amplify, Font Awesome
 
 Roadmap/Ideas:
+
 - cSheet Creation/Helper
 - Finished cSheet display
 - Connection to D&D API
@@ -26,7 +32,3 @@ Roadmap/Ideas:
 - Might add the ability to roll dice for leveling up
 - Might add an API, to pull your character data into other apps
 - Might make a discord bot to interact with the API
-
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

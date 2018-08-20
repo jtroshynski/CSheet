@@ -1,0 +1,49 @@
+.attribute {
+  display: flex;
+  // margin: 0 auto;
+  // text-align: center;
+  height: 120px;
+  width: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* -webkit-box-shadow: 1px 3px 1px #9e9e9e; */
+  padding: 20px;
+  margin: 20px;
+  position: relative;
+  .attributeValues {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: auto;
+    width: 70%;
+    text-align: center;
+    margin-top: 30px;
+
+    .points {
+      font-family: $font-stack;
+      color: $colorDarkGrey;
+      font-size: 3em;
+    }
+    .attribute-text {
+      font-family: $font-stack;
+      font-size: 2em;
+      // width: 100%;
+      text-align: center;
+      color: $primaryColor;
+      // padding: 30px;
+      /* position: absolute; */
+      /* transform: translate(-50%, -50%); */
+    }
+  }
+
+  .attributeButtons {
+    position: absolute;
+    // justify-content: right;
+    // bottom: 8px;
+    // right: 16px;
+    width: 30%;
+    height: 100%;
+    right: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

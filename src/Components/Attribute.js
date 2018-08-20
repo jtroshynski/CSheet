@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import "../Stylesheets/App.css";
-import axios from "axios";
+import "sass/main.css";
 import { Link } from "react-router-dom";
 
 class Attribute extends Component {
@@ -9,25 +8,75 @@ class Attribute extends Component {
 
     this.state = {
       name: "",
-      speed: ""
+      points: 8
     };
-    this.handleClick = this.handleClick.bind(this);
+
+    this.handleButtonPress = this.handleButtonPress.bind(this);
+    this.handleButtonRelease = this.handleButtonRelease.bind(this);
+    this.addToAttribute = this.addToAttribute.bind(this);
+    this.subtractFromAttribute = this.subtractFromAttribute.bind(this);
   }
 
-  handleClick() {
-    axios
-      .get("http://www.dnd5eapi.co/api/races/" + this.props.id)
-      .then(response => console.log(response.data));
+  pointBuyArray = [
+    { score: 8, cost: 0 },
+    { score: 9, cost: 1 },
+    { score: 10, cost: 2 },
+    { score: 11, cost: 3 },
+    { score: 12, cost: 4 },
+    { score: 13, cost: 5 },
+    { score: 14, cost: 7 },
+    { score: 15, cost: 9 }
+  ];
+
+  addToAttribute() {
+    let currentPoints = this.state.points;
+
+    if (currentPoints < 15) {
+      this.setState({ points: currentPoints + 1 });
+    }
+  }
+
+  subtractFromAttribute() {
+    let currentPoints = this.state.points;
+    let pointsRemaining = this.props.pointsRemaining;
+
+    if (currentPoints > 0 && pointsRemaining > 25) {
+      this.setState({ points: currentPoints - 1 });
+      pointsRemaining = pointsRemaining - 1;
+    }
+  }
+
+  handleButtonPress() {
+    this.buttonPressTimer = setTimeout(() => this.addToAttribute(), 600);
+  }
+
+  handleButtonRelease() {
+    clearTimeout(this.buttonPressTimer);
   }
 
   render() {
     return (
-      <Link to={this.props.link}>
-        <div className="tile" onClick={this.handleClick}>
-          <img src={this.props.image} alt={this.props.text} />
-          <div className="tile-text">{this.props.text}</div>
+      <div className="attribute">
+        <div className="attributeButtons">
+          <button
+            className="plusButton"
+            onTouchStart={this.handleButtonPress}
+            onTouchEnd={this.handleButtonRelease}
+            onMouseDown={this.handleButtonPress}
+            onMouseUp={this.handleButtonRelease}
+            onClick={this.addToAttribute}
+          />
+          <button
+            className="minusButton"
+            onClick={this.subtractFromAttribute}
+          />
         </div>
-      </Link>
+
+        <div className="attributeValues">
+          <div className="points">{this.state.points} </div>
+          <div className="attribute-text">{this.props.name}</div>
+        </div>
+      </div>
     );
   }
 }
