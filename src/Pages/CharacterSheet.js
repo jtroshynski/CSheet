@@ -50,6 +50,7 @@ class CharacterSheet extends Component {
     return (
       <div className="content">
         <h1 className="pageHeader">Your CSheet</h1>
+        <p className="paragraphText">Check back later!</p>
         {/* <this.CharacterSheet characterStats={this.stats} {...this.state} /> */}
       </div>
     );
