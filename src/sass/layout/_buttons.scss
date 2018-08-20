@@ -11,6 +11,8 @@ $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
   border: none;
   font-size: 16px;
   margin: 30px 0 10px 0;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .button.large:hover {
@@ -57,7 +59,9 @@ $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
   position: relative;
   margin-bottom: 20px;
   cursor: pointer;
+  transition: 0.3s;
 }
+
 //Horozontal Line
 .plusButton:after {
   background-color: $secondaryColor;
@@ -67,6 +71,13 @@ $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
   top: 13px;
   left: 0px;
   content: "";
+  transition: 0.3s;
+}
+.plusButton:hover:after {
+  background-color: $primaryColor;
+}
+.plusButton:hover:before {
+  background-color: $primaryColor;
 }
 //Vertical Line
 .plusButton:before {
@@ -77,6 +88,7 @@ $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
   top: 0px;
   left: 13px;
   content: "";
+  transition: 0.3s;
 }
 
 .minusButton {
@@ -98,4 +110,8 @@ $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
   top: 13px;
   left: 0px;
   content: "";
+  transition: 0.3s;
+}
+.minusButton:hover:after {
+  background-color: $primaryColor;
 }
