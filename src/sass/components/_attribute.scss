@@ -2,47 +2,50 @@
   display: inline-block;
   background-color: $backgroundColor;
   text-align: center;
-  height: 120px;
-  width: 100px;
+  width: 120px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 20px;
+  // padding: 20px;
   margin: 20px;
   position: relative;
-  .attributeValues {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: auto;
-    width: 70%;
-    text-align: center;
-    margin-top: 30px;
+
+  // }
+
+  .attributeNumberSection {
+    margin: 0 auto;
+    height: 70%;
 
     .points {
+      display: inline-block;
       font-family: $font-stack;
       color: $colorDarkGrey;
       font-size: 3em;
+      // vertical-align: center;
+      // width: auto;
+      margin-top: 20px;
+      margin-left: 15px;
+      // padding: 0;
     }
-    .attribute-text {
-      font-family: $font-stack;
-      font-size: 2em;
-      // width: 100%;
-      text-align: center;
-      color: $primaryColor;
-      // padding: 30px;
-      /* position: absolute; */
-      /* transform: translate(-50%, -50%); */
+    .attributeButtons {
+      // display: inline-block;
+      vertical-align: center;
+      margin-left: 10px;
+      // width: auto;
+      // width: 30%;
+      // height: 100%;
+      float: right;
+      // right: 0px;
+      margin-top: 30px;
+      margin-right: 10px;
     }
   }
-
-  .attributeButtons {
-    position: absolute;
-    // justify-content: right;
-    // bottom: 8px;
-    // right: 16px;
-    width: 30%;
-    height: 100%;
-    right: 0px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  .attributeName {
+    display: inline-block;
+    font-family: $font-stack;
+    width: 100%;
+    height: 30%;
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+    color: $primaryColor;
   }
 }

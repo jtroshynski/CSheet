@@ -54,10 +54,10 @@ $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
   background-color: $backgroundColor;
   display: block;
   border: 0px;
-  width: 30px;
-  height: 30px;
+  width: 21px;
+  height: 21px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -65,11 +65,23 @@ $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
 //Horozontal Line
 .plusButton:after {
   background-color: $secondaryColor;
-  width: 29px;
+  width: 21px;
   height: 5px;
   position: absolute;
-  top: 13px;
+  top: 8px;
   left: 0px;
+  content: "";
+  transition: 0.3s;
+}
+
+//Vertical Line
+.plusButton:before {
+  background-color: $secondaryColor;
+  width: 5px;
+  height: 21px;
+  position: absolute;
+  top: 0px;
+  left: 8px;
   content: "";
   transition: 0.3s;
 }
@@ -79,35 +91,23 @@ $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
 .plusButton:hover:before {
   background-color: $primaryColor;
 }
-//Vertical Line
-.plusButton:before {
-  background-color: $secondaryColor;
-  width: 5px;
-  height: 29px;
-  position: absolute;
-  top: 0px;
-  left: 13px;
-  content: "";
-  transition: 0.3s;
-}
-
 .minusButton {
   background-color: $backgroundColor;
   display: block;
   border: 0px;
-  width: 30px;
-  height: 30px;
+  width: 21px;
+  height: 21px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 //Horozontal Line
 .minusButton:after {
   background-color: $secondaryColor;
-  width: 29px;
+  width: 21px;
   height: 5px;
   position: absolute;
-  top: 13px;
+  top: 8px;
   left: 0px;
   content: "";
   transition: 0.3s;

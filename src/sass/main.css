@@ -213,21 +213,32 @@ section {
   background-color: #ffffff;
   display: block;
   border: 0px;
-  width: 30px;
-  height: 30px;
+  width: 21px;
+  height: 21px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .plusButton:after {
   background-color: #4f5f55;
-  width: 29px;
+  width: 21px;
   height: 5px;
   position: absolute;
-  top: 13px;
+  top: 8px;
   left: 0px;
+  content: "";
+  transition: 0.3s;
+}
+
+.plusButton:before {
+  background-color: #4f5f55;
+  width: 5px;
+  height: 21px;
+  position: absolute;
+  top: 0px;
+  left: 8px;
   content: "";
   transition: 0.3s;
 }
@@ -240,34 +251,23 @@ section {
   background-color: #40294b;
 }
 
-.plusButton:before {
-  background-color: #4f5f55;
-  width: 5px;
-  height: 29px;
-  position: absolute;
-  top: 0px;
-  left: 13px;
-  content: "";
-  transition: 0.3s;
-}
-
 .minusButton {
   background-color: #ffffff;
   display: block;
   border: 0px;
-  width: 30px;
-  height: 30px;
+  width: 21px;
+  height: 21px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 
 .minusButton:after {
   background-color: #4f5f55;
-  width: 29px;
+  width: 21px;
   height: 5px;
   position: absolute;
-  top: 13px;
+  top: 8px;
   left: 0px;
   content: "";
   transition: 0.3s;
@@ -395,42 +395,39 @@ section {
   display: inline-block;
   background-color: #ffffff;
   text-align: center;
-  height: 120px;
-  width: 100px;
+  width: 120px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 20px;
   margin: 20px;
   position: relative;
 }
-.attribute .attributeValues {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: auto;
-  width: 70%;
-  text-align: center;
-  margin-top: 30px;
+.attribute .attributeNumberSection {
+  margin: 0 auto;
+  height: 70%;
 }
-.attribute .attributeValues .points {
+.attribute .attributeNumberSection .points {
+  display: inline-block;
   font-family: "Carter One", "Open Sans", sans-serif;
   color: #252830;
   font-size: 3em;
+  margin-top: 20px;
+  margin-left: 15px;
 }
-.attribute .attributeValues .attribute-text {
+.attribute .attributeNumberSection .attributeButtons {
+  vertical-align: center;
+  margin-left: 10px;
+  float: right;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+.attribute .attributeName {
+  display: inline-block;
   font-family: "Carter One", "Open Sans", sans-serif;
+  width: 100%;
+  height: 30%;
   font-size: 2em;
   text-align: center;
+  margin: 0;
   color: #40294b;
-  /* position: absolute; */
-  /* transform: translate(-50%, -50%); */
-}
-.attribute .attributeButtons {
-  position: absolute;
-  width: 30%;
-  height: 100%;
-  right: 0px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .tile {

@@ -57,25 +57,28 @@ class Attribute extends Component {
   render() {
     return (
       <div className="attribute">
-        <div className="attributeButtons">
-          <button
-            className="plusButton"
-            onTouchStart={this.handleButtonPress}
-            onTouchEnd={this.handleButtonRelease}
-            onMouseDown={this.handleButtonPress}
-            onMouseUp={this.handleButtonRelease}
-            onClick={this.addToAttribute}
-          />
-          <button
-            className="minusButton"
-            onClick={this.subtractFromAttribute}
-          />
+        <div className="attributeNumberSection">
+          <div className="points">{this.state.points} </div>
+          <div className="attributeButtons">
+            <button
+              className="plusButton"
+              onTouchStart={this.handleButtonPress}
+              onTouchEnd={this.handleButtonRelease}
+              onMouseDown={this.handleButtonPress}
+              onMouseUp={this.handleButtonRelease}
+              onClick={this.addToAttribute}
+            />
+            <button
+              className="minusButton"
+              onClick={this.subtractFromAttribute}
+            />
+          </div>
         </div>
 
-        <div className="attributeValues">
-          <div className="points">{this.state.points} </div>
-          <div className="attribute-text">{this.props.name}</div>
-        </div>
+        {/* <div className="attributeValues"> */}
+
+        <div className="attributeName">{this.props.name}</div>
+        {/* </div> */}
       </div>
     );
   }
