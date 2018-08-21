@@ -1,9 +1,6 @@
-$purpleCircleButton: "../Images/Buttons/Purple Mobile Button.svg";
-$blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
-
 .button.large {
   background-color: $primaryColor;
-  font-family: $paragraphFonts;
+  font-family: $fontStackParagraphs;
 
   height: 50px;
   width: 165px;
@@ -16,7 +13,7 @@ $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
 }
 
 .button.large:hover {
-  background-color: #123379;
+  background-color: $colorDarkGrey;
 }
 
 .purpleMobileButton {
@@ -25,13 +22,13 @@ $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
   width: 50px;
 
   border-radius: 25px;
-  background: url($purpleCircleButton);
+  background: url($mobileButton);
   background-size: contain;
   cursor: pointer;
 }
 
 .purpleMobileButton:active {
-  background: url($blueCircleButton);
+  background: url($mobileButtonHighlight);
 }
 @media (min-width: $breakpoint) {
   .mobileButton {

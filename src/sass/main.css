@@ -1,28 +1,14 @@
-.pageHeader {
-  font-family: "Carter One", "Open Sans", sans-serif;
-  font-size: 3em;
-  text-align: center;
-  margin: 60px 0 40px 0;
-  color: #141414;
-}
-
-.body {
+html,
+body {
+  background-color: #ffffff;
   margin: 0;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 }
 
 .content {
-  background-color: #ffffff;
-}
-
-.paragraphText {
-  font-size: large;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
-  margin: 0 20vw 0 20vw;
 }
 
 img {
@@ -41,7 +27,7 @@ img {
 }
 
 @media (min-width: 768px) {
-  .body {
+  body {
     margin: 0;
     flex-direction: row;
     flex: 1;
@@ -51,11 +37,6 @@ img {
   .content {
     margin-left: 200px;
     flex: 1;
-  }
-}
-@media (max-width: 768px) {
-  .paragraphText {
-    margin: 0 5vw 0 5vw;
   }
 }
 html,
@@ -163,6 +144,41 @@ section {
   display: block;
 }
 
+.pageHeader {
+  font-family: "Carter One", "Open Sans", sans-serif;
+  font-size: 3em;
+  text-align: center;
+  margin: 60px 0 40px 0;
+  color: #141414;
+}
+
+.paragraphText {
+  font-size: large;
+  text-align: center;
+  font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
+  margin: 0 20vw 0 20vw;
+}
+
+.sidebarText {
+  display: inline-block;
+  font-size: large;
+  text-align: right;
+  justify-content: right;
+  font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
+  color: #252830;
+  text-decoration: none;
+  margin: 30px 20px 30px 0;
+}
+
+.sidebarText:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .paragraphText {
+    margin: 0 5vw 0 5vw;
+  }
+}
 .button.large {
   background-color: #40294b;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
@@ -177,7 +193,7 @@ section {
 }
 
 .button.large:hover {
-  background-color: #123379;
+  background-color: #252830;
 }
 
 .purpleMobileButton {
@@ -185,13 +201,13 @@ section {
   height: 50px;
   width: 50px;
   border-radius: 25px;
-  background: url("../Images/Buttons/Purple Mobile Button.svg");
+  background: url("../Images/Buttons/Mobile Button Purple.svg");
   background-size: contain;
   cursor: pointer;
 }
 
 .purpleMobileButton:active {
-  background: url("../Images/Buttons/Blue Mobile Button.svg");
+  background: url("../Images/Buttons/Mobile Button Dark Grey.svg");
 }
 
 @media (min-width: 768px) {
@@ -288,7 +304,6 @@ section {
     flex: 0 0 12em;
   }
   .sideBar .sideBarLogoSection {
-    background-color: #656565;
     padding: 20px;
   }
 
@@ -311,7 +326,6 @@ section {
   }
 
   .sideBarLogoSection {
-    background-color: #bbbbbb;
     padding: 20px;
   }
   .sideBarLogoSection .cSheetLogo {
@@ -335,7 +349,7 @@ section {
 .sideBar {
   height: 100%;
   margin: 0;
-  background: none repeat scroll 0 0 #bbbbbb;
+  background: none repeat scroll 0 0 #f7f7ed;
 }
 .sideBar .cSheetLogo {
   background: url("../Images/CSheet Logos/CSheet Logo Green Black.svg");
@@ -351,37 +365,35 @@ section {
   background: #656565;
 }
 .sideBar ul li.navigationIcon {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  height: 125px;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
   width: 225px;
-  position: relative;
   transition: 0.3s;
   cursor: pointer;
 }
 .sideBar ul li.navigationIcon .characterSheetIcon {
   background: url("../Images/Navigation/Character Sheet Black.svg");
+  display: inline-block;
   background-repeat: no-repeat;
-  margin: auto;
-  max-height: 77%;
-  max-width: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 65px;
+  width: 50px;
+  position: relative;
 }
 .sideBar ul li.navigationIcon .partyIcon {
   background: url("../Images/Navigation/Party Icon_1.svg");
   background-repeat: no-repeat;
-  margin: auto;
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: auto;
   max-height: 54%;
   max-width: 70%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  height: 80px;
+  width: 80px;
 }
 .sideBar ul li.navigationIcon .active {
   background-color: #ffffff;
@@ -434,8 +446,8 @@ section {
   display: inline-block;
   background-color: #ffffff;
   text-align: center;
-  height: 200px;
-  width: 250px;
+  height: 225px;
+  width: 225px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 20px;
   margin: 20px;
@@ -446,9 +458,10 @@ section {
 }
 .tile .tile-text {
   font-family: "Carter One", "Open Sans", sans-serif;
-  font-size: 2em;
+  font-size: 1.8em;
   color: #40294b;
   padding: 30px;
+  text-align: center;
 }
 
 .tile:hover {

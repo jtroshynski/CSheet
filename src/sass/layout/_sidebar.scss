@@ -9,7 +9,7 @@
     /* 12em is the width of the columns */
     flex: 0 0 12em;
     .sideBarLogoSection {
-      background-color: $colorMediumGrey;
+      // background-color: $colorLightGrey;
       padding: 20px;
     }
   }
@@ -33,7 +33,7 @@
     border: none;
   }
   .sideBarLogoSection {
-    background-color: $colorLightGrey;
+    // background-color: $sidebarColor;
     padding: 20px;
     .cSheetLogo {
       width: 120px;
@@ -56,7 +56,8 @@
 .sideBar {
   height: 100%;
   margin: 0;
-  background: none repeat scroll 0 0 $colorLightGrey;
+  background: none repeat scroll 0 0 $sidebarColor;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   .cSheetLogo {
     background: url($cSheetLogo);
@@ -75,38 +76,48 @@
 
   ul {
     li.navigationIcon {
-      padding-top: 30px;
-      padding-bottom: 30px;
-      height: 125px;
+      // padding-top: 30px;
+      // padding-bottom: 30px;
+      // display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 90px;
       width: 225px;
-      position: relative;
+      // position: relative;
       transition: 0.3s;
       cursor: pointer;
 
       .characterSheetIcon {
         background: url($characterSheetIcon);
+        display: inline-block;
         background-repeat: no-repeat;
-        margin: auto;
-        max-height: 77%;
-        max-width: 50%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        margin-left: 10px;
+        margin-top: auto;
+        margin-bottom: auto;
+        // max-height: 70%;
+        // max-width: 30%;
+        height: 65px;
+        width: 50px;
+        // flex: 33.33%;
+        position: relative;
+        // top: 0;
+        // bottom: 0;
+        // left: 0;
+        // right: 0;
       }
 
       .partyIcon {
         background: url($partyIcon);
         background-repeat: no-repeat;
-        margin: auto;
+        // margin: auto;
+        display: inline-block;
+        margin-top: auto;
+        margin-bottom: auto;
         max-height: 54%;
         max-width: 70%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        position: relative;
+        height: 80px;
+        width: 80px;
       }
 
       .active {

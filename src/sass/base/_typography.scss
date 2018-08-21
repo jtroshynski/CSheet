@@ -1,0 +1,36 @@
+.pageHeader {
+  font-family: $fontStackTitles;
+  font-size: 3em; //3.5vw?
+  text-align: center;
+  margin: 60px 0 40px 0;
+  color: rgb(20, 20, 20);
+}
+
+.paragraphText {
+  font-size: large;
+  text-align: center;
+  font-family: $fontStackParagraphs;
+  margin: 0 20vw 0 20vw;
+}
+
+.sidebarText {
+  display: inline-block;
+  font-size: large;
+  text-align: right;
+  justify-content: right;
+  font-family: $fontStackParagraphs;
+  color: $colorDarkGrey;
+  text-decoration: none;
+  // padding: 20px;
+  margin: 30px 20px 30px 0;
+}
+.sidebarText:hover {
+  text-decoration: none;
+}
+
+//Mobile and small screens
+@media (max-width: $breakpoint) {
+  .paragraphText {
+    margin: 0 5vw 0 5vw;
+  }
+}
