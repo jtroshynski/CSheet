@@ -7,6 +7,12 @@ Technologies used:
 
 React, Sass, AWS Amplify, Font Awesome
 
+VSCode Pertinant User Settings:
+{
+"prettier.printWidth": 100,
+"prettier.trailingComma": "es5"
+}
+
 Roadmap/Ideas:
 
 - cSheet Creation/Helper

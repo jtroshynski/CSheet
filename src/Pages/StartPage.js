@@ -18,7 +18,7 @@ class StartPage extends Component {
         </p>
         {
           <Link to={`/chooseRace`}>
-            <button className="button large">Start your cSheet</button>
+            <button className="button large">Start your CSheet</button>
           </Link>
         }
         <br />

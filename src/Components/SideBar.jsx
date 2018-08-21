@@ -67,18 +67,28 @@ class SideBar extends Component {
     <div className="sideBar">
       <div className="sideBarLogoSection">
         <Link className="cSheetLogo" to="/">
-          <img src={cSheet} alt="cSheet" />
+          <img src={cSheet} alt="cSheet" />{" "}
         </Link>
       </div>
       <ul>
         <li className="navigationIcon">
-          <Link to="/chooseRace" title="Character Sheet">
+          <Link
+            to="/chooseRace"
+            title="Character Sheet"
+            style={{ textDecoration: "none" }}
+          >
             <span className="characterSheetIcon" />
+            <p className="sidebarText">Character Sheet</p>
           </Link>
         </li>
         <li className="navigationIcon">
-          <Link to="/parties" title="Parties">
+          <Link
+            to="/parties"
+            title="Parties"
+            style={{ textDecoration: "none" }}
+          >
             <span className="partyIcon" />
+            <p className="sidebarText">Parties</p>
           </Link>
         </li>
       </ul>
