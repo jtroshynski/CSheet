@@ -11,10 +11,10 @@ class StartPage extends Component {
       <div className="content">
         <h1 className="pageHeader"> Welcome </h1>
         <p className="paragraphText">
-          Are you tired of having to write down stuff on your character sheet?
-          Does DnD feel overwhelming and complicated? Are you tired of using a
-          PENCIL? Well look no further, for you've stumbled upon a digital
-          version of the fifth edition character sheet!
+          My name is Jeremy Troshynski, and I'm currently working on a digital
+          version of the Dungeons & Dragons fifth edition character sheet.
+          You're welcome to give it a spin or check out my code using the github
+          link below.
         </p>
         {
           <Link to={`/chooseRace`}>
