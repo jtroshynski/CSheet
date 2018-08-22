@@ -1,16 +1,9 @@
 import React, { Component } from "react";
 import "sass/main.css";
 
-import axios from "axios";
+import Attribute from "../Components/Attribute";
 
-import dragonborn from "Images/CSheet Icons/CSheet Icon Blue.svg";
-import dwarf from "Images/CSheet Icons/CSheet Icon Brown.svg";
-import elf from "Images/CSheet Icons/CSheet Icon Dark Grey.svg";
-import halfelf from "Images/CSheet Icons/CSheet Icon Green.svg";
-import halfling from "Images/CSheet Icons/CSheet Icon Orange.svg";
-import halforc from "Images/CSheet Icons/CSheet Icon Purple.svg";
-import human from "Images/CSheet Icons/CSheet Icon Sea Green.svg";
-import tiefling from "Images/CSheet Icons/CSheet Icon Yellow.svg";
+import axios from "axios";
 
 import { Analytics } from "aws-amplify";
 
@@ -20,40 +13,68 @@ class CharacterSheet extends Component {
 
     this.state = {
       stats: [],
-      count: 0
+      count: 0,
+      attributes: [],
+      pointsRemaining: 27
     };
     // this.handleClick = this.handleClick.bind(this);
   }
 
-  raceArray = [
-    { id: 4, image: dragonborn },
-    { id: 0, image: dwarf },
-    { id: 1, image: elf },
-    { id: 6, image: halfelf },
-    { id: 2, image: halfling },
-    { id: 7, image: halforc },
-    { id: 3, image: human },
-    { id: 8, image: tiefling }
+  attributeArray = [
+    { id: 0 },
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+    { id: 4 },
+    { id: 5 }
   ];
+
+    // Creates Tile components out of the attributeArray and api data
+    AttributeTiles(props) {
+      const attributeTiles = props.attributeArray.map(attribute => (
+        <Attribute
+          key={attribute.id}
+          name={props.attributes[attribute.id].name}
+          pointsRemaining={props.pointsRemaining}
+          callback={props.callback}
+        />
+      ));
+      return <ul className="verticalAttributeTiles">{attributeTiles}</ul>;
+    }
 
   // Calls D&D api to get race data when page loads
   async componentDidMount() {
-    // await axios.get("http://www.dnd5eapi.co/api/races/").then(res => {
-    //   const raceData = res.data.results;
-    //   const numRaces = res.data.count;
-    //   this.setState({ races: raceData, count: numRaces });
-    // });
+    await axios.get("http://www.dnd5eapi.co/api/ability-scores/").then(res => {
+      const attributeData = res.data.results;
+      const count = res.data.count;
+      this.setState({ attributes: attributeData, count: count });
+    });
   }
 
+  callback = pointsSpent => {
+    this.setState({ pointsRemaining: pointsSpent });
+  };
+
   render() {
-    // Analytics.record("appRender"); else {
-    return (
-      <div className="content">
-        <h1 className="pageHeader">Your CSheet</h1>
-        <p className="paragraphText">Check back later!</p>
-        {/* <this.CharacterSheet characterStats={this.stats} {...this.state} /> */}
-      </div>
-    );
+    // Analytics.record("appRender");
+    if (this.state.count === 0) {
+      return (
+        <div className="content">
+          <span>Loading...</span>
+        </div>
+      );
+    } else {
+      return (
+        <div className="content">
+          <h1 className="pageHeader">Your Character Sheet</h1>
+          <this.AttributeTiles
+            attributeArray={this.attributeArray}
+            callback={this.callback}
+            {...this.state}
+          />
+        </div>
+      );
+    }
   }
 }
 

@@ -40,7 +40,7 @@ class App extends Component {
               <Route exact path="/" component={StartPage} />
               <Route path="/chooseRace" component={ChooseRace} />
               <Route path="/chooseClass" component={ChooseClass} />
-              <Route path="/chooseAttributes" component={ChooseAttributes} />
+              <Route path="/chooseAttributes" component={ChooseAttributes} />9
               <Route path="/parties" component={Parties} />
               <Route path="/characterSheet" component={CharacterSheet} />
               <Route component={PageNotFound} />

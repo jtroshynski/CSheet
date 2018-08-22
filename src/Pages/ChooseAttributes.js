@@ -41,7 +41,7 @@ class ChooseAttributes extends Component {
     this.setState({ pointsRemaining: pointsSpent });
   };
 
-  // Creates Tile components out of the raceArray and api data
+  // Creates Tile components out of the attributeArray and api data
   AttributeTiles(props) {
     const attributeTiles = props.attributeArray.map(attribute => (
       <Attribute

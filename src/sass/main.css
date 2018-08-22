@@ -16,11 +16,6 @@ img {
   max-height: 100%;
 }
 
-.tiles-section {
-  width: 100%;
-  text-align: center;
-}
-
 .footerIcon {
   color: black;
   margin: 10px;
@@ -149,7 +144,7 @@ section {
   font-size: 3em;
   text-align: center;
   margin: 60px 0 40px 0;
-  color: #141414;
+  color: #252830;
 }
 
 .paragraphText {
@@ -166,8 +161,9 @@ section {
   justify-content: right;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
   color: #252830;
+  vertical-align: middle;
   text-decoration: none;
-  margin: 30px 20px 30px 0;
+  margin: 30px 5px 30px 10px;
 }
 
 .sidebarText:hover {
@@ -295,7 +291,7 @@ section {
 
 @media (min-width: 768px) {
   .sideBar {
-    min-width: 200px;
+    width: 18%;
     margin: 0;
     height: 100%;
     position: fixed;
@@ -365,8 +361,6 @@ section {
   background: #656565;
 }
 .sideBar ul li.navigationIcon {
-  justify-content: space-between;
-  align-items: center;
   height: 90px;
   width: 225px;
   transition: 0.3s;
@@ -379,19 +373,22 @@ section {
   margin-left: 10px;
   margin-top: auto;
   margin-bottom: auto;
+  vertical-align: middle;
   height: 65px;
   width: 50px;
   position: relative;
 }
 .sideBar ul li.navigationIcon .partyIcon {
-  background: url("../Images/Navigation/Party Icon_1.svg");
+  background: url("../Images/Navigation/Party Icon.svg");
   background-repeat: no-repeat;
   display: inline-block;
   margin-top: auto;
   margin-bottom: auto;
+  margin-left: 10px;
   max-height: 54%;
   max-width: 70%;
   position: relative;
+  vertical-align: middle;
   height: 80px;
   width: 80px;
 }
@@ -401,6 +398,22 @@ section {
 }
 .sideBar ul li.navigationIcon:hover {
   background-color: #ffffff;
+}
+
+.tiles-section {
+  width: 100%;
+  text-align: center;
+}
+
+.verticalAttributeTiles {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.attribute-tiles {
+  width: 100%;
+  text-align: center;
 }
 
 .attribute {
@@ -466,11 +479,6 @@ section {
 
 .tile:hover {
   background-color: #bbbbbb;
-}
-
-.attribute-tiles {
-  width: 100%;
-  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
