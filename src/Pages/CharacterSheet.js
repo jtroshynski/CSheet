@@ -42,6 +42,10 @@ class CharacterSheet extends Component {
       return <ul className="verticalAttributeTiles">{attributeTiles}</ul>;
     }
 
+    ToggleLock() {
+      // Lock or Unlock Editing page
+    }
+
   // Calls D&D api to get race data when page loads
   async componentDidMount() {
     await axios.get("http://www.dnd5eapi.co/api/ability-scores/").then(res => {
@@ -67,6 +71,7 @@ class CharacterSheet extends Component {
       return (
         <div className="content">
           <h1 className="pageHeader">Your Character Sheet</h1>
+          <span className="padlock" onClick={this.ToggleLock}></span>
           <this.AttributeTiles
             attributeArray={this.attributeArray}
             callback={this.callback}
