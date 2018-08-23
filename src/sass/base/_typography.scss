@@ -16,13 +16,13 @@
 .sidebarText {
   display: inline-block;
   font-size: large;
-  text-align: right;
-  justify-content: right;
+  // text-align: right;
+  // justify-content: right;
   font-family: $fontStackParagraphs;
-  color: $titleColor;
-  vertical-align:middle;
+  color: $fontColorLight;
+  // vertical-align: middle;
   text-decoration: none;
-  margin: 30px 5px 30px 10px;
+  // margin: 30px 5px 30px 10px;
 }
 .sidebarText:hover {
   text-decoration: none;

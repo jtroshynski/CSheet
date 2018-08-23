@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: #ffffff;
+  background-color: #f0eef5;
   margin: 0;
   height: 100%;
 }
@@ -30,7 +30,7 @@ img {
   }
 
   .content {
-    margin-left: 200px;
+    margin-left: 300px;
     flex: 1;
   }
 }
@@ -140,7 +140,7 @@ section {
 }
 
 .pageHeader {
-  font-family: "Carter One", "Open Sans", sans-serif;
+  font-family: "Cabin", "Open Sans", sans-serif;
   font-size: 3em;
   text-align: center;
   margin: 60px 0 40px 0;
@@ -157,13 +157,9 @@ section {
 .sidebarText {
   display: inline-block;
   font-size: large;
-  text-align: right;
-  justify-content: right;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
-  color: #252830;
-  vertical-align: middle;
+  color: #f7f7ed;
   text-decoration: none;
-  margin: 30px 5px 30px 10px;
 }
 
 .sidebarText:hover {
@@ -176,7 +172,7 @@ section {
   }
 }
 .button.large {
-  background-color: #40294b;
+  background-color: #51425e;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
   height: 50px;
   width: 165px;
@@ -222,7 +218,7 @@ section {
   }
 }
 .plusButton {
-  background-color: #ffffff;
+  background-color: #f0eef5;
   display: block;
   border: 0px;
   width: 21px;
@@ -234,7 +230,7 @@ section {
 }
 
 .plusButton:after {
-  background-color: #4f5f55;
+  background-color: #483b53;
   width: 21px;
   height: 5px;
   position: absolute;
@@ -245,7 +241,7 @@ section {
 }
 
 .plusButton:before {
-  background-color: #4f5f55;
+  background-color: #483b53;
   width: 5px;
   height: 21px;
   position: absolute;
@@ -256,15 +252,15 @@ section {
 }
 
 .plusButton:hover:after {
-  background-color: #40294b;
+  background-color: #51425e;
 }
 
 .plusButton:hover:before {
-  background-color: #40294b;
+  background-color: #51425e;
 }
 
 .minusButton {
-  background-color: #ffffff;
+  background-color: #f0eef5;
   display: block;
   border: 0px;
   width: 21px;
@@ -275,7 +271,7 @@ section {
 }
 
 .minusButton:after {
-  background-color: #4f5f55;
+  background-color: #483b53;
   width: 21px;
   height: 5px;
   position: absolute;
@@ -286,12 +282,12 @@ section {
 }
 
 .minusButton:hover:after {
-  background-color: #40294b;
+  background-color: #51425e;
 }
 
 @media (min-width: 768px) {
   .sideBar {
-    width: 18%;
+    width: 300px;
     margin: 0;
     height: 100%;
     position: fixed;
@@ -300,7 +296,7 @@ section {
     flex: 0 0 12em;
   }
   .sideBar .sideBarLogoSection {
-    padding: 20px;
+    padding: 5px;
   }
 
   .mobileButton {
@@ -345,14 +341,20 @@ section {
 .sideBar {
   height: 100%;
   margin: 0;
-  background: none repeat scroll 0 0 #f7f7ed;
+  background: none repeat scroll 0 0 #51425e;
 }
-.sideBar .cSheetLogo {
+.sideBar .sideBarLogoSection {
+  background-color: #483b53;
+  width: 300px;
+  height: 50px;
+}
+.sideBar .sideBarLogoSection .cSheetLogo {
   background: url("../Images/CSheet Logos/CSheet Logo Green Black.svg");
   background-repeat: no-repeat;
   display: block;
-  width: 180px;
+  width: 160px;
   height: auto;
+  margin-left: 40px;
   cursor: pointer;
 }
 .sideBar .divider {
@@ -362,21 +364,23 @@ section {
 }
 .sideBar ul li.navigationIcon {
   height: 90px;
-  width: 225px;
+  width: 300px;
   transition: 0.3s;
   cursor: pointer;
 }
 .sideBar ul li.navigationIcon .characterSheetIcon {
-  background: url("../Images/Navigation/Character Sheet Black.svg");
-  display: inline-block;
+  background: url("../Images/CSheet Icons/CSheet Icon Green.svg");
   background-repeat: no-repeat;
-  margin-left: 10px;
+  display: inline-block;
   margin-top: auto;
   margin-bottom: auto;
-  vertical-align: middle;
-  height: 65px;
-  width: 50px;
+  margin-left: 10px;
+  max-height: 25px;
+  max-width: 25px;
   position: relative;
+  vertical-align: middle;
+  height: 80px;
+  width: 80px;
 }
 .sideBar ul li.navigationIcon .partyIcon {
   background: url("../Images/Navigation/Party Icon.svg");
@@ -385,19 +389,46 @@ section {
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 10px;
-  max-height: 54%;
-  max-width: 70%;
+  max-height: 45px;
+  max-width: 45px;
+  position: relative;
+  vertical-align: middle;
+  height: 80px;
+  width: 80px;
+}
+.sideBar ul li.navigationIcon .CSheetIcon {
+  background: url("../Images/CSheet Icons/CSheet Icon Green.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  max-height: 25px;
+  max-width: 25px;
   position: relative;
   vertical-align: middle;
   height: 80px;
   width: 80px;
 }
 .sideBar ul li.navigationIcon .active {
-  background-color: #ffffff;
+  background-color: #f0eef5;
   border-radius: 4px;
 }
 .sideBar ul li.navigationIcon:hover {
+  background-color: #392e42;
+}
+
+.titleBar {
+  width: 100%;
+  height: 60px;
+  top: 0;
+  position: fixed;
   background-color: #ffffff;
+  font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
+}
+.titleBar .name {
+  float: right;
+  margin: 20px 40px;
 }
 
 .tiles-section {
@@ -427,7 +458,7 @@ section {
 
 .attribute {
   display: inline-block;
-  background-color: #ffffff;
+  background-color: #f0eef5;
   text-align: center;
   width: 120px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -440,7 +471,7 @@ section {
 }
 .attribute .attributeNumberSection .points {
   display: inline-block;
-  font-family: "Carter One", "Open Sans", sans-serif;
+  font-family: "Cabin", "Open Sans", sans-serif;
   color: #252830;
   font-size: 3em;
   margin-top: 20px;
@@ -455,18 +486,18 @@ section {
 }
 .attribute .attributeName {
   display: inline-block;
-  font-family: "Carter One", "Open Sans", sans-serif;
+  font-family: "Cabin", "Open Sans", sans-serif;
   width: 100%;
   height: 30%;
   font-size: 2em;
   text-align: center;
   margin: 0;
-  color: #40294b;
+  color: #51425e;
 }
 
 .tile {
   display: inline-block;
-  background-color: #ffffff;
+  background-color: #f0eef5;
   text-align: center;
   height: 225px;
   width: 225px;
@@ -479,9 +510,9 @@ section {
   opacity: 0.75;
 }
 .tile .tile-text {
-  font-family: "Carter One", "Open Sans", sans-serif;
+  font-family: "Cabin", "Open Sans", sans-serif;
   font-size: 1.8em;
-  color: #40294b;
+  color: #51425e;
   padding: 30px;
   text-align: center;
 }
