@@ -77,7 +77,7 @@ class SideBar extends Component {
             title="Character Sheet"
             style={{ textDecoration: "none" }}
           >
-            <span className="characterSheetIcon" />
+            <span className="CSheetIcon" />
             <p className="sidebarText">Character Sheet</p>
           </Link>
         </li>
@@ -89,6 +89,36 @@ class SideBar extends Component {
           >
             <span className="partyIcon" />
             <p className="sidebarText">Parties</p>
+          </Link>
+        </li>
+        <li className="navigationIcon">
+          <Link
+            to="/parties"
+            title="Parties"
+            style={{ textDecoration: "none" }}
+          >
+            <span className="CSheetIcon" />
+            <p className="sidebarText">Maps</p>
+          </Link>
+        </li>
+        <li className="navigationIcon">
+          <Link
+            to="/parties"
+            title="Parties"
+            style={{ textDecoration: "none" }}
+          >
+            <span className="CSheetIcon" />
+            <p className="sidebarText">Spellbook</p>
+          </Link>
+        </li>
+        <li className="navigationIcon">
+          <Link
+            to="/parties"
+            title="Parties"
+            style={{ textDecoration: "none" }}
+          >
+            <span className="CSheetIcon" />
+            <p className="sidebarText">DM Tools</p>
           </Link>
         </li>
       </ul>

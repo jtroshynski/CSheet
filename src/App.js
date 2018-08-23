@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import SideBar from "Components/SideBar";
+import TitleBar from "Components/TitleBar";
 import ChooseRace from "Pages/ChooseRace";
 import ChooseClass from "Pages/ChooseClass";
 import StartPage from "Pages/StartPage";
@@ -35,6 +36,7 @@ class App extends Component {
       <div className="CSheet">
         <Router>
           <div className="body">
+            <TitleBar />
             <SideBar />
             <Switch>
               <Route exact path="/" component={StartPage} />
