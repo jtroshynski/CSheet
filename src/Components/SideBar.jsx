@@ -71,56 +71,43 @@ class SideBar extends Component {
         </Link>
       </div>
       <ul>
-        <li className="navigationIcon">
-          <Link
-            to="/characterSheet"
-            title="Character Sheet"
-            style={{ textDecoration: "none" }}
-          >
+        <Link
+          to="/characterSheet"
+          title="Character Sheet"
+          style={{ textDecoration: "none" }}
+        >
+          <li className="navigationIcon">
             <span className="CSheetIcon" />
             <p className="sidebarText">Character Sheet</p>
-          </Link>
-        </li>
-        <li className="navigationIcon">
-          <Link
-            to="/parties"
-            title="Parties"
-            style={{ textDecoration: "none" }}
-          >
+          </li>
+        </Link>
+
+        <Link to="/parties" title="Parties" style={{ textDecoration: "none" }}>
+          <li className="navigationIcon">
             <span className="partyIcon" />
             <p className="sidebarText">Parties</p>
-          </Link>
-        </li>
-        <li className="navigationIcon">
-          <Link
-            to="/parties"
-            title="Parties"
-            style={{ textDecoration: "none" }}
-          >
+          </li>
+        </Link>
+
+        <Link to="/parties" title="Parties" style={{ textDecoration: "none" }}>
+          <li className="navigationIcon">
             <span className="CSheetIcon" />
             <p className="sidebarText">Maps</p>
-          </Link>
-        </li>
-        <li className="navigationIcon">
-          <Link
-            to="/parties"
-            title="Parties"
-            style={{ textDecoration: "none" }}
-          >
+          </li>
+        </Link>
+
+        <Link to="/parties" title="Parties" style={{ textDecoration: "none" }}>
+          <li className="navigationIcon">
             <span className="CSheetIcon" />
             <p className="sidebarText">Spellbook</p>
-          </Link>
-        </li>
-        <li className="navigationIcon">
-          <Link
-            to="/parties"
-            title="Parties"
-            style={{ textDecoration: "none" }}
-          >
+          </li>
+        </Link>
+        <Link to="/parties" title="Parties" style={{ textDecoration: "none" }}>
+          <li className="navigationIcon">
             <span className="CSheetIcon" />
             <p className="sidebarText">DM Tools</p>
-          </Link>
-        </li>
+          </li>
+        </Link>
       </ul>
     </div>
   );
