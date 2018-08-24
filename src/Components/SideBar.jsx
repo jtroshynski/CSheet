@@ -89,20 +89,24 @@ class SideBar extends Component {
           </li>
         </Link>
 
-        <Link to="/parties" title="Parties" style={{ textDecoration: "none" }}>
+        <Link to="/maps" title="Maps" style={{ textDecoration: "none" }}>
           <li className="navigationIcon">
             <span className="CSheetIcon" />
             <p className="sidebarText">Maps</p>
           </li>
         </Link>
 
-        <Link to="/parties" title="Parties" style={{ textDecoration: "none" }}>
+        <Link
+          to="/spellbook"
+          title="Spellbook"
+          style={{ textDecoration: "none" }}
+        >
           <li className="navigationIcon">
             <span className="CSheetIcon" />
             <p className="sidebarText">Spellbook</p>
           </li>
         </Link>
-        <Link to="/parties" title="Parties" style={{ textDecoration: "none" }}>
+        <Link to="/dmTools" title="DM Tools" style={{ textDecoration: "none" }}>
           <li className="navigationIcon">
             <span className="CSheetIcon" />
             <p className="sidebarText">DM Tools</p>
