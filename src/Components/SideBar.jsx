@@ -73,7 +73,7 @@ class SideBar extends Component {
       <ul>
         <li className="navigationIcon">
           <Link
-            to="/chooseRace"
+            to="/characterSheet"
             title="Character Sheet"
             style={{ textDecoration: "none" }}
           >

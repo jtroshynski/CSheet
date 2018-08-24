@@ -16,21 +16,31 @@
 .sidebarText {
   display: inline-block;
   font-size: large;
-  // text-align: right;
-  // justify-content: right;
   font-family: $fontStackParagraphs;
   color: $fontColorLight;
-  // vertical-align: middle;
   text-decoration: none;
-  // margin: 30px 5px 30px 10px;
 }
 .sidebarText:hover {
   text-decoration: none;
 }
 
-//Mobile and small screens
-@media (max-width: $breakpoint) {
-  .paragraphText {
-    margin: 0 5vw 0 5vw;
-  }
+.sheetText {
+  font-family: $fontStackParagraphs;
+  font-size: 35px;
+  color: $titleColor;
+}
+
+.sheetTextSmall {
+  font-family: $fontStackParagraphs;
+  font-size: 23px;
+  color: $titleColor;
+}
+
+.largeNumber {
+  display: inline-block;
+  font-family: $fontStackTitles;
+  color: $colorDarkGrey;
+  font-size: 3em;
+  margin-top: 20px;
+  margin-left: 15px;
 }

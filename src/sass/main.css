@@ -166,11 +166,27 @@ section {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .paragraphText {
-    margin: 0 5vw 0 5vw;
-  }
+.sheetText {
+  font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
+  font-size: 35px;
+  color: #252830;
 }
+
+.sheetTextSmall {
+  font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
+  font-size: 23px;
+  color: #252830;
+}
+
+.largeNumber {
+  display: inline-block;
+  font-family: "Cabin", "Open Sans", sans-serif;
+  color: #252830;
+  font-size: 3em;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
 .button.large {
   background-color: #51425e;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
@@ -288,8 +304,6 @@ section {
 @media (min-width: 768px) {
   .sideBar {
     width: 300px;
-    margin: 0;
-    height: 100%;
     position: fixed;
     overflow-x: hidden;
     /* 12em is the width of the columns */
@@ -303,7 +317,6 @@ section {
     visibility: hidden;
     background: none;
     border: none;
-    margin: 25px;
   }
 }
 @media (max-width: 768px) {
@@ -341,7 +354,9 @@ section {
 .sideBar {
   height: 100%;
   margin: 0;
+  position: fixed;
   background: none repeat scroll 0 0 #51425e;
+  text-align: left;
 }
 .sideBar .sideBarLogoSection {
   background-color: #483b53;
@@ -436,10 +451,45 @@ section {
   text-align: center;
 }
 
+.sectionLabel {
+  display: flex;
+  height: 45px;
+  width: 270px;
+}
+
 .verticalAttributeTiles {
-  height: 100%;
+  height: 530px;
+  width: 270px;
+  margin-left: 90px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.skills {
+  height: 530px;
+  width: 270px;
+  display: inline-block;
+  margin-left: 10px;
+  overflow-y: auto;
+}
+.skills .skillTile {
+  height: 42px;
+  width: 100%;
+}
+.skills .skillTile .skillText {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.roundedTile {
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 12px;
+  height: 100%;
+  width: 100%;
 }
 
 .attribute-tiles {
@@ -456,12 +506,49 @@ section {
   margin-left: 100px;
 }
 
+.baseDetails {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 60px;
+  width: 100%;
+  height: 150px;
+  margin-left: 90px;
+}
+.baseDetails .characterName {
+  width: 550px;
+  height: 70px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 30px;
+}
+.baseDetails .level {
+  width: 200px;
+  height: 70px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 30px;
+}
+
+.sectionLabels {
+  display: flex;
+  width: 100%;
+  margin-left: 100px;
+  margin-bottom: 7px;
+}
+
+.firstSection {
+  display: flex;
+}
+
 .attribute {
   display: inline-block;
   background-color: #f0eef5;
   text-align: center;
+  height: 160px;
   width: 120px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 25px;
   margin: 5px 10px;
   position: relative;
 }

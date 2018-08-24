@@ -13,9 +13,11 @@ class CharacterSheet extends Component {
 
     this.state = {
       stats: [],
+      skills: [],
       count: 0,
       attributes: [],
-      pointsRemaining: 27
+      pointsRemaining: 27,
+      skillCount: 0
     };
     // this.handleClick = this.handleClick.bind(this);
   }
@@ -29,22 +31,58 @@ class CharacterSheet extends Component {
     { id: 5 }
   ];
 
-    // Creates Tile components out of the attributeArray and api data
-    AttributeTiles(props) {
-      const attributeTiles = props.attributeArray.map(attribute => (
-        <Attribute
-          key={attribute.id}
-          name={props.attributes[attribute.id].name}
-          pointsRemaining={props.pointsRemaining}
-          callback={props.callback}
-        />
-      ));
-      return <ul className="verticalAttributeTiles">{attributeTiles}</ul>;
-    }
+  skillsArray = [
+    { id: 0, bonus: 1 },
+    { id: 1, bonus: 2 },
+    { id: 2, bonus: 3 },
+    { id: 3, bonus: 4 },
+    { id: 4, bonus: 3 },
+    { id: 5, bonus: 2 },
+    { id: 6, bonus: 1 },
+    { id: 7, bonus: 1 },
+    { id: 8, bonus: 2 },
+    { id: 9, bonus: 3 },
+    { id: 10, bonus: 4 },
+    { id: 11, bonus: 3 },
+    { id: 12, bonus: 2 },
+    { id: 13, bonus: 1 },
+    { id: 14, bonus: 1 },
+    { id: 15, bonus: 2 },
+    { id: 16, bonus: 3 },
+    { id: 17, bonus: 4 }
+  ];
 
-    ToggleLock() {
-      // Lock or Unlock Editing page
-    }
+  // Creates Tile components out of the attributeArray and api data
+  AttributeTiles(props) {
+    const attributeTiles = props.attributeArray.map(attribute => (
+      <Attribute
+        key={attribute.id}
+        name={props.attributes[attribute.id].name}
+        pointsRemaining={props.pointsRemaining}
+        callback={props.callback}
+      />
+    ));
+    return <ul className="verticalAttributeTiles">{attributeTiles}</ul>;
+  }
+
+  // Creates Tile components out of the attributeArray and api data
+  SkillTiles(props) {
+    const skillTiles = props.skillsArray.map(skill => (
+      <div className="skillTile">
+        <div className="roundedTile">
+          <div className="skillText">
+            <h2 className="sheetTextSmall">{props.skills[skill.id].name}</h2>
+            <h2 className="sheetTextSmall">{skill.bonus}</h2>
+          </div>
+        </div>
+      </div>
+    ));
+    return <div className="skills">{skillTiles}</div>;
+  }
+
+  ToggleLock() {
+    // Lock or Unlock Editing page
+  }
 
   // Calls D&D api to get race data when page loads
   async componentDidMount() {
@@ -52,6 +90,11 @@ class CharacterSheet extends Component {
       const attributeData = res.data.results;
       const count = res.data.count;
       this.setState({ attributes: attributeData, count: count });
+    });
+    await axios.get("http://www.dnd5eapi.co/api/skills/").then(res => {
+      const skillData = res.data.results;
+      const skillCount = res.data.count;
+      this.setState({ skills: skillData, skillCount: skillCount });
     });
   }
 
@@ -61,22 +104,55 @@ class CharacterSheet extends Component {
 
   render() {
     // Analytics.record("appRender");
-    if (this.state.count === 0) {
+    if (this.state.count === 0 || this.state.skillCount === 0) {
       return (
-        <div className="content">
+        <div>
           <span>Loading...</span>
         </div>
       );
     } else {
       return (
-        <div className="content">
-          <h1 className="pageHeader">Your Character Sheet</h1>
-          <span className="padlock" onClick={this.ToggleLock}></span>
-          <this.AttributeTiles
-            attributeArray={this.attributeArray}
-            callback={this.callback}
-            {...this.state}
-          />
+        <div>
+          <div className="baseDetails">
+            <div className="characterName">
+              <div className="roundedTile">
+                <h2 className="sheetText">Maelor the Lost</h2>
+              </div>
+            </div>
+            <div className="level">
+              <div className="roundedTile">
+                <h2 className="sheetTextSmall">Level: 1</h2>
+              </div>
+            </div>
+            <div className="level">
+              <div className="roundedTile">
+                <h2 className="sheetTextSmall">Human</h2>
+              </div>
+            </div>
+            <div className="level">
+              <div className="roundedTile">
+                <h2 className="sheetTextSmall">Wizard</h2>
+              </div>
+            </div>
+          </div>
+          {/* <span className="padlock" onClick={this.ToggleLock} /> */}
+          <div className="sectionLabels">
+            <div className="sectionLabel">
+              <h2 className="sheetText">Attributes</h2>
+            </div>
+            <div className="sectionLabel">
+              <h2 className="sheetText">Skills</h2>
+            </div>
+          </div>
+
+          <div className="firstSection">
+            <this.AttributeTiles
+              attributeArray={this.attributeArray}
+              callback={this.callback}
+              {...this.state}
+            />
+            <this.SkillTiles skillsArray={this.skillsArray} {...this.state} />
+          </div>
         </div>
       );
     }

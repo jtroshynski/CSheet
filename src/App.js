@@ -33,20 +33,22 @@ class App extends Component {
   render() {
     Analytics.record("appRender");
     return (
-      <div className="CSheet">
+      <div className="App">
         <Router>
-          <div className="body">
+          <div className="App">
             <TitleBar />
             <SideBar />
-            <Switch>
-              <Route exact path="/" component={StartPage} />
-              <Route path="/chooseRace" component={ChooseRace} />
-              <Route path="/chooseClass" component={ChooseClass} />
-              <Route path="/chooseAttributes" component={ChooseAttributes} />9
-              <Route path="/parties" component={Parties} />
-              <Route path="/characterSheet" component={CharacterSheet} />
-              <Route component={PageNotFound} />
-            </Switch>
+            <div className="content">
+              <Switch>
+                <Route exact path="/" component={StartPage} />
+                <Route path="/chooseRace" component={ChooseRace} />
+                <Route path="/chooseClass" component={ChooseClass} />
+                <Route path="/chooseAttributes" component={ChooseAttributes} />9
+                <Route path="/parties" component={Parties} />
+                <Route path="/characterSheet" component={CharacterSheet} />
+                <Route component={PageNotFound} />
+              </Switch>
+            </div>
           </div>
         </Router>
       </div>

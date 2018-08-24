@@ -1,16 +1,53 @@
 .tiles-section {
-    width: 100%;
-    text-align: center;
-  }
+  width: 100%;
+  text-align: center;
+}
 
-  .verticalAttributeTiles {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+.sectionLabel {
+  display: flex;
+  height: 45px;
+  width: 270px;
+}
 
-  .attribute-tiles {
+.verticalAttributeTiles {
+  height: 530px;
+  width: 270px;
+  margin-left: 90px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.skills {
+  height: 530px;
+  width: 270px;
+  display: inline-block;
+  margin-left: 10px;
+  overflow-y: auto;
+  // flex-direction: column;
+  .skillTile {
+    height: 42px;
     width: 100%;
-    text-align: center;
-    // margin: 5px;
+
+    .skillText {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
   }
+}
+
+.roundedTile {
+  display: inline-block;
+  background-color: $colorWhite;
+  border-radius: 12px;
+  height: 100%;
+  width: 100%;
+}
+
+.attribute-tiles {
+  width: 100%;
+  text-align: center;
+  // margin: 5px;
+}

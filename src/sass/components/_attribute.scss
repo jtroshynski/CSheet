@@ -2,9 +2,10 @@
   display: inline-block;
   background-color: $backgroundColor;
   text-align: center;
+  height: 160px;
   width: 120px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  // padding: 20px;
+  border-radius: 25px;
   margin: 5px 10px;
   position: relative;
 
@@ -19,21 +20,13 @@
       font-family: $fontStackTitles;
       color: $colorDarkGrey;
       font-size: 3em;
-      // vertical-align: center;
-      // width: auto;
       margin-top: 20px;
       margin-left: 15px;
-      // padding: 0;
     }
     .attributeButtons {
-      // display: inline-block;
       vertical-align: center;
       margin-left: 10px;
-      // width: auto;
-      // width: 30%;
-      // height: 100%;
       float: right;
-      // right: 0px;
       margin-top: 30px;
       margin-right: 10px;
     }

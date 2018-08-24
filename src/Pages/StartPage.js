@@ -8,7 +8,7 @@ class StartPage extends Component {
   render() {
     Analytics.record("appRender");
     return (
-      <div className="content">
+      <div>
         <h1 className="pageHeader"> Welcome </h1>
         <p className="paragraphText">
           My name is Jeremy Troshynski, and I'm currently working on a digital

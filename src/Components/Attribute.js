@@ -61,9 +61,9 @@ class Attribute extends Component {
     return (
       <div className="attribute">
         <div className="attributeNumberSection">
-          <div className="points">{this.state.points} </div>
+          <div className="largeNumber">{this.state.points} </div>
           <div className="attributeButtons">
-            <button
+            {/* <button
               className="plusButton"
               // onTouchStart={this.handleButtonPress}
               // onTouchEnd={this.handleButtonRelease}
@@ -74,7 +74,7 @@ class Attribute extends Component {
             <button
               className="minusButton"
               onClick={this.subtractFromAttribute}
-            />
+            /> */}
           </div>
         </div>
 

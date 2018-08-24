@@ -66,13 +66,13 @@ class ChooseAttributes extends Component {
     Analytics.record("appRender");
     if (this.state.count === 0) {
       return (
-        <div className="content">
+        <div>
           <span>Loading...</span>
         </div>
       );
     } else {
       return (
-        <div className="content">
+        <div>
           <h1 className="pageHeader">Allocate your attributes</h1>
           <h2 className="paragraphText">
             Points Remaining: {this.state.pointsRemaining}
