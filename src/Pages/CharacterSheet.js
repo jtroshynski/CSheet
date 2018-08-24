@@ -17,7 +17,9 @@ class CharacterSheet extends Component {
       count: 0,
       attributes: [],
       pointsRemaining: 27,
-      skillCount: 0
+      skillCount: 0,
+      currentHealth: 8,
+      maxHealth: 12
     };
     // this.handleClick = this.handleClick.bind(this);
   }
@@ -80,6 +82,21 @@ class CharacterSheet extends Component {
     return <div className="skills">{skillTiles}</div>;
   }
 
+  ProgressBar(props) {
+    return (
+      <div class="progress">
+        <div
+          class="progress-bar bg-success"
+          role="progressbar"
+          // style="width: 25%"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        />
+      </div>
+    );
+  }
+
   ToggleLock() {
     // Lock or Unlock Editing page
   }
@@ -112,46 +129,61 @@ class CharacterSheet extends Component {
       );
     } else {
       return (
-        <div>
-          <div className="baseDetails">
-            <div className="characterName">
-              <div className="roundedTile">
-                <h2 className="sheetText">Maelor the Lost</h2>
+        <div class="container">
+          <div class="row">
+            <div className="baseDetails">
+              <div className="characterName">
+                <div className="roundedTile">
+                  <h2 className="sheetText">Maelor the Lost</h2>
+                </div>
               </div>
-            </div>
-            <div className="level">
-              <div className="roundedTile">
-                <h2 className="sheetTextSmall">Level: 1</h2>
+              <div className="level">
+                <div className="roundedTile">
+                  <h2 className="sheetTextSmall">Level: 1</h2>
+                </div>
               </div>
-            </div>
-            <div className="level">
-              <div className="roundedTile">
-                <h2 className="sheetTextSmall">Human</h2>
+              <div className="level">
+                <div className="roundedTile">
+                  <h2 className="sheetTextSmall">Human</h2>
+                </div>
               </div>
-            </div>
-            <div className="level">
-              <div className="roundedTile">
-                <h2 className="sheetTextSmall">Wizard</h2>
+              <div className="level">
+                <div className="roundedTile">
+                  <h2 className="sheetTextSmall">Wizard</h2>
+                </div>
               </div>
             </div>
           </div>
           {/* <span className="padlock" onClick={this.ToggleLock} /> */}
-          <div className="sectionLabels">
-            <div className="sectionLabel">
-              <h2 className="sheetText">Attributes</h2>
-            </div>
-            <div className="sectionLabel">
-              <h2 className="sheetText">Skills</h2>
-            </div>
-          </div>
+          <div class="container">
+            <div class="row">
+              <div className="col-sm">
+                <div className="sectionLabel">
+                  <h2 className="sheetText">Attributes</h2>
+                </div>
+                <this.AttributeTiles
+                  attributeArray={this.attributeArray}
+                  callback={this.callback}
+                  {...this.state}
+                />
+              </div>
+              <div class="col-sm">
+                <div className="sectionLabel">
+                  <h2 className="sheetText">Skills</h2>
+                </div>
+                <this.SkillTiles
+                  skillsArray={this.skillsArray}
+                  {...this.state}
+                />
+              </div>
 
-          <div className="firstSection">
-            <this.AttributeTiles
-              attributeArray={this.attributeArray}
-              callback={this.callback}
-              {...this.state}
-            />
-            <this.SkillTiles skillsArray={this.skillsArray} {...this.state} />
+              <div class="col-sm">
+                <div className="sectionLabel">
+                  <h2 className="sheetText">Health</h2>
+                </div>
+                <this.ProgressBar />
+              </div>
+            </div>
           </div>
         </div>
       );
