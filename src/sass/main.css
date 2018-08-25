@@ -30,7 +30,6 @@ img {
   }
 
   .content {
-    margin-left: 300px;
     flex: 1;
   }
 }
@@ -301,75 +300,23 @@ section {
   background-color: #51425e;
 }
 
-@media (min-width: 768px) {
-  .sideBar {
-    width: 300px;
-    position: fixed;
-    overflow-x: hidden;
-    /* 12em is the width of the columns */
-    flex: 0 0 12em;
-  }
-  .sideBar .sideBarLogoSection {
-    padding: 5px;
-  }
-
-  .mobileButton {
-    visibility: hidden;
-    background: none;
-    border: none;
-  }
-}
-@media (max-width: 768px) {
-  .sideBar {
-    width: 200px;
-  }
-
-  .mobileButton {
-    position: fixed;
-    background: none;
-    border: none;
-  }
-
-  .sideBarLogoSection {
-    padding: 20px;
-  }
-  .sideBarLogoSection .cSheetLogo {
-    width: 120px;
-  }
-
-  .characterSheetIcon {
-    display: block;
-    height: 62px;
-    width: 50px;
-    margin: auto;
-  }
-
-  .partyIcon {
-    display: block;
-    height: 62px;
-    width: 50px;
-    margin: auto;
-  }
-}
 .sideBar {
   height: 100%;
-  margin: 0;
-  position: fixed;
-  background: none repeat scroll 0 0 #51425e;
-  text-align: left;
+  background-color: #51425e;
 }
 .sideBar .sideBarLogoSection {
   background-color: #483b53;
-  width: 300px;
-  height: 50px;
+  width: 100%;
+  height: 60px;
 }
 .sideBar .sideBarLogoSection .cSheetLogo {
   background: url("../Images/CSheet Logos/CSheet Logo Green Black.svg");
   background-repeat: no-repeat;
   display: block;
-  width: 160px;
-  height: auto;
-  margin-left: 40px;
+  width: 180px;
+  height: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
   cursor: pointer;
 }
 .sideBar .divider {
@@ -496,7 +443,6 @@ section {
   height: 50px;
   width: 50px;
   display: block;
-  margin-left: 100px;
 }
 
 .baseDetails {
@@ -506,7 +452,6 @@ section {
   margin-top: 60px;
   width: 100%;
   height: 150px;
-  margin-left: 90px;
 }
 .baseDetails .characterName {
   width: 550px;

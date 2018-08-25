@@ -1,75 +1,77 @@
-//Desktop and large screens
-@media (min-width: $breakpoint) {
-  .sideBar {
-    // min-width: 225px;
-    width: 300px;
-    position: fixed;
-    overflow-x: hidden;
-    /* 12em is the width of the columns */
-    flex: 0 0 12em;
-    .sideBarLogoSection {
-      // background-color: $colorLightGrey;
-      padding: 5px;
-    }
-  }
-  .mobileButton {
-    visibility: hidden;
-    background: none;
-    border: none;
-    // margin: 25px;
-  }
-}
+// //Desktop and large screens
+// @media (min-width: $breakpoint) {
+//   .sideBar {
+//     // min-width: 225px;
+//     width: 300px;
+//     position: fixed;
+//     overflow-x: hidden;
+//     /* 12em is the width of the columns */
+//     flex: 0 0 12em;
+//     .sideBarLogoSection {
+//       // background-color: $colorLightGrey;
+//       padding: 5px;
+//     }
+//   }
+//   .mobileButton {
+//     visibility: hidden;
+//     background: none;
+//     border: none;
+//     // margin: 25px;
+//   }
+// }
 
-//Mobile and small screens
-@media (max-width: $breakpoint) {
-  .sideBar {
-    width: 200px;
-  }
-  .mobileButton {
-    // visibility: visible;
-    position: fixed;
-    background: none;
-    border: none;
-  }
-  .sideBarLogoSection {
-    padding: 20px;
-    .cSheetLogo {
-      width: 120px;
-    }
-  }
-  .characterSheetIcon {
-    display: block;
-    height: 62px;
-    width: 50px;
-    margin: auto;
-  }
-  .partyIcon {
-    display: block;
-    height: 62px;
-    width: 50px;
-    margin: auto;
-  }
-}
+// //Mobile and small screens
+// @media (max-width: $breakpoint) {
+//   .sideBar {
+//     width: 200px;
+//   }
+//   .mobileButton {
+//     // visibility: visible;
+//     position: fixed;
+//     background: none;
+//     border: none;
+//   }
+//   .sideBarLogoSection {
+//     padding: 20px;
+//     .cSheetLogo {
+//       width: 120px;
+//     }
+//   }
+//   .characterSheetIcon {
+//     display: block;
+//     height: 62px;
+//     width: 50px;
+//     margin: auto;
+//   }
+//   .partyIcon {
+//     display: block;
+//     height: 62px;
+//     width: 50px;
+//     margin: auto;
+//   }
+// }
 
 .sideBar {
   height: 100%;
-  margin: 0;
-  position: fixed;
-  background: none repeat scroll 0 0 $primaryColor;
-  text-align: left;
+  // margin: 0;
+  // position: fixed;
+  background-color: $primaryColor;
+  // text-align: left;
   // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   .sideBarLogoSection {
     background-color: $secondaryColor;
-    width: 300px;
-    height: 50px;
+    width: 100%;
+    height: 60px;
     .cSheetLogo {
       background: url($cSheetLogo);
       background-repeat: no-repeat;
       display: block;
-      width: 160px;
-      height: auto;
-      margin-left: 40px;
+      width: 180px;
+      height: 100%;
+      margin-left: 20px;
+      margin-right: 20px;
+      // margin-left: 40px;
       cursor: pointer;
     }
   }
