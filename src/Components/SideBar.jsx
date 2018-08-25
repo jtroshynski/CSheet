@@ -70,48 +70,36 @@ class SideBar extends Component {
           <img src={cSheet} alt="cSheet" />{" "}
         </Link>
       </div>
-      <ul>
-        <Link
-          to="/characterSheet"
-          title="Character Sheet"
-          style={{ textDecoration: "none" }}
-        >
-          <li className="navigationIcon">
-            <span className="CSheetIcon" />
-            <p className="sidebarText">Character Sheet</p>
-          </li>
-        </Link>
-
-        <Link to="/parties" title="Parties" style={{ textDecoration: "none" }}>
-          <li className="navigationIcon">
-            <span className="partyIcon" />
-            <p className="sidebarText">Parties</p>
-          </li>
-        </Link>
-
-        <Link to="/maps" title="Maps" style={{ textDecoration: "none" }}>
-          <li className="navigationIcon">
-            <span className="CSheetIcon" />
-            <p className="sidebarText">Maps</p>
-          </li>
-        </Link>
-
-        <Link
-          to="/spellbook"
-          title="Spellbook"
-          style={{ textDecoration: "none" }}
-        >
-          <li className="navigationIcon">
-            <span className="CSheetIcon" />
-            <p className="sidebarText">Spellbook</p>
-          </li>
-        </Link>
-        <Link to="/dmTools" title="DM Tools" style={{ textDecoration: "none" }}>
-          <li className="navigationIcon">
-            <span className="CSheetIcon" />
-            <p className="sidebarText">DM Tools</p>
-          </li>
-        </Link>
+      <ul class="list-group">
+        <div class="list-group">
+          <a
+            href="/characterSheet"
+            class="list-group-item list-group-item-action flex-column align-items-start active"
+          >
+            <div class="d-flex w-100 justify-content-between">
+              <small>img</small>
+              <h5 class="mb-1">Character Sheet</h5>
+            </div>
+          </a>
+          <a
+            href="/parties"
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <div class="d-flex w-100 justify-content-between">
+              <small>img</small>
+              <h5 class="mb-1">Parties</h5>
+            </div>
+          </a>
+          <a
+            href="/spellbook"
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <div class="d-flex w-100 justify-content-between">
+              <small>img</small>
+              <h5 class="mb-1">Spellbook</h5>
+            </div>
+          </a>
+        </div>
       </ul>
     </div>
   );

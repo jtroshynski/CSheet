@@ -86,13 +86,15 @@ class CharacterSheet extends Component {
     return (
       <div class="progress">
         <div
-          class="progress-bar bg-success"
+          class="progress-bar bg-danger"
           role="progressbar"
-          // style="width: 25%"
-          aria-valuenow="25"
+          style={{ width: "70%" }}
+          aria-valuenow="75"
           aria-valuemin="0"
           aria-valuemax="100"
-        />
+        >
+          <span className="sr-only">70% Complete</span>
+        </div>
       </div>
     );
   }
