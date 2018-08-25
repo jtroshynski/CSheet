@@ -8,6 +8,9 @@ import ChooseClass from "Pages/ChooseClass";
 import StartPage from "Pages/StartPage";
 import ChooseAttributes from "Pages/ChooseAttributes";
 import Parties from "Pages/Parties";
+import Maps from "Pages/Maps";
+import Spellbook from "Pages/Spellbook";
+import DMTools from "Pages/DMTools";
 import CharacterSheet from "Pages/CharacterSheet";
 
 import PageNotFound from "Pages/PageNotFound";
@@ -46,6 +49,9 @@ class App extends Component {
                 <Route path="/chooseAttributes" component={ChooseAttributes} />9
                 <Route path="/parties" component={Parties} />
                 <Route path="/characterSheet" component={CharacterSheet} />
+                <Route path="/maps" component={Maps} />
+                <Route path="/spellbook" component={Spellbook} />
+                <Route path="/dmTools" component={DMTools} />
                 <Route component={PageNotFound} />
               </Switch>
             </div>

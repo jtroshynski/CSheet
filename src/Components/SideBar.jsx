@@ -70,57 +70,36 @@ class SideBar extends Component {
           <img src={cSheet} alt="cSheet" />{" "}
         </Link>
       </div>
-      <ul>
-        <li className="navigationIcon">
-          <Link
-            to="/characterSheet"
-            title="Character Sheet"
-            style={{ textDecoration: "none" }}
+      <ul class="list-group">
+        <div class="list-group">
+          <a
+            href="/characterSheet"
+            class="list-group-item list-group-item-action flex-column align-items-start active"
           >
-            <span className="CSheetIcon" />
-            <p className="sidebarText">Character Sheet</p>
-          </Link>
-        </li>
-        <li className="navigationIcon">
-          <Link
-            to="/parties"
-            title="Parties"
-            style={{ textDecoration: "none" }}
+            <div class="d-flex w-100 justify-content-between">
+              <small>img</small>
+              <h5 class="mb-1">Character Sheet</h5>
+            </div>
+          </a>
+          <a
+            href="/parties"
+            class="list-group-item list-group-item-action flex-column align-items-start"
           >
-            <span className="partyIcon" />
-            <p className="sidebarText">Parties</p>
-          </Link>
-        </li>
-        <li className="navigationIcon">
-          <Link
-            to="/parties"
-            title="Parties"
-            style={{ textDecoration: "none" }}
+            <div class="d-flex w-100 justify-content-between">
+              <small>img</small>
+              <h5 class="mb-1">Parties</h5>
+            </div>
+          </a>
+          <a
+            href="/spellbook"
+            class="list-group-item list-group-item-action flex-column align-items-start"
           >
-            <span className="CSheetIcon" />
-            <p className="sidebarText">Maps</p>
-          </Link>
-        </li>
-        <li className="navigationIcon">
-          <Link
-            to="/parties"
-            title="Parties"
-            style={{ textDecoration: "none" }}
-          >
-            <span className="CSheetIcon" />
-            <p className="sidebarText">Spellbook</p>
-          </Link>
-        </li>
-        <li className="navigationIcon">
-          <Link
-            to="/parties"
-            title="Parties"
-            style={{ textDecoration: "none" }}
-          >
-            <span className="CSheetIcon" />
-            <p className="sidebarText">DM Tools</p>
-          </Link>
-        </li>
+            <div class="d-flex w-100 justify-content-between">
+              <small>img</small>
+              <h5 class="mb-1">Spellbook</h5>
+            </div>
+          </a>
+        </div>
       </ul>
     </div>
   );
