@@ -44,22 +44,22 @@ class CharacterSheet extends Component {
             <div className="baseDetails">
               <div className="characterName">
                 <div className="roundedTile">
-                  <h2 className="sheetText">Maelor the Lost</h2>
+                  <h2 className="header">Maelor the Lost</h2>
                 </div>
               </div>
               <div className="level">
                 <div className="roundedTile">
-                  <h2 className="sheetTextSmall">Level: 1</h2>
+                  <h2 className="largeBody">Level: 1</h2>
                 </div>
               </div>
               <div className="level">
                 <div className="roundedTile">
-                  <h2 className="sheetTextSmall">Human</h2>
+                  <h2 className="largeBody">Human</h2>
                 </div>
               </div>
               <div className="level">
                 <div className="roundedTile">
-                  <h2 className="sheetTextSmall">Wizard</h2>
+                  <h2 className="largeBody">Wizard</h2>
                 </div>
               </div>
             </div>
@@ -69,19 +69,25 @@ class CharacterSheet extends Component {
             <div class="row">
               <div className="col-sm">
                 <div className="sectionLabel">
-                  <h2 className="sheetText">Attributes</h2>
+                  <h2 className="header">Attributes</h2>
                 </div>
                 <AttributeTiles />
               </div>
               <div class="col-sm">
                 <div className="sectionLabel">
-                  <h2 className="sheetText">Skills</h2>
+                  <h2 className="header">Skills</h2>
                 </div>
                 <SkillList />
               </div>
 
               <div class="col-sm">
+                <div className="sectionLabel">
+                  <h2 className="header">Health</h2>
+                </div>
                 <HealthBar />
+                <div className="sectionLabel">
+                  <h2 className="header">Armor</h2>
+                </div>
               </div>
             </div>
           </div>

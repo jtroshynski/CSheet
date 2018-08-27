@@ -118,17 +118,6 @@ section {
   display: block;
 }
 
-.pageHeader {
-  font-family: "Cabin", "Open Sans", sans-serif;
-  font-size: 3em;
-  color: #252830;
-}
-
-.paragraphText {
-  font-size: large;
-  font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
-}
-
 .sidebarText {
   font-size: 1em;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
@@ -140,16 +129,31 @@ section {
   text-decoration: none;
 }
 
-.sheetText {
+.headline {
+  font-family: "Cabin", "Open Sans", sans-serif;
+  font-size: 3em;
+  color: #252830;
+}
+
+.header {
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
   font-size: 35px;
   color: #252830;
 }
 
-.sheetTextSmall {
+.largeBody {
+  font-size: 24px;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
-  font-size: 23px;
-  color: #252830;
+}
+
+.regularBody {
+  font-size: 20px;
+  font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
+}
+
+.smallBody {
+  font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
+  font-size: 18px;
 }
 
 .largeNumber {

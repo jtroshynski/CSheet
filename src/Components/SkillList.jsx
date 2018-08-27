@@ -56,10 +56,10 @@ class SkillList extends Component {
         <div className="skillTile">
           <div className="roundedTile">
             <div className="skillText">
-              <h2 className="sheetTextSmall">
+              <h2 className="regularBody">
                 {this.state.skills[skill.id].name}
               </h2>
-              <h2 className="sheetTextSmall">{skill.bonus}</h2>
+              <h2 className="regularBody">{skill.bonus}</h2>
             </div>
           </div>
         </div>

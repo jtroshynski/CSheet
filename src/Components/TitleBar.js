@@ -43,7 +43,7 @@ class TitleBar extends Component {
 
   render() {
     return (
-      <nav class="navbar navbar-expand-lg navbar-light bg-light paragraphText">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light smallBody">
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">

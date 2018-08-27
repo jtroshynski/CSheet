@@ -1,14 +1,3 @@
-.pageHeader {
-  font-family: $fontStackTitles;
-  font-size: 3em; //3.5vw?
-  color: $titleColor;
-}
-
-.paragraphText {
-  font-size: large;
-  font-family: $fontStackParagraphs;
-}
-
 .sidebarText {
   font-size: 1em;
   font-family: $fontStackParagraphs;
@@ -19,16 +8,32 @@
   text-decoration: none;
 }
 
-.sheetText {
+.headline {
+  font-family: $fontStackTitles;
+  font-size: 3em; //3.5vw?
+  color: $titleColor;
+}
+
+.title {
+}
+.header {
   font-family: $fontStackParagraphs;
   font-size: 35px;
   color: $titleColor;
 }
-
-.sheetTextSmall {
+.largeBody {
+  font-size: 24px;
   font-family: $fontStackParagraphs;
-  font-size: 23px;
-  color: $titleColor;
+}
+
+.regularBody {
+  font-size: 20px;
+  font-family: $fontStackParagraphs;
+}
+
+.smallBody {
+  font-family: $fontStackParagraphs;
+  font-size: 18px;
 }
 
 .largeNumber {

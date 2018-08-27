@@ -15,12 +15,9 @@ class HealthBar extends Component {
   render() {
     return (
       <div>
-        <div className="sectionLabel">
-          <h2 className="sheetText">Health</h2>
-        </div>
         <div class="progress">
           <div
-            class="progress-bar bg-danger"
+            class="progress-bar bg-danger smallBody"
             role="progressbar"
             style={{ width: "70%" }}
             aria-valuenow="75"

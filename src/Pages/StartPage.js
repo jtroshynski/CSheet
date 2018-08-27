@@ -9,8 +9,8 @@ class StartPage extends Component {
     Analytics.record("appRender");
     return (
       <div>
-        <h1 className="pageHeader"> Welcome </h1>
-        <p className="paragraphText">
+        <h1 className="header"> Welcome </h1>
+        <p className="regularBody">
           My name is Jeremy Troshynski, and I'm currently working on a digital
           version of the Dungeons & Dragons fifth edition character sheet.
           You're welcome to give it a spin or check out my code using the github
