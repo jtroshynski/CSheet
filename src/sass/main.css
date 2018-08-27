@@ -1,14 +1,6 @@
 html,
 body {
   background-color: #f0eef5;
-  margin: 0;
-  height: 100%;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 }
 
 img {
@@ -21,18 +13,6 @@ img {
   margin: 10px;
 }
 
-@media (min-width: 768px) {
-  body {
-    margin: 0;
-    flex-direction: row;
-    flex: 1;
-    height: 100%;
-  }
-
-  .content {
-    flex: 1;
-  }
-}
 html,
 body,
 div,
@@ -141,21 +121,16 @@ section {
 .pageHeader {
   font-family: "Cabin", "Open Sans", sans-serif;
   font-size: 3em;
-  text-align: center;
-  margin: 60px 0 40px 0;
   color: #252830;
 }
 
 .paragraphText {
   font-size: large;
-  text-align: center;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
-  margin: 0 20vw 0 20vw;
 }
 
 .sidebarText {
-  display: inline-block;
-  font-size: large;
+  font-size: 1em;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
   color: #f7f7ed;
   text-decoration: none;
@@ -178,12 +153,9 @@ section {
 }
 
 .largeNumber {
-  display: inline-block;
   font-family: "Cabin", "Open Sans", sans-serif;
   color: #252830;
   font-size: 3em;
-  margin-top: 20px;
-  margin-left: 15px;
 }
 
 .button.large {
@@ -302,82 +274,24 @@ section {
 
 .sideBar {
   height: 100%;
+  width: 200px;
   background-color: #51425e;
 }
 .sideBar .sideBarLogoSection {
-  background-color: #483b53;
-  width: 100%;
-  height: 60px;
+  padding: 20px;
 }
-.sideBar .sideBarLogoSection .cSheetLogo {
-  background: url("../Images/CSheet Logos/CSheet Logo Green Black.svg");
-  background-repeat: no-repeat;
-  display: block;
-  width: 180px;
-  height: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
-  cursor: pointer;
-}
-.sideBar .divider {
-  height: 1px;
-  width: 95%;
-  background: #656565;
-}
-.sideBar ul li.navigationIcon {
-  height: 90px;
-  width: 300px;
+.sideBar .sidebarItem {
   transition: 0.3s;
-  cursor: pointer;
+  background-color: #51425e;
+  padding: 20px;
 }
-.sideBar ul li.navigationIcon .characterSheetIcon {
-  background: url("../Images/CSheet Icons/CSheet Icon Green.svg");
-  background-repeat: no-repeat;
-  display: inline-block;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 10px;
-  max-height: 25px;
-  max-width: 25px;
-  position: relative;
-  vertical-align: middle;
-  height: 80px;
-  width: 80px;
+.sideBar .sidebarItem:hover {
+  background-color: #483b53;
+  color: #f7f7ed;
 }
-.sideBar ul li.navigationIcon .partyIcon {
-  background: url("../Images/Navigation/Party Icon.svg");
-  background-repeat: no-repeat;
-  display: inline-block;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 10px;
-  max-height: 45px;
-  max-width: 45px;
-  position: relative;
-  vertical-align: middle;
-  height: 80px;
-  width: 80px;
-}
-.sideBar ul li.navigationIcon .CSheetIcon {
-  background: url("../Images/CSheet Icons/CSheet Icon Green.svg");
-  background-repeat: no-repeat;
-  display: inline-block;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 10px;
-  max-height: 25px;
-  max-width: 25px;
-  position: relative;
-  vertical-align: middle;
-  height: 80px;
-  width: 80px;
-}
-.sideBar ul li.navigationIcon .active {
-  background-color: #f0eef5;
-  border-radius: 4px;
-}
-.sideBar ul li.navigationIcon:hover {
-  background-color: #392e42;
+.sideBar .sidebarIcon {
+  height: 20px;
+  width: 20px;
 }
 
 .titleBar {
@@ -456,16 +370,12 @@ section {
 .baseDetails .characterName {
   width: 550px;
   height: 70px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-right: 30px;
+  margin: 40px 30px 40px 0;
 }
 .baseDetails .level {
   width: 200px;
   height: 70px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-right: 30px;
+  margin: 40px 30px 40px 0;
 }
 
 .attribute {

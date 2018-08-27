@@ -20,7 +20,13 @@ import "sass/main.css";
 import Amplify, { Analytics } from "aws-amplify";
 import aws_exports from "aws-exports";
 
-import cSheet from "Images/CSheet Logos/CSheet Logo Green Black.svg";
+import cSheetLogo from "Images/CSheet Logos/CSheet Logo Green Black.svg";
+
+import cSheetIconYellow from "Images/CSheet Icons/CSheet Icon Yellow.svg";
+import cSheetIconSeaGreen from "Images/CSheet Icons/CSheet Icon Sea Green.svg";
+import cSheetIconBrown from "Images/CSheet Icons/CSheet Icon Brown.svg";
+import cSheetIconBlue from "Images/CSheet Icons/CSheet Icon Blue.svg";
+import cSheetIconOrange from "Images/CSheet Icons/CSheet Icon Orange.svg";
 
 // import { withAuthenticator } from "aws-amplify-react";
 
@@ -60,41 +66,93 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <div className="App">
-            <TitleBar />
-            <Sidebar
-              sidebar={
-                <div className="sideBar">
-                  <div className="sideBarLogoSection">
-                    <Link className="cSheetLogo" to="/">
-                      <img src={cSheet} alt="cSheet" />
-                    </Link>
-                  </div>
+          <Sidebar
+            sidebar={
+              <div className="sideBar">
+                <div className="sideBarLogoSection">
+                  <Link to="/">
+                    <img src={cSheetLogo} alt="CSheet" />
+                  </Link>
                 </div>
-              }
-              open={this.state.sidebarOpen}
-              docked={this.state.sidebarDocked}
-              onSetOpen={this.onSetSidebarOpen}
-            >
-              <div className="content">
-                <Switch>
-                  <Route exact path="/" component={StartPage} />
-                  <Route path="/chooseRace" component={ChooseRace} />
-                  <Route path="/chooseClass" component={ChooseClass} />
-                  <Route
-                    path="/chooseAttributes"
-                    component={ChooseAttributes}
-                  />
-                  <Route path="/parties" component={Parties} />
-                  <Route path="/characterSheet" component={CharacterSheet} />
-                  <Route path="/maps" component={Maps} />
-                  <Route path="/spellbook" component={Spellbook} />
-                  <Route path="/dmTools" component={DMTools} />
-                  <Route component={PageNotFound} />
-                </Switch>
+                <div className="list-group">
+                  <a
+                    href="/characterSheet"
+                    className="list-group-item list-group-item-info sidebarItem"
+                  >
+                    <img
+                      className="sidebarIcon"
+                      src={cSheetIconYellow}
+                      align="left"
+                    />
+                    <p className="sidebarText">Character Sheet</p>
+                  </a>
+                  <a
+                    href="/parties"
+                    className="list-group-item list-group-item-info sidebarItem"
+                  >
+                    <img
+                      className="sidebarIcon"
+                      src={cSheetIconSeaGreen}
+                      align="left"
+                    />
+                    <p className="sidebarText">Parties</p>
+                  </a>
+                  <a
+                    href="/spellbook"
+                    className="list-group-item list-group-item-info sidebarItem"
+                  >
+                    <img
+                      className="sidebarIcon"
+                      src={cSheetIconBrown}
+                      align="left"
+                    />
+                    <p className="sidebarText">Spellbook</p>
+                  </a>
+                  <a
+                    href="/maps"
+                    class="list-group-item list-group-item-info sidebarItem"
+                  >
+                    <img
+                      className="sidebarIcon"
+                      src={cSheetIconBlue}
+                      align="left"
+                    />
+                    <p className="sidebarText">Maps</p>
+                  </a>
+                  <a
+                    href="/dmTools"
+                    className="list-group-item list-group-item-info sidebarItem"
+                  >
+                    <img
+                      className="sidebarIcon"
+                      src={cSheetIconOrange}
+                      align="left"
+                    />
+                    <p className="sidebarText">DM Tools</p>
+                  </a>
+                </div>
               </div>
-            </Sidebar>
-          </div>
+            }
+            open={this.state.sidebarOpen}
+            docked={this.state.sidebarDocked}
+            onSetOpen={this.onSetSidebarOpen}
+          >
+            <TitleBar />
+            <div className="content">
+              <Switch>
+                <Route exact path="/" component={StartPage} />
+                <Route path="/chooseRace" component={ChooseRace} />
+                <Route path="/chooseClass" component={ChooseClass} />
+                <Route path="/chooseAttributes" component={ChooseAttributes} />
+                <Route path="/parties" component={Parties} />
+                <Route path="/characterSheet" component={CharacterSheet} />
+                <Route path="/maps" component={Maps} />
+                <Route path="/spellbook" component={Spellbook} />
+                <Route path="/dmTools" component={DMTools} />
+                <Route component={PageNotFound} />
+              </Switch>
+            </div>
+          </Sidebar>
         </Router>
       </div>
     );

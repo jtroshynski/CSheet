@@ -1,14 +1,6 @@
 html,
 body {
   background-color: $backgroundColor;
-  margin: 0;
-  height: 100%;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 }
 
 img {
@@ -19,18 +11,4 @@ img {
 .footerIcon {
   color: black;
   margin: 10px;
-}
-
-//Desktop and large screens
-@media (min-width: $breakpoint) {
-  body {
-    margin: 0;
-    flex-direction: row;
-    flex: 1;
-    height: 100%;
-  }
-  .content {
-    // margin-left: 300px;
-    flex: 1;
-  }
 }
