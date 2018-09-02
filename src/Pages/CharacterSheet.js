@@ -5,6 +5,7 @@ import HealthBar from "../Components/HealthBar";
 import SkillList from "../Components/SkillList";
 import AttributeTiles from "../Components/AttributeTiles";
 import Armor from "../Components/Armor";
+import Weapons from "../Components/Weapons";
 
 import axios from "axios";
 
@@ -94,7 +95,6 @@ class CharacterSheet extends Component {
                 </div>
                 <SkillList />
               </div>
-
               <div className="col-sm-6">
                 <div className="sectionLabel">
                   <h2 className="header">Health</h2>
@@ -107,7 +107,7 @@ class CharacterSheet extends Component {
                 <div className="sectionLabel">
                   <h2 className="header">Weapons</h2>
                 </div>
-                <Armor />
+                <Weapons />
               </div>
             </div>
           </div>

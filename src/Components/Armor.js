@@ -37,13 +37,15 @@ class Armor extends Component {
     return (
       <div class="container">
         <div class="row">
-          <div className="attribute">
-            <div className="attributeNumberSection">
-              <div className="largeNumber">{this.state.points} </div>
+          <div className="col-sm-3">
+            <div className="attribute">
+              <div className="attributeNumberSection">
+                <div className="largeNumber">{this.state.points} </div>
+              </div>
+              <div className="attributeName">AC</div>
             </div>
-            <div className="attributeName">AC</div>
           </div>
-          {this.getArmor()}
+          <div className="col-sm-9">{this.getArmor()}</div>
         </div>
       </div>
     );
