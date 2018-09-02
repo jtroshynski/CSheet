@@ -7,8 +7,8 @@ class DMTools extends Component {
     // Analytics.record("appRender");
     return (
       <div>
-        <h1 className="pageHeader">Under Construction</h1>
-        <p className="paragraphText">{"Check back later!"}</p>
+        <h1 className="header">Under Construction</h1>
+        <p className="regularBody">{"Check back later!"}</p>
       </div>
     );
   }

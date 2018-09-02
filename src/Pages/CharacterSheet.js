@@ -4,6 +4,7 @@ import "sass/main.css";
 import HealthBar from "../Components/HealthBar";
 import SkillList from "../Components/SkillList";
 import AttributeTiles from "../Components/AttributeTiles";
+import Armor from "../Components/Armor";
 
 import axios from "axios";
 
@@ -41,46 +42,60 @@ class CharacterSheet extends Component {
       return (
         <div class="container">
           <div class="row">
-            <div className="baseDetails">
-              <div className="characterName">
+            <div className="col-sm-6">
+              <div className="longTile tall">
                 <div className="roundedTile">
-                  <h2 className="header">Maelor the Lost</h2>
+                  <div className="longTileText">
+                    <h2 className="header">Maelor the Lost</h2>
+                  </div>
                 </div>
               </div>
-              <div className="level">
+            </div>
+            <div className="col-sm-2">
+              <div className="longTile tall">
                 <div className="roundedTile">
-                  <h2 className="largeBody">Level: 1</h2>
+                  <div className="longTileText">
+                    <h2 className="largeBody">Level: 1</h2>
+                  </div>
                 </div>
               </div>
-              <div className="level">
+            </div>
+            <div className="col-sm-2">
+              <div className="longTile tall">
                 <div className="roundedTile">
-                  <h2 className="largeBody">Human</h2>
+                  <div className="longTileText">
+                    <h2 className="largeBody">Human</h2>
+                  </div>
                 </div>
               </div>
-              <div className="level">
+            </div>
+            <div className="col-sm-2">
+              <div className="longTile tall">
                 <div className="roundedTile">
-                  <h2 className="largeBody">Wizard</h2>
+                  <div className="longTileText">
+                    <h2 className="largeBody">Wizard</h2>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           {/* <span className="padlock" onClick={this.ToggleLock} /> */}
-          <div class="container">
-            <div class="row">
-              <div className="col-sm">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-3">
                 <div className="sectionLabel">
                   <h2 className="header">Attributes</h2>
                 </div>
                 <AttributeTiles />
               </div>
-              <div class="col-sm">
+              <div className="col-sm-3">
                 <div className="sectionLabel">
                   <h2 className="header">Skills</h2>
                 </div>
                 <SkillList />
               </div>
 
-              <div class="col-sm">
+              <div className="col-sm-6">
                 <div className="sectionLabel">
                   <h2 className="header">Health</h2>
                 </div>
@@ -88,6 +103,11 @@ class CharacterSheet extends Component {
                 <div className="sectionLabel">
                   <h2 className="header">Armor</h2>
                 </div>
+                <Armor />
+                <div className="sectionLabel">
+                  <h2 className="header">Weapons</h2>
+                </div>
+                <Armor />
               </div>
             </div>
           </div>

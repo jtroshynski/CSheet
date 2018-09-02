@@ -53,9 +53,9 @@ class SkillList extends Component {
       );
     } else {
       const skillTiles = this.skillsArray.map(skill => (
-        <div className="skillTile">
+        <div className="longTile short">
           <div className="roundedTile">
-            <div className="skillText">
+            <div className="longTileText">
               <h2 className="regularBody">
                 {this.state.skills[skill.id].name}
               </h2>
@@ -64,7 +64,7 @@ class SkillList extends Component {
           </div>
         </div>
       ));
-      return <div className="skills">{skillTiles}</div>;
+      return <div className="longTileSection">{skillTiles}</div>;
     }
   }
 }
