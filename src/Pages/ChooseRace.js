@@ -63,13 +63,13 @@ class ChooseRace extends Component {
     // Analytics.record("appRender");
     if (this.state.count === 0) {
       return (
-        <div className="content">
+        <div>
           <span>Loading...</span>
         </div>
       );
     } else {
       return (
-        <div className="content">
+        <div>
           <h1 className="pageHeader">Pick a race</h1>
           <this.RaceTiles raceArray={this.raceArray} {...this.state} />
         </div>

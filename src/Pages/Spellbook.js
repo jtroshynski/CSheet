@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "sass/main.css";
 import { Analytics } from "aws-amplify";
 
-class PageNotFound extends Component {
+class Spellbook extends Component {
   render() {
     // Analytics.record("appRender");
     return (
@@ -14,5 +14,5 @@ class PageNotFound extends Component {
   }
 }
 
-export default PageNotFound;
+export default Spellbook;
 // export default withAuthenticator(App);

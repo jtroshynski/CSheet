@@ -1,64 +1,20 @@
-.pageHeader {
-  font-family: $font-stack;
-  font-size: 3em; //3.5vw?
-  text-align: center;
-  margin: 60px 0 40px 0;
-  color: rgb(20, 20, 20);
-}
-
-.body {
-  margin: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.content {
+html,
+body {
   background-color: $backgroundColor;
 }
 
-.paragraphText {
-  font-size: large;
-  text-align: center;
-  font-family: $paragraphFonts;
-  margin: 0 20vw 0 20vw;
-}
 img {
   max-width: 100%;
   max-height: 100%;
 }
-
-.tiles-section {
-  width: 100%;
-  text-align: center;
-}
-
-// .characterSheetIcon:hover {
-// }
 
 .footerIcon {
   color: black;
   margin: 10px;
 }
 
-//Desktop and large screens
-@media (min-width: $breakpoint) {
-  .body {
-    margin: 0;
-    flex-direction: row;
-    flex: 1;
-    height: 100%;
-  }
-  .content {
-    margin-left: 200px;
-    flex: 1;
-  }
-}
-
-//Mobile and small screens
-@media (max-width: $breakpoint) {
-  .paragraphText {
-    margin: 0 5vw 0 5vw;
-  }
+.sectionLabel {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }

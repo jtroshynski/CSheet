@@ -1,0 +1,43 @@
+.sidebarText {
+  font-size: 1em;
+  font-family: $fontStackParagraphs;
+  color: $fontColorLight;
+  text-decoration: none;
+}
+.sidebarText:hover {
+  text-decoration: none;
+}
+
+.headline {
+  font-family: $fontStackTitles;
+  font-size: 3em; //3.5vw?
+  color: $titleColor;
+}
+
+.title {
+}
+.header {
+  font-family: $fontStackParagraphs;
+  font-size: 35px;
+  color: $titleColor;
+}
+.largeBody {
+  font-size: 24px;
+  font-family: $fontStackParagraphs;
+}
+
+.regularBody {
+  font-size: 20px;
+  font-family: $fontStackParagraphs;
+}
+
+.smallBody {
+  font-family: $fontStackParagraphs;
+  font-size: 18px;
+}
+
+.largeNumber {
+  font-family: $fontStackTitles;
+  color: $colorDarkGrey;
+  font-size: 3em;
+}

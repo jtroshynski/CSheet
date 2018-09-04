@@ -28,23 +28,26 @@ class Attribute extends Component {
     { score: 15, cost: 9 }
   ];
 
-  addToAttribute() {
+  addToAttribute = () => {
     let currentPoints = this.state.points;
-
-    if (currentPoints < 15) {
+    let pointsRemaining = this.props.pointsRemaining;
+    if (currentPoints < 15 && pointsRemaining > 0) {
       this.setState({ points: currentPoints + 1 });
+      pointsRemaining = pointsRemaining - 1;
+      this.props.callback(pointsRemaining);
     }
-  }
+  };
 
-  subtractFromAttribute() {
+  subtractFromAttribute = () => {
     let currentPoints = this.state.points;
     let pointsRemaining = this.props.pointsRemaining;
 
-    if (currentPoints > 0 && pointsRemaining > 25) {
+    if (currentPoints > 8) {
       this.setState({ points: currentPoints - 1 });
-      pointsRemaining = pointsRemaining - 1;
+      pointsRemaining = pointsRemaining + 1;
+      this.props.callback(pointsRemaining);
     }
-  }
+  };
 
   handleButtonPress() {
     this.buttonPressTimer = setTimeout(() => this.addToAttribute(), 600);
@@ -57,25 +60,28 @@ class Attribute extends Component {
   render() {
     return (
       <div className="attribute">
-        <div className="attributeButtons">
-          <button
-            className="plusButton"
-            onTouchStart={this.handleButtonPress}
-            onTouchEnd={this.handleButtonRelease}
-            onMouseDown={this.handleButtonPress}
-            onMouseUp={this.handleButtonRelease}
-            onClick={this.addToAttribute}
-          />
-          <button
-            className="minusButton"
-            onClick={this.subtractFromAttribute}
-          />
+        <div className="attributeNumberSection">
+          <div className="largeNumber">{this.state.points} </div>
+          {/* <div className="attributeButtons"> */}
+          {/* <button
+              className="plusButton"
+              // onTouchStart={this.handleButtonPress}
+              // onTouchEnd={this.handleButtonRelease}
+              // onMouseDown={this.handleButtonPress}
+              // onMouseUp={this.handleButtonRelease}
+              onClick={this.addToAttribute}
+            />
+            <button
+              className="minusButton"
+              onClick={this.subtractFromAttribute}
+            /> */}
+          {/* </div> */}
         </div>
 
-        <div className="attributeValues">
-          <div className="points">{this.state.points} </div>
-          <div className="attribute-text">{this.props.name}</div>
-        </div>
+        {/* <div className="attributeValues"> */}
+
+        <div className="attributeName">{this.props.name}</div>
+        {/* </div> */}
       </div>
     );
   }

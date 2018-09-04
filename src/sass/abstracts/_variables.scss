@@ -8,22 +8,42 @@ $breakpoint: 768px;
 $cSheetLogo: "../Images/CSheet Logos/CSheet Logo Green Black.svg";
 
 $characterSheetIcon: "../Images/Navigation/Character Sheet Black.svg";
-$partyIcon: "../Images/Navigation/Party Icon_1.svg";
+$partyIcon: "../Images/Navigation/Party Icon.svg";
 
-$colorPurple: #40294b;
+$CSheetIcon: "../Images/CSheet Icons/CSheet Icon Green.svg";
+
+$lockedPadlock: "../Images/Icons/Locked Padlock.svg";
+$unlockedPadlock: "../Images/Icons/Unlocked Padlock.svg";
+
+$mobileButton: "../Images/Buttons/Mobile Button Purple.svg";
+$mobileButtonHighlight: "../Images/Buttons/Mobile Button Dark Grey.svg";
+
+//old purple: #40294b
+$colorLightPurple: #f0eef5;
+$colorPurple: #51425e;
+$colorMedPurple: #483b53;
+$colorDarkPurple: #392e42;
+
 $colorGreen: #4f5f55;
 $colorBlue: #6a89a8;
 $colorWhite: #ffffff;
+$colorOffWhite: #f7f7ed;
 $colorBlack: #000000;
 $colorDarkGrey: #252830;
 $colorMediumGrey: #656565;
 $colorLightGrey: #bbbbbb;
 
 $primaryColor: $colorPurple;
-$secondaryColor: $colorGreen;
-$backgroundColor: $colorWhite;
+$secondaryColor: $colorMedPurple;
+$backgroundColor: $colorLightPurple;
 $highlightColor: $colorLightGrey;
+$sidebarColor: $colorOffWhite;
+$textColor: $colorOffWhite;
+$fontColorLight: $colorOffWhite;
+$fontcolordark: $colorDarkGrey;
+$titleColor: $colorDarkGrey;
 // $contrastColor: ;
 
-$font-stack: "Carter One", "Open Sans", sans-serif;
-$paragraphFonts: "Cabin", "Calibri", "Open Sans", sans-serif;
+$fontStackTitles: "Cabin", "Open Sans", sans-serif;
+$fontStackParagraphs: "Cabin", "Calibri", "Open Sans", sans-serif;
+$font-family-base: "Cabin", "Calibri", "Open Sans", sans-serif;

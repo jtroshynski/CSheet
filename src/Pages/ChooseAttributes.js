@@ -14,7 +14,7 @@ class ChooseAttributes extends Component {
     this.state = {
       attributes: [],
       count: 0,
-      totalPoints: 27
+      pointsRemaining: 27
     };
     // this.handleClick = this.handleClick.bind(this);
   }
@@ -28,13 +28,27 @@ class ChooseAttributes extends Component {
     { id: 5 }
   ];
 
-  // Creates Tile components out of the raceArray and api data
+  checkDone(props) {
+    if (props.pointsRemaining > 0) {
+      alert(
+        "Are you sure you want to progress? You still have unallocated points!"
+      );
+    } else {
+    }
+  }
+
+  callback = pointsSpent => {
+    this.setState({ pointsRemaining: pointsSpent });
+  };
+
+  // Creates Tile components out of the attributeArray and api data
   AttributeTiles(props) {
     const attributeTiles = props.attributeArray.map(attribute => (
       <Attribute
         key={attribute.id}
         name={props.attributes[attribute.id].name}
-        pointsRemaining={props.totalPoints}
+        pointsRemaining={props.pointsRemaining}
+        callback={props.callback}
       />
     ));
     return <ul className="attribute-tiles">{attributeTiles}</ul>;
@@ -52,23 +66,26 @@ class ChooseAttributes extends Component {
     Analytics.record("appRender");
     if (this.state.count === 0) {
       return (
-        <div className="content">
+        <div>
           <span>Loading...</span>
         </div>
       );
     } else {
       return (
-        <div className="content">
+        <div>
           <h1 className="pageHeader">Allocate your attributes</h1>
           <h2 className="paragraphText">
-            Points Remaining: {this.state.totalPoints}
+            Points Remaining: {this.state.pointsRemaining}
           </h2>
           <this.AttributeTiles
             attributeArray={this.attributeArray}
+            callback={this.callback}
             {...this.state}
           />
           <Link to="/characterSheet">
-            <button className="button large">Done</button>
+            <button className="button large" onClick={this.checkDone}>
+              Done
+            </button>
           </Link>
         </div>
       );

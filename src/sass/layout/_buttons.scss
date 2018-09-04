@@ -1,9 +1,6 @@
-$purpleCircleButton: "../Images/Buttons/Purple Mobile Button.svg";
-$blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
-
 .button.large {
   background-color: $primaryColor;
-  font-family: $paragraphFonts;
+  font-family: $fontStackParagraphs;
 
   height: 50px;
   width: 165px;
@@ -11,10 +8,12 @@ $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
   border: none;
   font-size: 16px;
   margin: 30px 0 10px 0;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .button.large:hover {
-  background-color: #123379;
+  background-color: $colorDarkGrey;
 }
 
 .purpleMobileButton {
@@ -23,13 +22,13 @@ $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
   width: 50px;
 
   border-radius: 25px;
-  background: url($purpleCircleButton);
+  background: url($mobileButton);
   background-size: contain;
   cursor: pointer;
 }
 
 .purpleMobileButton:active {
-  background: url($blueCircleButton);
+  background: url($mobileButtonHighlight);
 }
 @media (min-width: $breakpoint) {
   .mobileButton {
@@ -52,50 +51,64 @@ $blueCircleButton: "../Images/Buttons/Blue Mobile Button.svg";
   background-color: $backgroundColor;
   display: block;
   border: 0px;
-  width: 30px;
-  height: 30px;
+  width: 21px;
+  height: 21px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   cursor: pointer;
+  transition: 0.3s;
 }
+
 //Horozontal Line
 .plusButton:after {
   background-color: $secondaryColor;
-  width: 29px;
+  width: 21px;
   height: 5px;
   position: absolute;
-  top: 13px;
+  top: 8px;
   left: 0px;
   content: "";
+  transition: 0.3s;
 }
+
 //Vertical Line
 .plusButton:before {
   background-color: $secondaryColor;
   width: 5px;
-  height: 29px;
+  height: 21px;
   position: absolute;
   top: 0px;
-  left: 13px;
+  left: 8px;
   content: "";
+  transition: 0.3s;
 }
-
+.plusButton:hover:after {
+  background-color: $primaryColor;
+}
+.plusButton:hover:before {
+  background-color: $primaryColor;
+}
 .minusButton {
   background-color: $backgroundColor;
   display: block;
   border: 0px;
-  width: 30px;
-  height: 30px;
+  width: 21px;
+  height: 21px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 //Horozontal Line
 .minusButton:after {
   background-color: $secondaryColor;
-  width: 29px;
+  width: 21px;
   height: 5px;
   position: absolute;
-  top: 13px;
+  top: 8px;
   left: 0px;
   content: "";
+  transition: 0.3s;
+}
+.minusButton:hover:after {
+  background-color: $primaryColor;
 }

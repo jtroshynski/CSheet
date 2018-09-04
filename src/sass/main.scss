@@ -1,22 +1,18 @@
 @import "abstracts/variables";
 @import "abstracts/placeholders";
 
-@import "vendors/bootstrap";
-
 @import "base/base";
 @import "base/reset";
 @import "base/typography";
 
 @import "layout/buttons";
 @import "layout/sidebar";
+@import "layout/titleBar";
+@import "layout/tiles";
+
+@import "pages/characterSheet";
 
 @import "components/attribute";
 @import "components/tile";
-
-@import "pages/chooseAttributes";
-@import "pages/chooseClass";
-@import "pages/chooseRace";
-@import "pages/pageNotFound";
-@import "pages/startPage";
 
 @import "themes/first";

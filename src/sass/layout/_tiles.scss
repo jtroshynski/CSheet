@@ -1,0 +1,47 @@
+.tiles-section {
+  width: 100%;
+  text-align: center;
+}
+
+.verticalAttributeTiles {
+  height: 530px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.longTileSection {
+  // margin-left: 10px;
+  overflow-y: auto;
+
+  .longTileText {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 20px;
+  }
+}
+
+.longTile {
+  width: 100%;
+
+  &.short {
+    height: 42px;
+  }
+  &.tall {
+    height: 70px;
+  }
+}
+
+.roundedTile {
+  display: inline-block;
+  background-color: $colorWhite;
+  border-radius: 12px;
+  height: 100%;
+  width: 100%;
+}
+
+.attribute-tiles {
+  width: 100%;
+  text-align: center;
+}

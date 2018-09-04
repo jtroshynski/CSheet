@@ -1,124 +1,23 @@
-//Desktop and large screens
-@media (min-width: $breakpoint) {
-  .sideBar {
-    min-width: 200px;
-    margin: 0;
-    height: 100%;
-    position: fixed;
-    overflow-x: hidden;
-    /* 12em is the width of the columns */
-    flex: 0 0 12em;
-    .sideBarLogoSection {
-      background-color: $colorMediumGrey;
-      padding: 20px;
-    }
-  }
-  .mobileButton {
-    visibility: hidden;
-    background: none;
-    border: none;
-    margin: 25px;
-  }
-}
-
-//Mobile and small screens
-@media (max-width: $breakpoint) {
-  .sideBar {
-    width: 200px;
-  }
-  .mobileButton {
-    // visibility: visible;
-    position: fixed;
-    background: none;
-    border: none;
-  }
-  .sideBarLogoSection {
-    background-color: $colorLightGrey;
-    padding: 20px;
-    .cSheetLogo {
-      width: 120px;
-    }
-  }
-  .characterSheetIcon {
-    display: block;
-    height: 62px;
-    width: 50px;
-    margin: auto;
-  }
-  .partyIcon {
-    display: block;
-    height: 62px;
-    width: 50px;
-    margin: auto;
-  }
-}
-
 .sideBar {
   height: 100%;
-  margin: 0;
-  // -webkit-flex: 1;
-  // flex: 1;
-  background: none repeat scroll 0 0 $colorLightGrey;
-  color: $colorWhite;
-  // z-index: 1;
+  width: 200px;
+  background-color: $primaryColor;
 
-  .cSheetLogo {
-    background: url($cSheetLogo);
-    background-repeat: no-repeat;
-    display: block;
-    width: 180px;
-    height: auto;
-    cursor: pointer;
+  .sideBarLogoSection {
+    padding: 20px;
+  }
+  .sidebarItem {
+    transition: 0.3s;
+    background-color: $primaryColor;
+    padding: 20px;
+  }
+  .sidebarItem:hover {
+    background-color: $secondaryColor;
+    color: $fontColorLight;
   }
 
-  .divider {
-    height: 1px;
-    width: 95%;
-    background: $colorMediumGrey;
-  }
-
-  ul {
-    li.navigationIcon {
-      padding-top: 30px;
-      padding-bottom: 30px;
-      height: 125px;
-      width: 225px;
-      position: relative;
-      cursor: pointer;
-
-      .characterSheetIcon {
-        background: url($characterSheetIcon);
-        background-repeat: no-repeat;
-        margin: auto;
-        max-height: 77%;
-        max-width: 50%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
-
-      .partyIcon {
-        background: url($partyIcon);
-        background-repeat: no-repeat;
-        margin: auto;
-        max-height: 54%;
-        max-width: 70%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
-
-      .active {
-        background-color: $backgroundColor;
-        border-radius: 4px;
-      }
-    }
-    li.navigationIcon:hover {
-      background-color: $backgroundColor;
-    }
+  .sidebarIcon {
+    height: 20px;
+    width: 20px;
   }
 }

@@ -5,7 +5,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Technologies used:
 
-React, Sass, AWS Amplify, Font Awesome
+React, Sass, Bootstrap, AWS Amplify, Font Awesome
+
+Run the following commands to ensure you have all the required npm packages
+npm install Sass
+npm install sass-loader
+npm install postcss-loader
+npm install bootstrap
+npm install react-bootstrap
+npm install --save jquery popper.js
+
+VSCode Pertinant User Settings:
+{
+"prettier.printWidth": 100,
+"prettier.trailingComma": "es5"
+}
 
 Roadmap/Ideas:
 

@@ -1,16 +1,13 @@
 import React, { Component } from "react";
 import "sass/main.css";
 
-import axios from "axios";
+import HealthBar from "../Components/HealthBar";
+import SkillList from "../Components/SkillList";
+import AttributeTiles from "../Components/AttributeTiles";
+import Armor from "../Components/Armor";
+import Weapons from "../Components/Weapons";
 
-import dragonborn from "Images/CSheet Icons/CSheet Icon Blue.svg";
-import dwarf from "Images/CSheet Icons/CSheet Icon Brown.svg";
-import elf from "Images/CSheet Icons/CSheet Icon Dark Grey.svg";
-import halfelf from "Images/CSheet Icons/CSheet Icon Green.svg";
-import halfling from "Images/CSheet Icons/CSheet Icon Orange.svg";
-import halforc from "Images/CSheet Icons/CSheet Icon Purple.svg";
-import human from "Images/CSheet Icons/CSheet Icon Sea Green.svg";
-import tiefling from "Images/CSheet Icons/CSheet Icon Yellow.svg";
+import axios from "axios";
 
 import { Analytics } from "aws-amplify";
 
@@ -20,39 +17,103 @@ class CharacterSheet extends Component {
 
     this.state = {
       stats: [],
-      count: 0
+      count: 0,
+      pointsRemaining: 27,
+      currentHealth: 8,
+      maxHealth: 12
     };
     // this.handleClick = this.handleClick.bind(this);
   }
 
-  raceArray = [
-    { id: 4, image: dragonborn },
-    { id: 0, image: dwarf },
-    { id: 1, image: elf },
-    { id: 6, image: halfelf },
-    { id: 2, image: halfling },
-    { id: 7, image: halforc },
-    { id: 3, image: human },
-    { id: 8, image: tiefling }
-  ];
+  // Creates Tile components out of the attributeArray and api data
 
-  // Calls D&D api to get race data when page loads
-  async componentDidMount() {
-    // await axios.get("http://www.dnd5eapi.co/api/races/").then(res => {
-    //   const raceData = res.data.results;
-    //   const numRaces = res.data.count;
-    //   this.setState({ races: raceData, count: numRaces });
-    // });
+  ToggleLock() {
+    // Lock or Unlock Editing page
   }
 
   render() {
-    // Analytics.record("appRender"); else {
-    return (
-      <div className="content">
-        <h1 className="pageHeader">Your CSheet</h1>
-        {/* <this.CharacterSheet characterStats={this.stats} {...this.state} /> */}
-      </div>
-    );
+    // Analytics.record("appRender");
+    if (false) {
+      return (
+        <div>
+          <span>Loading...</span>
+        </div>
+      );
+    } else {
+      return (
+        <div class="container">
+          <div class="row">
+            <div className="col-sm-6">
+              <div className="longTile tall">
+                <div className="roundedTile">
+                  <div className="longTileText">
+                    <h2 className="header">Maelor the Lost</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-2">
+              <div className="longTile tall">
+                <div className="roundedTile">
+                  <div className="longTileText">
+                    <h2 className="largeBody">Level: 1</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-2">
+              <div className="longTile tall">
+                <div className="roundedTile">
+                  <div className="longTileText">
+                    <h2 className="largeBody">Human</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-2">
+              <div className="longTile tall">
+                <div className="roundedTile">
+                  <div className="longTileText">
+                    <h2 className="largeBody">Wizard</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <span className="padlock" onClick={this.ToggleLock} /> */}
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-3">
+                <div className="sectionLabel">
+                  <h2 className="header">Attributes</h2>
+                </div>
+                <AttributeTiles />
+              </div>
+              <div className="col-sm-3">
+                <div className="sectionLabel">
+                  <h2 className="header">Skills</h2>
+                </div>
+                <SkillList />
+              </div>
+              <div className="col-sm-6">
+                <div className="sectionLabel">
+                  <h2 className="header">Health</h2>
+                </div>
+                <HealthBar />
+                <div className="sectionLabel">
+                  <h2 className="header">Armor</h2>
+                </div>
+                <Armor />
+                <div className="sectionLabel">
+                  <h2 className="header">Weapons</h2>
+                </div>
+                <Weapons />
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
   }
 }
 
