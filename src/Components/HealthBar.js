@@ -7,8 +7,9 @@ class HealthBar extends Component {
     super();
 
     this.state = {
-      maxHealth: 0,
-      currentHealth: 0
+      maxHealth: 12,
+      currentHealth: 8,
+      currentHealthPercent: "60%"
     };
   }
 
@@ -19,12 +20,14 @@ class HealthBar extends Component {
           <div
             class="progress-bar bg-danger smallBody"
             role="progressbar"
-            style={{ width: "70%" }}
+            style={{ width: this.state.currentHealthPercent }}
             aria-valuenow="75"
             aria-valuemin="0"
             aria-valuemax="100"
           >
-            <span>8/12</span>
+            <span>
+              {this.state.currentHealth} / {this.state.maxHealth}
+            </span>
           </div>
         </div>
       </div>

@@ -9,31 +9,31 @@ features:
           sdk-generation-stage-name: Development
         paths:
           /items: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/sampleLambda-20180801191809.zip
+            codeFilename: uploads/sampleLambda-20180902153357.zip
             description: 'Handler for calls to resource path : /items/{proxy+}'
             enableCORS: true
             environment: {}
             handler: lambda.handler
-            hashcode: GHUQkvjcS/D69Dv7+vLv/yaAI3SAUD7k1g4Q21X8XWo=
+            hashcode: 2SNsFekequnzt6iHXaIh/yPZD47uM7FAvwp+R/Ni/pU=
             memorySize: '128'
-            modified: '2018-08-02T00:19:28.697+0000'
+            modified: '2018-09-02T20:32:33.653+0000'
             name: sampleLambda
             runtime: nodejs6.10
             timeout: '3'
-            version: iu4yVlmEpSYuLWf5MhRR_k5aMrRcpB3W
+            version: Webh.s6o7_vgvWWtsz6fsZxX9JftFKew
           '/items/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/sampleLambda-20180801191809.zip
+            codeFilename: uploads/sampleLambda-20180902153357.zip
             description: 'Handler for calls to resource path : /items/{proxy+}'
             enableCORS: true
             environment: {}
             handler: lambda.handler
-            hashcode: GHUQkvjcS/D69Dv7+vLv/yaAI3SAUD7k1g4Q21X8XWo=
+            hashcode: 2SNsFekequnzt6iHXaIh/yPZD47uM7FAvwp+R/Ni/pU=
             memorySize: '128'
-            modified: '2018-08-02T00:19:28.697+0000'
+            modified: '2018-09-02T20:32:33.653+0000'
             name: sampleLambda
             runtime: nodejs6.10
             timeout: '3'
-            version: bFSYdIdJGsQklDLY_BN5Dnm.UZXlon6B
+            version: bARmAtT0rJSSKrP2CHa2cMbVzOds3SC3
   content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
     attributes:
       enabled: true
@@ -89,5 +89,5 @@ features:
     attributes:
       enabled: true
       wildcard-cors-policy: true
-name: CSheet-2018-08-01-19-17-23
-region: us-west-1
+name: dnd-app-2018-07-13-18-19-29
+region: us-east-2
