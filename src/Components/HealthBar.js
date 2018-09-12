@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "sass/main.css";
-import { Link } from "react-router-dom";
 
 class HealthBar extends Component {
   constructor() {
@@ -15,9 +14,9 @@ class HealthBar extends Component {
   render() {
     return (
       <div>
-        <div class="progress">
+        <div className="progress">
           <div
-            class="progress-bar bg-danger smallBody"
+            className="progress-bar bg-danger smallBody"
             role="progressbar"
             style={{ width: "70%" }}
             aria-valuenow="75"

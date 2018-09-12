@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "sass/main.css";
-import { Link } from "react-router-dom";
 
 class Armor extends Component {
   constructor() {
@@ -35,8 +34,8 @@ class Armor extends Component {
 
   render() {
     return (
-      <div class="container">
-        <div class="row">
+      <div className="container">
+        <div className="row">
           <div className="col-sm-3">
             <div className="attribute">
               <div className="attributeNumberSection">
