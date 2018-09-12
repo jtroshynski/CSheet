@@ -43,9 +43,28 @@ class TitleBar extends Component {
 
   render() {
     return (
-      <header className="titleBar">
-        <span className="name">Jeremy Troshynski</span>
-      </header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light smallBody">
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#Stats">
+                Stats <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Characteristics">
+                Characteristics
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Spells">
+                Spells
+              </a>
+            </li>
+          </ul>
+          <span class="navbar-text">Jeremy Troshynski</span>
+        </div>
+      </nav>
     );
   }
 }

@@ -1,145 +1,23 @@
-//Desktop and large screens
-@media (min-width: $breakpoint) {
-  .sideBar {
-    // min-width: 225px;
-    width: 300px;
-    position: fixed;
-    overflow-x: hidden;
-    /* 12em is the width of the columns */
-    flex: 0 0 12em;
-    .sideBarLogoSection {
-      // background-color: $colorLightGrey;
-      padding: 5px;
-    }
-  }
-  .mobileButton {
-    visibility: hidden;
-    background: none;
-    border: none;
-    // margin: 25px;
-  }
-}
-
-//Mobile and small screens
-@media (max-width: $breakpoint) {
-  .sideBar {
-    width: 200px;
-  }
-  .mobileButton {
-    // visibility: visible;
-    position: fixed;
-    background: none;
-    border: none;
-  }
-  .sideBarLogoSection {
-    padding: 20px;
-    .cSheetLogo {
-      width: 120px;
-    }
-  }
-  .characterSheetIcon {
-    display: block;
-    height: 62px;
-    width: 50px;
-    margin: auto;
-  }
-  .partyIcon {
-    display: block;
-    height: 62px;
-    width: 50px;
-    margin: auto;
-  }
-}
-
 .sideBar {
   height: 100%;
-  margin: 0;
-  position: fixed;
-  background: none repeat scroll 0 0 $primaryColor;
-  text-align: left;
-  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 200px;
+  background-color: $primaryColor;
 
   .sideBarLogoSection {
+    padding: 20px;
+  }
+  .sidebarItem {
+    transition: 0.3s;
+    background-color: $primaryColor;
+    padding: 20px;
+  }
+  .sidebarItem:hover {
     background-color: $secondaryColor;
-    width: 300px;
-    height: 50px;
-    .cSheetLogo {
-      background: url($cSheetLogo);
-      background-repeat: no-repeat;
-      display: block;
-      width: 160px;
-      height: auto;
-      margin-left: 40px;
-      cursor: pointer;
-    }
+    color: $fontColorLight;
   }
 
-  .divider {
-    height: 1px;
-    width: 95%;
-    background: $colorMediumGrey;
-  }
-
-  ul {
-    li.navigationIcon {
-      height: 90px;
-      width: 300px;
-
-      transition: 0.3s;
-      cursor: pointer;
-
-      .characterSheetIcon {
-        background: url($CSheetIcon);
-        background-repeat: no-repeat;
-        display: inline-block;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: 10px;
-        max-height: 25px;
-        max-width: 25px;
-        position: relative;
-        vertical-align: middle;
-        height: 80px;
-        width: 80px;
-      }
-
-      .partyIcon {
-        background: url($partyIcon);
-        background-repeat: no-repeat;
-        display: inline-block;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: 10px;
-        max-height: 45px;
-        max-width: 45px;
-        position: relative;
-        vertical-align: middle;
-        height: 80px;
-        width: 80px;
-      }
-
-      .CSheetIcon {
-        background: url($CSheetIcon);
-        background-repeat: no-repeat;
-        display: inline-block;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: 10px;
-        max-height: 25px;
-        max-width: 25px;
-        position: relative;
-        vertical-align: middle;
-        height: 80px;
-        width: 80px;
-      }
-
-      .active {
-        background-color: $backgroundColor;
-        border-radius: 4px;
-      }
-    }
-    li.navigationIcon:hover {
-      background-color: $colorDarkPurple;
-    }
+  .sidebarIcon {
+    height: 20px;
+    width: 20px;
   }
 }

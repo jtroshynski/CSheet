@@ -1,14 +1,6 @@
 html,
 body {
   background-color: #f0eef5;
-  margin: 0;
-  height: 100%;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 }
 
 img {
@@ -21,19 +13,12 @@ img {
   margin: 10px;
 }
 
-@media (min-width: 768px) {
-  body {
-    margin: 0;
-    flex-direction: row;
-    flex: 1;
-    height: 100%;
-  }
-
-  .content {
-    margin-left: 300px;
-    flex: 1;
-  }
+.sectionLabel {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
+
 html,
 body,
 div,
@@ -139,24 +124,8 @@ section {
   display: block;
 }
 
-.pageHeader {
-  font-family: "Cabin", "Open Sans", sans-serif;
-  font-size: 3em;
-  text-align: center;
-  margin: 60px 0 40px 0;
-  color: #252830;
-}
-
-.paragraphText {
-  font-size: large;
-  text-align: center;
-  font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
-  margin: 0 20vw 0 20vw;
-}
-
 .sidebarText {
-  display: inline-block;
-  font-size: large;
+  font-size: 1em;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
   color: #f7f7ed;
   text-decoration: none;
@@ -166,25 +135,37 @@ section {
   text-decoration: none;
 }
 
-.sheetText {
+.headline {
+  font-family: "Cabin", "Open Sans", sans-serif;
+  font-size: 3em;
+  color: #252830;
+}
+
+.header {
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
   font-size: 35px;
   color: #252830;
 }
 
-.sheetTextSmall {
+.largeBody {
+  font-size: 24px;
   font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
-  font-size: 23px;
-  color: #252830;
+}
+
+.regularBody {
+  font-size: 20px;
+  font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
+}
+
+.smallBody {
+  font-family: "Cabin", "Calibri", "Open Sans", sans-serif;
+  font-size: 18px;
 }
 
 .largeNumber {
-  display: inline-block;
   font-family: "Cabin", "Open Sans", sans-serif;
   color: #252830;
   font-size: 3em;
-  margin-top: 20px;
-  margin-left: 15px;
 }
 
 .button.large {
@@ -301,136 +282,26 @@ section {
   background-color: #51425e;
 }
 
-@media (min-width: 768px) {
-  .sideBar {
-    width: 300px;
-    position: fixed;
-    overflow-x: hidden;
-    /* 12em is the width of the columns */
-    flex: 0 0 12em;
-  }
-  .sideBar .sideBarLogoSection {
-    padding: 5px;
-  }
-
-  .mobileButton {
-    visibility: hidden;
-    background: none;
-    border: none;
-  }
-}
-@media (max-width: 768px) {
-  .sideBar {
-    width: 200px;
-  }
-
-  .mobileButton {
-    position: fixed;
-    background: none;
-    border: none;
-  }
-
-  .sideBarLogoSection {
-    padding: 20px;
-  }
-  .sideBarLogoSection .cSheetLogo {
-    width: 120px;
-  }
-
-  .characterSheetIcon {
-    display: block;
-    height: 62px;
-    width: 50px;
-    margin: auto;
-  }
-
-  .partyIcon {
-    display: block;
-    height: 62px;
-    width: 50px;
-    margin: auto;
-  }
-}
 .sideBar {
   height: 100%;
-  margin: 0;
-  position: fixed;
-  background: none repeat scroll 0 0 #51425e;
-  text-align: left;
+  width: 200px;
+  background-color: #51425e;
 }
 .sideBar .sideBarLogoSection {
-  background-color: #483b53;
-  width: 300px;
-  height: 50px;
+  padding: 20px;
 }
-.sideBar .sideBarLogoSection .cSheetLogo {
-  background: url("../Images/CSheet Logos/CSheet Logo Green Black.svg");
-  background-repeat: no-repeat;
-  display: block;
-  width: 160px;
-  height: auto;
-  margin-left: 40px;
-  cursor: pointer;
-}
-.sideBar .divider {
-  height: 1px;
-  width: 95%;
-  background: #656565;
-}
-.sideBar ul li.navigationIcon {
-  height: 90px;
-  width: 300px;
+.sideBar .sidebarItem {
   transition: 0.3s;
-  cursor: pointer;
+  background-color: #51425e;
+  padding: 20px;
 }
-.sideBar ul li.navigationIcon .characterSheetIcon {
-  background: url("../Images/CSheet Icons/CSheet Icon Green.svg");
-  background-repeat: no-repeat;
-  display: inline-block;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 10px;
-  max-height: 25px;
-  max-width: 25px;
-  position: relative;
-  vertical-align: middle;
-  height: 80px;
-  width: 80px;
+.sideBar .sidebarItem:hover {
+  background-color: #483b53;
+  color: #f7f7ed;
 }
-.sideBar ul li.navigationIcon .partyIcon {
-  background: url("../Images/Navigation/Party Icon.svg");
-  background-repeat: no-repeat;
-  display: inline-block;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 10px;
-  max-height: 45px;
-  max-width: 45px;
-  position: relative;
-  vertical-align: middle;
-  height: 80px;
-  width: 80px;
-}
-.sideBar ul li.navigationIcon .CSheetIcon {
-  background: url("../Images/CSheet Icons/CSheet Icon Green.svg");
-  background-repeat: no-repeat;
-  display: inline-block;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 10px;
-  max-height: 25px;
-  max-width: 25px;
-  position: relative;
-  vertical-align: middle;
-  height: 80px;
-  width: 80px;
-}
-.sideBar ul li.navigationIcon .active {
-  background-color: #f0eef5;
-  border-radius: 4px;
-}
-.sideBar ul li.navigationIcon:hover {
-  background-color: #392e42;
+.sideBar .sidebarIcon {
+  height: 20px;
+  width: 20px;
 }
 
 .titleBar {
@@ -453,28 +324,29 @@ section {
 
 .verticalAttributeTiles {
   height: 530px;
-  width: 270px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.skills {
-  height: 530px;
-  width: 270px;
-  display: inline-block;
-  margin-left: 10px;
+.longTileSection {
   overflow-y: auto;
 }
-.skills .skillTile {
-  height: 42px;
-  width: 100%;
-}
-.skills .skillTile .skillText {
+.longTileSection .longTileText {
   display: flex;
   justify-content: space-between;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 8px 20px;
+}
+
+.longTile {
+  width: 100%;
+}
+.longTile.short {
+  height: 42px;
+}
+.longTile.tall {
+  height: 70px;
 }
 
 .roundedTile {
@@ -496,55 +368,26 @@ section {
   height: 50px;
   width: 50px;
   display: block;
-  margin-left: 100px;
-}
-
-.baseDetails {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin-top: 60px;
-  width: 100%;
-  height: 150px;
-  margin-left: 90px;
-}
-.baseDetails .characterName {
-  width: 550px;
-  height: 70px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-right: 30px;
-}
-.baseDetails .level {
-  width: 200px;
-  height: 70px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-right: 30px;
 }
 
 .attribute {
   display: inline-block;
-  background-color: #f0eef5;
+  background-color: #ffffff;
   text-align: center;
-  height: 160px;
-  width: 120px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 25px;
-  margin: 5px 10px;
+  height: 140px;
+  width: 100px;
+  border-radius: 12px;
   position: relative;
 }
 .attribute .attributeNumberSection {
-  margin: 0 auto;
-  height: 70%;
+  margin: 20px auto;
+  height: 40%;
 }
 .attribute .attributeNumberSection .points {
   display: inline-block;
   font-family: "Cabin", "Open Sans", sans-serif;
   color: #252830;
   font-size: 3em;
-  margin-top: 20px;
-  margin-left: 15px;
 }
 .attribute .attributeNumberSection .attributeButtons {
   vertical-align: center;

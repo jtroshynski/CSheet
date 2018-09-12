@@ -1,27 +1,27 @@
 .attribute {
   display: inline-block;
-  background-color: $backgroundColor;
+  background-color: $colorWhite;
   text-align: center;
-  height: 160px;
-  width: 120px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 25px;
-  margin: 5px 10px;
+  height: 140px;
+  width: 100px;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 12px;
+  // margin: 5px 10px;
   position: relative;
 
   // }
 
   .attributeNumberSection {
-    margin: 0 auto;
-    height: 70%;
+    margin: 20px auto;
+    height: 40%;
 
     .points {
       display: inline-block;
       font-family: $fontStackTitles;
       color: $colorDarkGrey;
       font-size: 3em;
-      margin-top: 20px;
-      margin-left: 15px;
+      // margin-top: 20px;
+      // margin-left: 15px;
     }
     .attributeButtons {
       vertical-align: center;

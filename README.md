@@ -12,6 +12,7 @@ npm install Sass
 npm install sass-loader
 npm install postcss-loader
 npm install bootstrap
+npm install react-bootstrap
 npm install --save jquery popper.js
 
 VSCode Pertinant User Settings:
