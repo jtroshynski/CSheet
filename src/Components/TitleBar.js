@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import cSheet from "Images/CSheet Logos/CSheet Logo Green Black.svg";
 
 import "sass/main.css";
 
@@ -43,26 +41,26 @@ class TitleBar extends Component {
 
   render() {
     return (
-      <nav class="navbar navbar-expand-lg navbar-light bg-light smallBody">
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#Stats">
-                Stats <span class="sr-only">(current)</span>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light smallBody">
+        <div className="collapse navbar-collapse" id="navbarText">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="#Stats">
+                Stats <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Characteristics">
+            <li className="nav-item">
+              <a className="nav-link" href="#Characteristics">
                 Characteristics
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Spells">
+            <li className="nav-item">
+              <a className="nav-link" href="#Spells">
                 Spells
               </a>
             </li>
           </ul>
-          <span class="navbar-text">Jeremy Troshynski</span>
+          <span className="navbar-text">Jeremy Troshynski</span>
         </div>
       </nav>
     );

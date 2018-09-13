@@ -2,7 +2,7 @@
   "name": "csheet",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jtroshynski.com",
+  "homepage": "http://www.jtroshynski.com",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
     "@fortawesome/free-brands-svg-icons": "^5.2.0",
@@ -22,7 +22,7 @@
     "react-bootstrap": "^0.32.3",
     "react-dom": "^16.4.2",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4",
+    "react-scripts": "^1.1.5",
     "react-sidebar": "^3.0.2",
     "react-sidemenu": "0.0.14",
     "reset-css": "^4.0.1",

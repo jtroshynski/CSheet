@@ -7,9 +7,9 @@ import AttributeTiles from "../Components/AttributeTiles";
 import Armor from "../Components/Armor";
 import Weapons from "../Components/Weapons";
 
-import axios from "axios";
-
-import { Analytics } from "aws-amplify";
+import Amplify, { Storage } from 'aws-amplify';
+import aws_exports from 'aws-exports';
+Amplify.configure(aws_exports);
 
 class CharacterSheet extends Component {
   constructor() {
@@ -22,6 +22,13 @@ class CharacterSheet extends Component {
       currentHealth: 8,
       maxHealth: 12
     };
+    Storage.put('test.txt', 'Private Content', {
+      level: 'private',
+      contentType: 'text/plain'
+  })
+  .then (result => console.log(result))
+  .catch(err => console.log(err));
+
     // this.handleClick = this.handleClick.bind(this);
   }
 
@@ -41,8 +48,8 @@ class CharacterSheet extends Component {
       );
     } else {
       return (
-        <div class="container">
-          <div class="row">
+        <div className="container">
+          <div className="row">
             <div className="col-sm-6">
               <div className="longTile tall">
                 <div className="roundedTile">

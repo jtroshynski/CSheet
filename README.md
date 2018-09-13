@@ -14,6 +14,7 @@ npm install postcss-loader
 npm install bootstrap
 npm install react-bootstrap
 npm install --save jquery popper.js
+npm install react-sidebar
 
 VSCode Pertinant User Settings:
 {

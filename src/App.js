@@ -22,7 +22,6 @@ import aws_exports from "./aws-exports";
 import { withAuthenticator } from "aws-amplify-react";
 
 import cSheetLogo from "Images/CSheet Logos/CSheet Logo Green Black.svg";
-
 import cSheetIconYellow from "Images/CSheet Icons/CSheet Icon Yellow.svg";
 import cSheetIconSeaGreen from "Images/CSheet Icons/CSheet Icon Sea Green.svg";
 import cSheetIconBrown from "Images/CSheet Icons/CSheet Icon Brown.svg";
@@ -109,7 +108,7 @@ class App extends Component {
                   </a>
                   <a
                     href="/maps"
-                    class="list-group-item list-group-item-info sidebarItem"
+                    className="list-group-item list-group-item-info sidebarItem"
                   >
                     <img
                       className="sidebarIcon"
