@@ -7,13 +7,14 @@ Technologies used:
 
 React, Sass, Bootstrap, AWS Amplify, Font Awesome
 
-Run the following commands to ensure you have all the required npm packages
+Run the following commands to ensure you have all the required node packages
 npm install Sass
 npm install sass-loader
 npm install postcss-loader
 npm install bootstrap
 npm install react-bootstrap
 npm install --save jquery popper.js
+npm install react-sidebar
 
 VSCode Pertinant User Settings:
 {

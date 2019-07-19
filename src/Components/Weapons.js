@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "sass/main.css";
-import { Link } from "react-router-dom";
 
 class Weapons extends Component {
   constructor() {
@@ -34,8 +33,8 @@ class Weapons extends Component {
 
   render() {
     return (
-      <div class="container">
-        <div class="row">
+      <div className="container">
+        <div className="row">
           <div className="col-sm-12">
             <div className="longTileSection">
               <div className="longTile long">

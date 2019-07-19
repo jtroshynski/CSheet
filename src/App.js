@@ -18,17 +18,15 @@ import PageNotFound from "Pages/PageNotFound";
 import "sass/main.css";
 
 import Amplify, { Analytics } from "aws-amplify";
-import aws_exports from "aws-exports";
+import aws_exports from "./aws-exports";
+import { withAuthenticator } from "aws-amplify-react";
 
 import cSheetLogo from "Images/CSheet Logos/CSheet Logo Green Black.svg";
-
 import cSheetIconYellow from "Images/CSheet Icons/CSheet Icon Yellow.svg";
 import cSheetIconSeaGreen from "Images/CSheet Icons/CSheet Icon Sea Green.svg";
 import cSheetIconBrown from "Images/CSheet Icons/CSheet Icon Brown.svg";
 import cSheetIconBlue from "Images/CSheet Icons/CSheet Icon Blue.svg";
 import cSheetIconOrange from "Images/CSheet Icons/CSheet Icon Orange.svg";
-
-// import { withAuthenticator } from "aws-amplify-react";
 
 Amplify.configure(aws_exports);
 
@@ -110,7 +108,7 @@ class App extends Component {
                   </a>
                   <a
                     href="/maps"
-                    class="list-group-item list-group-item-info sidebarItem"
+                    className="list-group-item list-group-item-info sidebarItem"
                   >
                     <img
                       className="sidebarIcon"
@@ -158,5 +156,5 @@ class App extends Component {
     );
   }
 }
-export default App;
-// export default withAuthenticator(App);
+// export default App;
+export default withAuthenticator(App);
